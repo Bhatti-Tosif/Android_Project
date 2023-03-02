@@ -22,7 +22,8 @@ public class MapPractice {
         System.out.println(number.values());
         System.out.println(number.entrySet());
         number.put(2, "two");
-        //int result = number.compute(1, (key, value) -> key - key + 10);
+        String result = number.compute(1, (key, value) -> value + "A");
+        System.out.println("Compute is: " + result);
 
         System.out.println("========Iterate through Map======== ");
         System.out.println("Print data");
