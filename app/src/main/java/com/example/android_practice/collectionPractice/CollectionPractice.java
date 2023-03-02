@@ -7,6 +7,8 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
+import java.util.Vector;
 
 public class CollectionPractice {
     public static void main(String[] args) {
@@ -76,5 +78,13 @@ public class CollectionPractice {
             e *= 2;
             System.out.println("New: " + e);
         });
+
+        //Stack Practice
+        Stack<String> stack = new  Stack<String>();
+        stack.add("Hello");
+        stack.add("rahul");
+        stack.add(1, "harsh");
+        System.out.println(stack);
+
     }
 }
