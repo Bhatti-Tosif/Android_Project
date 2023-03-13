@@ -15,9 +15,5 @@ public class MainActivity extends AppCompatActivity {
 
         userName=findViewById(R.id.username_et);
         email=findViewById(R.id.email_et);
-
-
-
-
     }
 }
