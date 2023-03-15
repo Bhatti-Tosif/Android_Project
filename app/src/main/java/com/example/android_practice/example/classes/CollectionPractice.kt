@@ -23,6 +23,7 @@ fun main() {
     println(array == arraylist)
 
     val strList = listOf("one", "two", "three", "four")
+    strList.let {  }
     val strSet = setOf("one", "two", "three", "four", "five")
     val strMap = mapOf(1 to  "one", 2 to "two", 3 to "three")
     println("$strList \b set: $strSet \b map: $strMap")
@@ -32,4 +33,5 @@ fun main() {
     val person2 = listOf(Person("adam", 20), Person("Bob", 30), bob)
     println(person2 == person1)
     println("Both are refer to same object: ${person1 === person2}")
+
 }

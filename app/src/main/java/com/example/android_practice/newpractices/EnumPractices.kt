@@ -3,13 +3,13 @@ package com.example.android_practice.newpractices
 enum class CreditCardType {
     SILVER,
     GOLD,
-    PLATINUM
+    PLATINUM;
 }
 interface CashBack {
     fun getCashBAck(): Float
 }
-enum class CreditCard(val color: String, val value: Int = 100000): CashBack {
-    SILVER("RED") {
+enum class CreditCard(val color: String, val value: Int = 1000000): CashBack {
+    SILVER("RED",199999) {
         override fun getCashBAck(): Float = 0.2f
     },
     GOLD("BLUE", 300000) {

@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+interface Abc {
+
+}
 public class MainActivity extends AppCompatActivity {
 
     EditText userName,email,nwePass,confirmPass;

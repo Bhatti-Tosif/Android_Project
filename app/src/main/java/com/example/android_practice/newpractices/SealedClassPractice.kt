@@ -26,4 +26,5 @@ fun main() {
     val circle = Shape.Circle(10f)
     val square = Shape.Square(20)
     checkShape(circle)
+    var name:String = "tosif"
 }
