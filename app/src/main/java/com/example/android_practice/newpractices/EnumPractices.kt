@@ -5,6 +5,8 @@ enum class CreditCardType {
     GOLD,
     PLATINUM;
 }
+//we can not extend enum class
+//data class A: CreditCardType() { }
 interface CashBack {
     fun getCashBAck(): Float
 }
@@ -22,6 +24,7 @@ enum class CreditCard(val color: String, val value: Int = 1000000): CashBack {
 fun main() {
     val value: CreditCardType = CreditCardType.GOLD
     println(value)
+    println(CreditCardType.valueOf("GOLD"))
     println(CreditCardType.PLATINUM.ordinal)
     println(CreditCardType.GOLD.name)
     val all: Array<CreditCardType> = CreditCardType.values()

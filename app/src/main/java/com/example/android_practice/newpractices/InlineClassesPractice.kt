@@ -2,6 +2,7 @@ package com.example.android_practice.newpractices
 
 inline class Width(val width: Int)
 inline class Height(val height: Int)
+
 class RectangleTypesafe(width: Width, height: Height) {
     private val width: Width? = width
     private val height: Height? = height

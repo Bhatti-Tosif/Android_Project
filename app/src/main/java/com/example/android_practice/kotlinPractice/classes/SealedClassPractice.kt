@@ -20,6 +20,7 @@ fun main() {
     var points = when(tile) {
         is Red -> tile.points * 2
         is Blue -> tile.points * 4
+        is SealedTry -> println("outer class inherit")
     }
     println(points)
 

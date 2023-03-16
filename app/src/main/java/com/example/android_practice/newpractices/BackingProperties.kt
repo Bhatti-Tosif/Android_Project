@@ -1,5 +1,7 @@
 package com.example.android_practice.newpractices
 
+import com.example.android_practice.kotlinPractice.classes.Tile
+
 class Student {
     private val _hobbies = mutableListOf<String>("tosif", "harsh")
     var hobbies: List<String> = mutableListOf("a")

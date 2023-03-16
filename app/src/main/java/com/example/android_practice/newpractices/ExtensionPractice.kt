@@ -31,5 +31,6 @@ fun main() {
     val ex = Extension()
     println(ex.y)
     ex.y = 24
+    var array = arrayOf(10, 20, 30)
     println(ex.x)
 }

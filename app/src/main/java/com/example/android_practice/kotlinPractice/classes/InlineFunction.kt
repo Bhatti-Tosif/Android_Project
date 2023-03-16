@@ -13,7 +13,6 @@ inline fun f(crossinline body: () -> Unit) {
     }
 }
 fun main() {
-
     myExample<String>("www.tutorialspoint.com")
     myExample<Int>(100)
     myExample<Long>(1L)
