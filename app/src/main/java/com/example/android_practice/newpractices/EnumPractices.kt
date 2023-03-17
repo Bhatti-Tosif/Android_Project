@@ -9,8 +9,11 @@ enum class CreditCardType {
 //data class A: CreditCardType() { }
 interface CashBack {
     fun getCashBAck(): Float
+    companion object {
+        var name = "tosif"
+    }
 }
-enum class CreditCard(val color: String, val value: Int = 1000000): CashBack {
+enum class CreditCard(color: String, val value: Int = 1000000): CashBack {
     SILVER("RED",199999) {
         override fun getCashBAck(): Float = 0.2f
     },
@@ -19,7 +22,7 @@ enum class CreditCard(val color: String, val value: Int = 1000000): CashBack {
     },
     PLATINUM("GOLDEN", 10000000) {
         override fun getCashBAck(): Float = 0.6f
-    }
+    };
 }
 fun main() {
     val value: CreditCardType = CreditCardType.GOLD
@@ -43,6 +46,8 @@ fun main() {
     }
     println("========CreditCard Enum Class ==========")
     println(CreditCard.PLATINUM.getCashBAck())
-    println(CreditCard.SILVER.color)
+    println(CreditCard.SILVER.name)
+    println(CreditCardType.GOLD.ordinal)
+    println(CreditCardType.SILVER.declaringClass)
 
 }

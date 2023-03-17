@@ -14,19 +14,21 @@ class D: abstract() {
     //override var x = 10
 }
 var Extension.y: Int
-    get() = 23
+    get() = x
     set(value) {
         x = value
     }
 object abc {
 
 }
+
 fun abc.data() {
     println("data")
 }
 fun data() {
     var x = 24
 }
+
 fun main() {
     val ex = Extension()
     println(ex.y)

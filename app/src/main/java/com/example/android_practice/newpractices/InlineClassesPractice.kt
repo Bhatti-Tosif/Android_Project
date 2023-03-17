@@ -7,7 +7,9 @@ class RectangleTypesafe(width: Width, height: Height) {
     private val width: Width? = width
     private val height: Height? = height
     fun printAre() {
-        println("Area is: ${this.width} and ${this.height}")
+        val widthInt = width.toString()
+        val heightInt = height.toString()
+        println("Area is: ${this.width} and ${this.height} ${widthInt + heightInt}")
     }
 }
 class Area(var height: Int, val width: Int) {

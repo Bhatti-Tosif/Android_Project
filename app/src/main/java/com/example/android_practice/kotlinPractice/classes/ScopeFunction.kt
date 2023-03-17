@@ -13,13 +13,13 @@ fun main() {
     println(data?.equals(data2))
     println(data.hashCode())
     println("=========With Example========")
-    val x = with(data2) {
+    with(data2) {
         name = "Tosif"
         surname = "bhatti"
         printData()
         name
     }
-    println(x)
+    println(data2)
     println("=========apply Practice======")
     val applyReturn = data?.apply {
         name = "parth"
