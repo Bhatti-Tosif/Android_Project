@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android_practice</string>
+    <string name="login">Login</string>
 </resources>
