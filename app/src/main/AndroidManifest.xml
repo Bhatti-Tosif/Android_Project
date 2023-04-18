@@ -12,26 +12,26 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
-            android:name=".layoutPractice.LayoutPractice"
+            android:name=".layoutPractice.RelativeLayout"
             android:exported="true" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
+
             <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
-
-        <activity
-            android:name=".SecondActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
-
+        </intent-filter>/>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".layoutPractice.LayoutPractice"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
