@@ -7,27 +7,36 @@
     tools:context=".layoutPractice.RelativeLayout">
 
     <EditText
+        android:id="@+id/edit_Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Enter Name"
-        android:id="@+id/edit_Name"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Enter Password"
-        android:id="@+id/edit_Password"
-        android:layout_below="@+id/edit_Name"
-        android:layout_marginTop="30dp"/>
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter Name" />
 
     <EditText
+        android:id="@+id/edit_Password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Confirm Password"
+        android:layout_height="48dp"
+        android:layout_below="@+id/edit_Name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter Password" />
+
+    <EditText
         android:id="@+id/edit_CPassword"
-        android:layout_below="@+id/edit_Password"/>
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/edit_Password"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Confirm Password" />
 
     <Button
         android:layout_width="wrap_content"
@@ -46,7 +55,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/btn_color"
-        android:text="SignUp" />
+        android:text="SignUp Form" />
 
 
 </RelativeLayout>
