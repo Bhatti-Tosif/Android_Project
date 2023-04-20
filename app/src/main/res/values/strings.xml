@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Android_practice</string>
     <string name="login">Login</string>
+    <string name="btn_textview">TextView</string>
+    <string name="under_line_text"><u>This is under line text</u></string>
+    <string name="strikethrough"><strike>This is strike through</strike></string>
+    <string name="underlineWithStrike"><u><strike>UnderLine with strike</strike></u></string>
+    <string name="multiColorString">
+        <font fgcolor="FF9C27B0">Color Text</font>
+        <font size="20">big Size</font>
+    </string>
 </resources>
