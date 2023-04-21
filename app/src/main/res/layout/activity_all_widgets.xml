@@ -8,22 +8,33 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/button_48dp"
         android:id="@+id/btn_textView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_30"
         android:text="@string/btn_textview"/>
 
     <Button
         android:id="@+id/buttonPractice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button Practice"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/AllWidget_button_practice"
         app:layout_constraintEnd_toEndOf="@+id/btn_textView"
         app:layout_constraintStart_toStartOf="@+id/btn_textView"
         app:layout_constraintTop_toBottomOf="@+id/btn_textView" />
+
+    <Button
+        android:id="@+id/btnEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/allWidget_edit_text"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPractice"
+        app:layout_constraintStart_toStartOf="@id/buttonPractice"
+        app:layout_constraintEnd_toEndOf="@id/buttonPractice"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

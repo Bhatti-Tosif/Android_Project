@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
+            android:name=".uiwidgets.EditText"
+            android:exported="false" />
+        <activity
             android:name=".uiwidgets.ButtonPractice"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
         </activity>
         <activity
             android:name=".uiwidgets.textView"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".layoutPractice.ConstraintLAyout"
             android:exported="false" />

@@ -9,4 +9,20 @@
         <font fgcolor="FF9C27B0">Color Text</font>
         <font size="20">big Size</font>
     </string>
+    <string name="AllWidget_button_practice">Button Practice</string>
+    <string name="allWidget_edit_text">Edit Text</string>
+    <string name="btn_simple">Simple</string>
+    <string name="btn_bg_change">Bg change</string>
+    <string name="btn_inset">Inset</string>
+    <string name="btn_icone">Icone</string>
+    <string name="btn_corner">Corner</string>
+    <string name="btn_ripple">Ripple</string>
+    <string name="btn_appcompact">AppCompact</string>
+    <string name="btn_verticle">Verticle</string>
+    <string name="btn_material">Material</string>
+    <string name="btn_material2">Material</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_elevated">Elevated</string>
+    <string name="btn_plain">Plain</string>
+    <string name="btn_outlined">OutLined</string>
 </resources>
