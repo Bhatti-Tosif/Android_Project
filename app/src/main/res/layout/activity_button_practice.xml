@@ -202,6 +202,7 @@
         android:layout_marginStart="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_30"
         android:autoLink="all"
+        android:text="@null"
         android:background="@drawable/heart_shape"
         android:textAllCaps="false"
         app:layout_constraintStart_toEndOf="@id/giudMargin"

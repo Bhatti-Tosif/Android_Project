@@ -25,4 +25,25 @@
     <string name="btn_elevated">Elevated</string>
     <string name="btn_plain">Plain</string>
     <string name="btn_outlined">OutLined</string>
+    <string name="hint_enter_number">Number</string>
+    <string name="allWidget_radio_button">Radio Button</string>
+    <string name="txt_food_menu">Food Menu</string>
+    <string name="txt_pizza">Pizza</string>
+    <string name="txt_burger">Burger</string>
+    <string name="txt_sandwich">Sandwich</string>
+    <string name="txt_salad">Salad</string>
+    <string name="txt_onion">Onion</string>
+    <string name="txt_cheese">Cheese</string>
+    <string name="btn_order">Order</string>
+    <string name="btn_switch">Switch</string>
+    <string name="btn_imageview">ImageView</string>
+    <string name="switch_show_passwords">Show Passwords</string>
+    <string name="btn_chips">Chips</string>
+    <string name="txt_types_of_chips">Types of Chips</string>
+    <string name="chips_default">Default</string>
+    <string name="chips_entry">Entry</string>
+    <string name="chip_choice">Choice</string>
+    <string name="chip_action">Action</string>
+    <string name="chup_filter">filter</string>
+    <string name="chip_chip_icon">Chip Icon</string>
 </resources>

@@ -165,23 +165,6 @@
         app:layout_constraintStart_toStartOf="@id/leftGuide"
         app:layout_constraintTop_toBottomOf="@id/autoCompleteTextView" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textFieldMaterial"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/centerGuide"
-        app:layout_constraintEnd_toEndOf="@id/rightGuide"
-        app:layout_constraintTop_toBottomOf="@id/multiAutoCompleteTextView2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Material" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
@@ -198,16 +181,16 @@
         android:id="@+id/txtMaterial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
         android:text="Material"
-        android:textColor="#F44336"
-        android:textSize="20sp"
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/_20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/view3"
         app:layout_constraintStart_toEndOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaterial" />
+        app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
 
     <View
         android:id="@+id/view3"
@@ -226,7 +209,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtMaterial"
         app:layout_constraintStart_toStartOf="@id/leftGuide"
         app:layout_constraintEnd_toStartOf="@id/centerGuide"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_10"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="@color/black"
         app:hintTextColor="@color/teal_700"
@@ -260,6 +243,60 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/required_number"
+        android:layout_marginTop="@dimen/dp_10"
+        android:hint="@string/hint_enter_number"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/red_color"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/materialOutline"
+        app:placeholderText="Enter Number"
+        app:prefixText="+91"
+        app:startIconDrawable="@android:drawable/stat_sys_speakerphone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="11" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_error"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:endIconMode="password_toggle"
+        app:errorContentDescription="Too long"
+        app:errorEnabled="true"
+        android:hint="Password"
+        app:boxBackgroundMode="outline"
+        app:placeholderText="Enter Password"
+        app:errorIconDrawable="@android:drawable/ic_dialog_info"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/red_color"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toEndOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/required_number"
+        app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_textEditText"
+            android:inputType="textPassword"
+            android:maxLength="16" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

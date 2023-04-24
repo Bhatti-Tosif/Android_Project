@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat
+import androidx.core.widget.doOnTextChanged
 import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityEditTextBinding
 
@@ -18,6 +21,9 @@ class EditText : AppCompatActivity(), View.OnClickListener {
         setContentView(view)
 
         binding.checkedTextView.setOnClickListener(this)
+
+        //PasswordSetCall
+        passwordSet()
     }
 
     override fun onClick(v: View?) {
@@ -32,6 +38,18 @@ class EditText : AppCompatActivity(), View.OnClickListener {
                     binding.checkedTextView.setChecked(true)
                     binding.checkedTextView.setCheckMarkDrawable(null)
                 }
+            }
+        }
+    }
+    private fun passwordSet() {
+//        binding.passwordError.setEndIconOnClickListener() {
+//            print("end Icone Click")
+//        }
+        binding.passwordTextEditText.doOnTextChanged { text, start, before, count ->
+            if(text!!.length > 12) {
+                binding.passwordError.error = "Too Long"
+            } else if (text!!.length < 10) {
+                binding.passwordError.error = null
             }
         }
     }

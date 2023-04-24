@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.android_practice.R
+import android.widget.CheckBox
 import com.example.android_practice.databinding.ActivityAllWidgetsBinding
 
 class AllWidgets : AppCompatActivity(), View.OnClickListener {
@@ -24,6 +24,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnEditText.setOnClickListener(this)
         binding.btnTextView.setOnClickListener(this)
         binding.buttonPractice.setOnClickListener(this)
+        binding.btnRadioButton.setOnClickListener(this)
+        binding.btnSwitch.setOnClickListener(this)
+        binding.btnImageView.setOnClickListener(this)
+        binding.btnChips.setOnClickListener(this)
 
     }
     override fun onClick(v: View?) {
@@ -38,6 +42,22 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.buttonPractice.id -> {
                 val intent = Intent(this, ButtonPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnRadioButton.id -> {
+                val intent = Intent(this, CheckBoxTry::class.java)
+                startActivity(intent)
+            }
+            binding.btnSwitch.id -> {
+                val intent = Intent(this, SwitchTry::class.java)
+                startActivity(intent)
+            }
+            binding.btnImageView.id -> {
+                val intent = Intent(this, ImageButton::class.java)
+                startActivity(intent)
+            }
+            binding.btnChips.id -> {
+                val intent = Intent(this, Chips::class.java)
                 startActivity(intent)
             }
             else -> print("hello")
