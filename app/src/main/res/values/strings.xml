@@ -46,4 +46,14 @@
     <string name="chip_action">Action</string>
     <string name="chup_filter">filter</string>
     <string name="chip_chip_icon">Chip Icon</string>
+    <string name="txt_customchip">CustomChip</string>
+    <string name="txt_filter">Filter</string>
+    <string name="txt_custom">Custom</string>
+    <string name="txt_new">New</string>
+    <string name="btn_spinner">Spinner</string>
+    <string name="txt_custom_spinner">Custom Spinner</string>
+    <string name="btn_progressbar">ProgressBar</string>
+    <string name="btn_download">Download</string>
+    <string name="txt_value">Value =</string>
+    <string name="tvRating">Rating =</string>
 </resources>

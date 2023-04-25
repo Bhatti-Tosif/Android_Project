@@ -10,4 +10,7 @@
     <color name="btn_color">#429745</color>
     <color name="red_color">#F44336</color>
     <color name="yellow_color">#CDDC39</color>
+
+    <color name="mediumGray">#777474</color>
+    <color name="lightGreay">#BFBBBB</color>
 </resources>

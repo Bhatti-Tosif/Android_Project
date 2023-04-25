@@ -28,7 +28,8 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnSwitch.setOnClickListener(this)
         binding.btnImageView.setOnClickListener(this)
         binding.btnChips.setOnClickListener(this)
-
+        binding.btnSpinner.setOnClickListener(this)
+        binding.btnProgress.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -58,6 +59,14 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnChips.id -> {
                 val intent = Intent(this, Chips::class.java)
+                startActivity(intent)
+            }
+            binding.btnSpinner.id -> {
+                val intent = Intent(this, SpinnerPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnProgress.id -> {
+                val intent = Intent(this, ProgressBarTry::class.java)
                 startActivity(intent)
             }
             else -> print("hello")

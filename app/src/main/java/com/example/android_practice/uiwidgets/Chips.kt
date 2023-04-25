@@ -25,24 +25,33 @@ class Chips : AppCompatActivity(), View.OnClickListener {
         binding.actionChip.setOnCloseIconClickListener(this)
         binding.defaultChip.setOnCloseIconClickListener(this)
 
+        binding.defaultChip.isCheckable = true
+
         binding.iconChip.setOnCloseIconClickListener {
             binding.iconChip.visibility = View.GONE
         }
 
+        setChipBackground()
+
         binding.typeofChipGroup.setOnCheckedStateChangeListener { group, checkedIds ->
-            when(checkedIds) {
-                binding.defaultChip -> {
-                    binding.defaultChip.chipBackgroundColor
+                if(checkedIds.contains(binding.defaultChip.id)) {
+                    binding.defaultChip.chipBackgroundColor = AppCompatResources.getColorStateList(this@Chips, R.color.chip_background_color)
+                }
+                if(checkedIds.contains(binding.entryChip.id)) {
+                    binding.entryChip.isCheckable = true
+                    binding.entryChip.chipBackgroundColor = AppCompatResources.getColorStateList(this@Chips, R.color.chip_background_color)
                 }
             }
         }
-    }
-
     override fun onClick(v: View?) {
         when(v?.id) {
             binding.defaultChip.id -> {
                 binding.defaultChip.setBackgroundColor(Color.BLACK)
             }
         }
+    }
+
+    private fun setChipBackground() {
+
     }
 }

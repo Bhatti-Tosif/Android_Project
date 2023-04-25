@@ -81,4 +81,41 @@
         app:layout_constraintTop_toBottomOf="@+id/typeofChipGroup"
         app:layout_constraintStart_toStartOf="@+id/typeofChipGroup"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCustomChip"
+        android:text="@string/txt_customchip"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:textSize="@dimen/_20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/iconChip"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtCustomChip"
+        app:layout_constraintStart_toStartOf="@+id/txtCustomChip"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="@string/txt_filter" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="@string/txt_custom" />
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="@string/txt_new" />
+    </com.google.android.material.chip.ChipGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
