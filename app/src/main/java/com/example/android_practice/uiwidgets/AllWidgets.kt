@@ -30,6 +30,7 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnChips.setOnClickListener(this)
         binding.btnSpinner.setOnClickListener(this)
         binding.btnProgress.setOnClickListener(this)
+        binding.btnCalendarView.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -69,7 +70,11 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, ProgressBarTry::class.java)
                 startActivity(intent)
             }
-            else -> print("hello")
+            binding.btnCalendarView.id -> {
+                val intent = Intent(this, CalendarView::class.java)
+                startActivity(intent)
+            }
+            else -> print("Wrong")
         }
     }
 }

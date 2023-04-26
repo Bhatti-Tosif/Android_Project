@@ -56,4 +56,9 @@
     <string name="btn_download">Download</string>
     <string name="txt_value">Value =</string>
     <string name="tvRating">Rating =</string>
+    <string name="btn_calendarview">CalendarView</string>
+    <string name="txt_select_date">Select Date</string>
+    <string name="txt_select_time">Select Time</string>
+    <string name="hint_check_autocomplete">Check AutoComplete</string>
+    <string name="txt_players">Players</string>
 </resources>

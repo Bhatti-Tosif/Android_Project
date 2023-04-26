@@ -37,6 +37,13 @@ class SpinnerPractice : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>?) { }
         }
+
+        //AutoComplete textView Adapter
+        val autoAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, players)
+        binding.autoComplete.setAdapter(autoAdapter)
+
+//        val dropdownList = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, players)
+//        binding.materialSpinner.setAdapter(dropdownList)
     }
 
     private fun setupCustomSpinner() {
