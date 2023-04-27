@@ -4,4 +4,11 @@
     <dimen name="edittext_margintop">25dp</dimen>
     <dimen name="btn_radius">20dp</dimen>
     <dimen name="dp_60">60dp</dimen>
+    <dimen name="_60sp">60sp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="_40sp">40sp</dimen>
+    <dimen name="dp_50">50dp</dimen>
 </resources>

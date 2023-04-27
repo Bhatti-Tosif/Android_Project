@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="@drawable/background_img">
+
     <Toolbar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,7 +16,7 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_48"
         android:id="@+id/username_et"
         android:hint="Enter Username"
         android:background="@drawable/custom_edittext"
@@ -26,7 +27,7 @@
         />
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_48"
         android:id="@+id/email_et"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
@@ -37,7 +38,7 @@
         />
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_48"
         android:id="@+id/newPass_et"
         android:hint="Enter New Password"
         android:inputType="textPassword"
@@ -49,7 +50,7 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_48"
         android:id="@+id/confirmPass_et"
         android:hint="Enter Confirm Password"
         android:inputType="textPassword"
