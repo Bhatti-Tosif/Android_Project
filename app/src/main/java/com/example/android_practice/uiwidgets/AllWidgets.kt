@@ -9,14 +9,12 @@ import com.example.android_practice.databinding.ActivityAllWidgetsBinding
 
 class AllWidgets : AppCompatActivity(), View.OnClickListener {
 
-    private var _binding: ActivityAllWidgetsBinding? = null
-
-    private val binding get() = _binding!!
+    private lateinit var binding: ActivityAllWidgetsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        _binding = ActivityAllWidgetsBinding.inflate(layoutInflater)
+        binding = ActivityAllWidgetsBinding.inflate(layoutInflater)
 
         val view = binding.root
         setContentView(view)
