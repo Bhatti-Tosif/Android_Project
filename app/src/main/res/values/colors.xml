@@ -13,4 +13,10 @@
 
     <color name="mediumGray">#777474</color>
     <color name="lightGreay">#BFBBBB</color>
+
+    <color name="blue_bank">#59a4e2</color>
+    <color name="bank_light_blue">#deedf9</color>
+    <color name="bank_navy_blue">#1B1939</color>
+    <color name="light_gray">#D5CFCF</color>
+    <color name="off_white">#EFEFEF</color>
 </resources>
