@@ -29,6 +29,7 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnSpinner.setOnClickListener(this)
         binding.btnProgress.setOnClickListener(this)
         binding.btnCalendarView.setOnClickListener(this)
+        binding.btnInclude.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -70,6 +71,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnCalendarView.id -> {
                 val intent = Intent(this, CalendarView::class.java)
+                startActivity(intent)
+            }
+            binding.btnInclude.id -> {
+                val intent = Intent(this, IncludePractice::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

@@ -113,4 +113,15 @@
         app:layout_constraintStart_toStartOf="@id/buttonPractice"
         app:layout_constraintTop_toBottomOf="@+id/btnProgress" />
 
+    <Button
+        android:id="@+id/btnInclude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/btn_include"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+        app:layout_constraintStart_toStartOf="@id/buttonPractice"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalendarView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
