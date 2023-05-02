@@ -17,16 +17,20 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         val view = binding.root
         setContentView(view)
         binding.btnScreens.setOnClickListener(this)
+        binding.btnUiComponents.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        binding.btnScreens.setOnClickListener {
-            val intent = Intent(this, BankEcLaunchScreen::class.java)
-            startActivity(intent)
-        }
-        binding.btnUiComponents.setOnClickListener {
-            val intent = Intent(this, AllWidgets::class.java)
-            startActivity(intent)
+        when (v?.id) {
+            binding.btnScreens.id -> {
+                val intent = Intent(this, BankEcLaunchScreen::class.java)
+                startActivity(intent)
+            }
+
+            binding.btnUiComponents.id -> {
+                val intent = Intent(this, AllWidgets::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

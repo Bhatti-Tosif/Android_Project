@@ -6,122 +6,179 @@
     android:layout_height="match_parent"
     tools:context=".uiwidgets.AllWidgets">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/button_48dp"
-        android:id="@+id/btn_textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/dp_30"
-        android:text="@string/btn_textview"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonPractice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/AllWidget_button_practice"
-        app:layout_constraintEnd_toEndOf="@+id/btn_textView"
-        app:layout_constraintStart_toStartOf="@+id/btn_textView"
-        app:layout_constraintTop_toBottomOf="@+id/btn_textView" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/allWidget_edit_text"
-        android:textAllCaps="false"
-        android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPractice"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"/>
+            <Button
+                android:id="@+id/btn_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_48dp"
+                android:layout_marginTop="@dimen/dp_30"
+                android:text="@string/btn_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnRadioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/allWidget_radio_button"
-        android:textAllCaps="false"
-        android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditText"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"/>
-    <Button
-        android:id="@+id/btnSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_switch"
-        android:textAllCaps="false"
-        android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@+id/btnRadioButton"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"/>
+            <Button
+                android:id="@+id/buttonPractice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/AllWidget_button_practice"
+                app:layout_constraintEnd_toEndOf="@+id/btn_textView"
+                app:layout_constraintStart_toStartOf="@+id/btn_textView"
+                app:layout_constraintTop_toBottomOf="@+id/btn_textView" />
 
-    <Button
-        android:id="@+id/btnImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_imageview"
-        android:textAllCaps="false"
-        android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@+id/btnSwitch"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"/>
+            <Button
+                android:id="@+id/btnEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/allWidget_edit_text"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/buttonPractice" />
 
-    <Button
-        android:id="@+id/btnChips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/btn_chips"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintTop_toBottomOf="@+id/btnImageView" />
+            <Button
+                android:id="@+id/btnRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/allWidget_radio_button"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnEditText" />
 
-    <Button
-        android:id="@+id/btnSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/btn_spinner"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintTop_toBottomOf="@+id/btnChips" />
+            <Button
+                android:id="@+id/btnSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_switch"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnRadioButton" />
 
-    <Button
-        android:id="@+id/btnProgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/btn_progressbar"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintTop_toBottomOf="@+id/btnSpinner" />
+            <Button
+                android:id="@+id/btnImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_imageview"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnSwitch" />
 
-    <Button
-        android:id="@+id/btnCalendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/btn_calendarview"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintTop_toBottomOf="@+id/btnProgress" />
+            <Button
+                android:id="@+id/btnChips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_chips"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnImageView" />
 
-    <Button
-        android:id="@+id/btnInclude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/btn_include"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@id/buttonPractice"
-        app:layout_constraintStart_toStartOf="@id/buttonPractice"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalendarView" />
+            <Button
+                android:id="@+id/btnSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_spinner"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnChips" />
+
+            <Button
+                android:id="@+id/btnProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_progressbar"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnSpinner" />
+
+            <Button
+                android:id="@+id/btnCalendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_calendarview"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnProgress" />
+
+            <Button
+                android:id="@+id/btnInclude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_include"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnCalendarView" />
+
+            <Button
+                android:id="@+id/btnFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_fab"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnInclude" />
+
+            <Button
+                android:id="@+id/btnSnackBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_custom_snack_bar"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnFab" />
+
+            <Button
+                android:id="@+id/btnTabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_tab_layout"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@+id/btnSnackBar" />
+
+            <Button
+                android:id="@+id/btnAppBarLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_app_bar_layout"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnTabLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

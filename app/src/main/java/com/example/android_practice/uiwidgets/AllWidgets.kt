@@ -30,6 +30,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnProgress.setOnClickListener(this)
         binding.btnCalendarView.setOnClickListener(this)
         binding.btnInclude.setOnClickListener(this)
+        binding.btnFab.setOnClickListener(this)
+        binding.btnSnackBar.setOnClickListener(this)
+        binding.btnTabLayout.setOnClickListener(this)
+        binding.btnAppBarLayout.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -75,6 +79,22 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnInclude.id -> {
                 val intent = Intent(this, IncludePractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnFab.id -> {
+                val intent = Intent(this, FloatingActionButton::class.java)
+                startActivity(intent)
+            }
+            binding.btnSnackBar.id -> {
+                val intent = Intent(this, CustomeSnackBar::class.java)
+                startActivity(intent)
+            }
+            binding.btnTabLayout.id -> {
+                val intent = Intent(this, TabLayoutPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnAppBarLayout.id -> {
+                val intent = Intent(this, TopAppBar::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

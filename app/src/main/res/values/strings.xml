@@ -92,4 +92,26 @@
     <string name="txt_lunch_dinner">Lunch and Dinner</string>
     <string name="tv_price">450</string>
     <string name="btn_on_track">On Track</string>
+    <string name="btn_fab">Fab</string>
+    <string name="fab_extend_fab">Extend fab</string>
+    <string name="fab_add">Add</string>
+    <string name="txt_received">Received</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="tv_custom_snack">Custom Snack</string>
+    <string name="btn_custom_snackBar">Custom SnackBar</string>
+    <string name="txt_dismiss">Dismiss</string>
+    <string name="txt_custom_snack">Custom Snack</string>
+    <string name="txt_android_developer">Android Developer</string>
+    <string name="btn_custom_snack_bar">Custom SnackBar</string>
+    <string name="btn_tab_layout">Tab Layout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_this_is_call_fragment">This Is Call Fragment</string>
+    <string name="txt_this_is_chat_fragment">This is Chat Fragment</string>
+    <string name="txt_this_is_status_fragment">This is Status Fragment</string>
+    <string name="txt_australia">Australia</string>
+    <string name="txt_all_countries">All Countries</string>
+    <string name="txt_china">China</string>
+    <string name="txt_india">India</string>
+    <string name="btn_app_bar_layout">App Bar Layout</string>
 </resources>
