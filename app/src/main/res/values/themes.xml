@@ -25,4 +25,8 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@color/blue_bank</item>
+    </style>
+
 </resources>

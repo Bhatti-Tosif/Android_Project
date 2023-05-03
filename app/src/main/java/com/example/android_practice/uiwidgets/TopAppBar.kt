@@ -11,20 +11,20 @@ class TopAppBar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_top_app_bar)
 
-        val materialToolBar: MaterialToolbar = findViewById(R.id.material_toolBar)
-
-        materialToolBar.setOnMenuItemClickListener {
-            when(it.itemId) {
-                R.id.favorite -> {
-                    Toast.makeText(this, "Favorite Clicked", Toast.LENGTH_SHORT).show()
-                    true
-                }
-                R.id.search -> {
-                    Toast.makeText(this,"Search Clicked", Toast.LENGTH_SHORT).show()
-                    true
-                }
-                else -> false
-            }
-        }
+//        val materialToolBar: MaterialToolbar = findViewById(R.id.material_toolBar)
+//
+//        materialToolBar.setOnMenuItemClickListener {
+//            when(it.itemId) {
+//                R.id.favorite -> {
+//                    Toast.makeText(this, "Favorite Clicked", Toast.LENGTH_SHORT).show()
+//                    true
+//                }
+//                R.id.search -> {
+//                    Toast.makeText(this,"Search Clicked", Toast.LENGTH_SHORT).show()
+//                    true
+//                }
+//                else -> false
+//            }
+//        }
     }
 }

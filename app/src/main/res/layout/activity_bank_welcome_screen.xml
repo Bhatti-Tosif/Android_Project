@@ -57,7 +57,7 @@
         android:id="@+id/etFirstName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/et_height"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_20"
         app:boxBackgroundColor="@color/bank_light_blue"
         app:boxBackgroundMode="outline"
@@ -75,15 +75,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_full_name"
+            android:singleLine="true"
             android:paddingTop="@dimen/dp_16"
-            android:paddingEnd="@dimen/dp_16"/>
+            android:paddingBottom="@dimen/dp_16"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etEmailAddress"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/et_height"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         app:boxBackgroundColor="@color/bank_light_blue"
         app:boxBackgroundMode="outline"
@@ -100,6 +101,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:hint="@string/hint_email_address" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,7 +109,7 @@
         android:id="@+id/etPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/et_height"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         app:boxBackgroundColor="@color/bank_light_blue"
         app:boxBackgroundMode="outline"
@@ -126,15 +128,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_password"
+            android:singleLine="true"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/cbTermAndCondition"
-        android:layout_width="@dimen/dp_50"
-        android:layout_height="@dimen/dp_50"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
         android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
         android:background="@color/bank_light_blue"
+        android:button="@drawable/bank_custom_check_box"
         app:layout_constraintStart_toStartOf="@+id/leftGuide"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 

@@ -69,7 +69,7 @@
     <string name="txt_please_provide_following">Please provide following</string>
     <string name="txt_detail_for_your_new_account">detail for your new account</string>
     <string name="btn_screens">Screens</string>
-    <string name="btn_uicomponents">UIComponents</string>
+    <string name="btn_ui_components">UIComponents</string>
     <string name="hint_full_name">Full Name</string>
     <string name="btn_sign_up_my_account">Sign up my Account</string>
     <string name="btn_sign_up_with_phone_number">Sign up with Phone Number</string>
@@ -114,4 +114,31 @@
     <string name="txt_china">China</string>
     <string name="txt_india">India</string>
     <string name="btn_app_bar_layout">App Bar Layout</string>
+    <string name="btn_Constrain_layouts">Constraint Layouts</string>
+    <string name="btn_relative_layout">Relative Layout</string>
+    <string name="btn_linear_layout">Linear Layout</string>
+    <string name="btn_coordinator_layout">Coordinator Layout</string>
+
+    <string name="content">With the idea of imparting programming
+      knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a
+      dream, GeeksforGeeks. Whether programming excites you or you feel
+      stifled, wondering how to prepare for interview questions or how to
+      ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+      With every tick of time, we are adding arrows in our quiver. From articles
+      on various computer science subjects to programming problems for practice,
+      from basic to premium courses, from technologies to entrance examinations,
+      we have been building ample content with superior quality. In a short span,
+      we have built a community of 1 Million+ Geeks around the world, 20,000+
+      Contributors and 500+ Campus Ambassadors in various colleges across the nation.
+      Our success stories include a lot of students who benefitted in their placements
+      and landed jobs at tech giants. Our vision is to build a gigantic network of
+      geeks and we are only a fraction of it yet.
+    </string>
+    <string name="btn_grid_layout">Grid Layout</string>
+    <string name="btn_collapsing_toolbar">Collapsing ToolBar</string>
+    <string name="hint_select_date">Select Date</string>
+    <string name="btn_custom_calender">Custom Calender</string>
+    <string name="txt_frame_layout_practice">Frame Layout Practice</string>
+    <string name="txt_last_text">Last Text</string>
+    <string name="btn_frame_layout">Frame Layout</string>
 </resources>

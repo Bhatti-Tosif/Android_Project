@@ -47,7 +47,7 @@
         android:id="@+id/etEmailAddress"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/et_height"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_80"
         app:boxBackgroundColor="@color/bank_light_blue"
         app:boxBackgroundMode="outline"
@@ -64,6 +64,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:hint="@string/hint_email_address" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +72,7 @@
         android:id="@+id/etPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/et_height"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         app:boxBackgroundColor="@color/bank_light_blue"
         app:boxBackgroundMode="outline"

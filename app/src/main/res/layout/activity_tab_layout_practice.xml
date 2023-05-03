@@ -68,4 +68,32 @@
             android:text="@string/txt_india" />
 
     </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicator="@drawable/custom_edittext"
+        app:tabIndicatorColor="@color/blue_bank"
+        app:tabIndicatorAnimationDuration="1000"
+        app:tabIconTint="@color/red_color"
+        app:tabMode="fixed"
+        app:tabRippleColor="@color/black"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorAnimationMode="elastic"
+        app:layout_constraintTop_toBottomOf="@+id/scrollableTabLayout">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@android:drawable/ic_media_play"
+            android:text="@string/txt_all_countries" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_india" />
+
+    </com.google.android.material.tabs.TabLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

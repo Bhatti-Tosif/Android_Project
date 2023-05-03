@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
 import com.example.android_practice.databinding.ActivityAllWidgetsBinding
+import com.example.android_practice.layoutPractice.CoordinatorLayout
 
 class AllWidgets : AppCompatActivity(), View.OnClickListener {
 
@@ -34,6 +35,8 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnSnackBar.setOnClickListener(this)
         binding.btnTabLayout.setOnClickListener(this)
         binding.btnAppBarLayout.setOnClickListener(this)
+        binding.btnCollapsingToolBar.setOnClickListener(this)
+        binding.btnCustomCalender.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -95,6 +98,14 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnAppBarLayout.id -> {
                 val intent = Intent(this, TopAppBar::class.java)
+                startActivity(intent)
+            }
+            binding.btnCollapsingToolBar.id -> {
+                val intent = Intent(this, CollapsingToolBarPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnCustomCalender.id -> {
+                val intent = Intent(this, CustomDatePicker::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

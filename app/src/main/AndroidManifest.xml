@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
+            android:name=".layoutPractice.FrameLayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CustomDatePicker"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CollapsingToolBarPractice"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.CoordinatorLayout"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.GridLayoutPractice"
+            android:exported="false" />
+        <activity
             android:name=".uiwidgets.TopAppBar"
             android:exported="false" />
         <activity
@@ -44,7 +59,8 @@
         </activity>
         <activity
             android:name=".screens.BankWelcomeScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".screens.BankEcLaunchScreen"
             android:exported="false" />
@@ -85,7 +101,7 @@
             android:name=".uiwidgets.textView"
             android:exported="true" />
         <activity
-            android:name=".layoutPractice.ConstraintLAyout"
+            android:name=".layoutPractice.ConstraintLayout"
             android:exported="false" />
         <activity
             android:name=".layoutPractice.RelativeLayout"

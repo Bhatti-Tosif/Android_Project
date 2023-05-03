@@ -3,8 +3,6 @@ package com.example.android_practice.layoutPractice
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityRelativeLayoutBinding
 
 class RelativeLayout : AppCompatActivity() {
@@ -20,7 +18,7 @@ class RelativeLayout : AppCompatActivity() {
         setContentView(view)
 
         binding.signUp.setOnClickListener {
-            var intent = Intent(this, ConstraintLAyout::class.java)
+            var intent = Intent(this, ConstraintLayout::class.java)
             startActivity(intent)
         }
 

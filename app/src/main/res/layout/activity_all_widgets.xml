@@ -177,6 +177,28 @@
                 app:layout_constraintStart_toStartOf="@id/buttonPractice"
                 app:layout_constraintTop_toBottomOf="@id/btnTabLayout" />
 
+            <Button
+                android:id="@+id/btnCollapsingToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_collapsing_toolbar"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnAppBarLayout" />
+
+            <Button
+                android:id="@+id/btnCustomCalender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_custom_calender"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnCollapsingToolBar" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
