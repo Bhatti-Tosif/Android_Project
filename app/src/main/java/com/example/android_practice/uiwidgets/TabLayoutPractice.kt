@@ -36,7 +36,7 @@ class TabLayoutPractice : AppCompatActivity() {
 
         binding.tabLayoutWp.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                tab?.let { binding.viewPager.setCurrentItem(it.position)}
+                tab?.let { binding.viewPager.currentItem = it.position }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {

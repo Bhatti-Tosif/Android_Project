@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bank_navy_blue"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.ChatFragment">
+    tools:context=".fragment.LinearManager">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="@dimen/dp_0"

@@ -141,4 +141,10 @@
     <string name="txt_frame_layout_practice">Frame Layout Practice</string>
     <string name="txt_last_text">Last Text</string>
     <string name="btn_frame_layout">Frame Layout</string>
+    <string name="txt_restaurant_name">Restaurant Name</string>
+    <string name="txt_address">Address</string>
+    <string name="btn_recyclerview">RecyclerView</string>
+    <string name="tab_linear_manager">Linear Manager</string>
+    <string name="tab_grid_manager">Grid Manager</string>
+    <string name="tab_staggered_manager">Staggered Manager</string>
 </resources>
