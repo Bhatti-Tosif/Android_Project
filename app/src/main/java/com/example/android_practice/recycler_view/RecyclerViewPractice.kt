@@ -24,7 +24,7 @@ class RecyclerViewPractice : AppCompatActivity() {
         binding = ActivityRecyclerViewPracticeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val fragmentAdapter = FragmentAdapterForRv(this)
+        val fragmentAdapter = FragmentAdapterForRv(this, binding.tabForRv.tabCount)
         binding.viewPager2.adapter = fragmentAdapter
 
         binding.tabForRv.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

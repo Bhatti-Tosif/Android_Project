@@ -8,9 +8,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class FragmentAdapterForRv(var fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
+class FragmentAdapterForRv(var fragmentActivity: FragmentActivity, var tabCount: Int): FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int {
-        return 3
+        return tabCount
     }
 
     override fun createFragment(position: Int): Fragment {
@@ -18,6 +18,7 @@ class FragmentAdapterForRv(var fragmentActivity: FragmentActivity): FragmentStat
             0 -> LinearManager()
             1 -> GridManager()
             2 -> StaggeredLayoutManager()
+            3 -> SearchRecyclerView()
             else -> LinearManager()
         }
     }

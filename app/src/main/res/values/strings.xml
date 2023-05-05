@@ -147,4 +147,9 @@
     <string name="tab_linear_manager">Linear Manager</string>
     <string name="tab_grid_manager">Grid Manager</string>
     <string name="tab_staggered_manager">Staggered Manager</string>
+    <string name="btn_listview">ListView</string>
+    <string name="tab_simple_list">Simple List</string>
+    <string name="tab_custom_list">Custom List</string>
+    <string name="tab_search_view">Search View</string>
+    <string name="txt_search_here">Search Here...</string>
 </resources>

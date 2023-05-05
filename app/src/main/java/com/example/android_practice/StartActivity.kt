@@ -11,6 +11,7 @@ import com.example.android_practice.layoutPractice.FrameLayoutPractice
 import com.example.android_practice.layoutPractice.GridLayoutPractice
 import com.example.android_practice.layoutPractice.LayoutPractice
 import com.example.android_practice.layoutPractice.RelativeLayout
+import com.example.android_practice.listView.SimpleListView
 import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.uiwidgets.AllWidgets
@@ -34,6 +35,7 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnGridLayout.setOnClickListener(this)
         binding.btnFrameLayout.setOnClickListener(this)
         binding.btnRecyclerView.setOnClickListener(this)
+        binding.btnListView.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -72,6 +74,10 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnRecyclerView.id -> {
                 val intent = Intent(this@StartActivity, RecyclerViewPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnListView.id -> {
+                val intent = Intent(this@StartActivity, SimpleListView::class.java)
                 startActivity(intent)
             }
             else -> {
