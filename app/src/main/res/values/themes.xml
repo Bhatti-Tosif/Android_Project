@@ -29,4 +29,12 @@
         <item name="android:statusBarColor">@color/blue_bank</item>
     </style>
 
+    //Custom SearchView
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+
 </resources>

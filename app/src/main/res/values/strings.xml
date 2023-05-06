@@ -152,4 +152,5 @@
     <string name="tab_custom_list">Custom List</string>
     <string name="tab_search_view">Search View</string>
     <string name="txt_search_here">Search Here...</string>
+    <string name="rv_expandable">Expandable</string>
 </resources>

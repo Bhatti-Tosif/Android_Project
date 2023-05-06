@@ -19,6 +19,7 @@ class FragmentAdapterForRv(var fragmentActivity: FragmentActivity, var tabCount:
             1 -> GridManager()
             2 -> StaggeredLayoutManager()
             3 -> SearchRecyclerView()
+            4 -> ExpandableRv()
             else -> LinearManager()
         }
     }

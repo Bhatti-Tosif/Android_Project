@@ -13,6 +13,7 @@
         android:background="@color/bank_navy_blue"
         app:tabIndicator="@drawable/custom_edittext"
         app:tabIndicatorGravity="stretch"
+        app:tabMode="auto"
         app:tabTextColor="@color/white"
         app:tabIndicatorAnimationMode="elastic"
         app:tabIndicatorAnimationDuration="1000"
@@ -38,6 +39,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tab_search_view"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rv_expandable"/>
 
     </com.google.android.material.tabs.TabLayout>
 
