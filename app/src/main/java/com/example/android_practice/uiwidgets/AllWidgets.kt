@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
+import com.example.android_practice.dataBinding.DataBindingPractice
 import com.example.android_practice.databinding.ActivityAllWidgetsBinding
 import com.example.android_practice.layoutPractice.CoordinatorLayout
+import com.example.android_practice.viewPager2.ViewvPagerPractice
 
 class AllWidgets : AppCompatActivity(), View.OnClickListener {
 
@@ -37,6 +39,9 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnAppBarLayout.setOnClickListener(this)
         binding.btnCollapsingToolBar.setOnClickListener(this)
         binding.btnCustomCalender.setOnClickListener(this)
+        binding.btnViewPager2.setOnClickListener(this)
+        binding.btnDataBinding.setOnClickListener(this)
+        binding.btnBottomNavigation.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -106,6 +111,18 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnCustomCalender.id -> {
                 val intent = Intent(this, CustomDatePicker::class.java)
+                startActivity(intent)
+            }
+            binding.btnViewPager2.id -> {
+                val intent = Intent(this, ViewvPagerPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnDataBinding.id -> {
+                val intent = Intent(this, DataBindingPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnBottomNavigation.id -> {
+                val intent = Intent(this, BottomNavigationPractice::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

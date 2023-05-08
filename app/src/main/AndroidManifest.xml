@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
+            android:name=".uiwidgets.BottomNavigationPractice"
+            android:exported="false" />
+        <activity
+            android:name=".dataBinding.DataBindingPractice"
+            android:exported="false" />
+        <activity
+            android:name=".viewPager2.ViewvPagerPractice"
+            android:exported="false" />
+        <activity
             android:name=".listView.SimpleListView"
             android:exported="false" />
         <activity
