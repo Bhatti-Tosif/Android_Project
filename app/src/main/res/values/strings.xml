@@ -161,4 +161,5 @@
     <string name="menu_home">Home</string>
     <string name="menu_download">Download</string>
     <string name="menu_profile">Profile</string>
+    <string name="tab_Swipe">Swipeable</string>
 </resources>

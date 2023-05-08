@@ -1,11 +1,7 @@
 package com.example.android_practice.fragment
 
-import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Lifecycle
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class FragmentAdapterForRv(var fragmentActivity: FragmentActivity, var tabCount: Int): FragmentStateAdapter(fragmentActivity) {
@@ -20,6 +16,7 @@ class FragmentAdapterForRv(var fragmentActivity: FragmentActivity, var tabCount:
             2 -> StaggeredLayoutManager()
             3 -> SearchRecyclerView()
             4 -> ExpandableRv()
+            5 -> SwappableRv()
             else -> LinearManager()
         }
     }
