@@ -12,7 +12,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btn_textView"
@@ -198,6 +198,41 @@
                 app:layout_constraintEnd_toEndOf="@id/buttonPractice"
                 app:layout_constraintStart_toStartOf="@id/buttonPractice"
                 app:layout_constraintTop_toBottomOf="@id/btnCollapsingToolBar" />
+
+            <Button
+                android:id="@+id/btnViewPager2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_viewpager2"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnCustomCalender" />
+
+            <Button
+                android:id="@+id/btnDataBinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_dataBinding"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnCustomCalender" />
+
+            <Button
+                android:id="@+id/btnBottomNavigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/btn_bottomnavigation"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnDataBinding" />
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
