@@ -104,7 +104,7 @@
     <string name="txt_android_developer">Android Developer</string>
     <string name="btn_custom_snack_bar">Custom SnackBar</string>
     <string name="btn_tab_layout">Tab Layout</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_this_is_call_fragment">This Is Call Fragment</string>
     <string name="txt_this_is_chat_fragment">This is Chat Fragment</string>
@@ -153,13 +153,23 @@
     <string name="tab_search_view">Search View</string>
     <string name="txt_search_here">Search Here...</string>
     <string name="rv_expandable">Expandable</string>
-    <string name="btn_viewpager2">ViewPager2</string>
-    <string name="txt_name">Name:</string>
-    <string name="txt_dataBinding_example">DataBinding Example</string>
-    <string name="btn_dataBinding">DataBinding</string>
-    <string name="btn_bottomnavigation">BottomNavigation</string>
-    <string name="menu_home">Home</string>
-    <string name="menu_download">Download</string>
-    <string name="menu_profile">Profile</string>
     <string name="tab_Swipe">Swipeable</string>
+    <string name="tv_rental_id">Rental ID</string>
+    <string name="tv_facility">Facility</string>
+    <string name="tv_reservation_type">Reservation Type</string>
+    <string name="tv_enter_after">Enter After</string>
+    <string name="tv_exit_before">Exit Before</string>
+    <string name="btn_detail">Details</string>
+    <string name="tab_multiple_holder">Multiple Holder</string>
+    <string name="pr_price">$20</string>
+    <string name="cb_is_rented_before">Is Rented Before?</string>
+    <string name="appBar_past_reservation">Past Reservation</string>
+    <string name="btn_filter">Filter</string>
+    <string name="hint_search_by_facility_rental_id_etc">Search by Facility...</string>
+    <string name="btn_tagB_design">TagB Design</string>
+
+    <string name="rate_now"><u>Rate Now</u></string>
+    <string name="txt_give_rating">Give Rating</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_done">Done</string>
 </resources>
