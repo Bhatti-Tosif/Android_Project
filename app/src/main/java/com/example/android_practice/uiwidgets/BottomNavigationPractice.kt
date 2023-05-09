@@ -57,5 +57,6 @@ class BottomNavigationPractice : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, fragment)
         fragmentTransaction.commit()
+
     }
 }

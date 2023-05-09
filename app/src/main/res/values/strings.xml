@@ -180,4 +180,12 @@
     <string name="txt_give_rating">Give Rating</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_done">Done</string>
+    <string name="btn_viewpager2">ViewPager2</string>
+    <string name="txt_name">Name:</string>
+    <string name="txt_dataBinding_example">DataBinding Example</string>
+    <string name="btn_dataBinding">DataBinding</string>
+    <string name="btn_bottomnavigation">BottomNavigation</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_download">Download</string>
+    <string name="menu_profile">Profile</string>
 </resources>
