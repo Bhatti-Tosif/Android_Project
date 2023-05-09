@@ -14,6 +14,7 @@ import com.example.android_practice.layoutPractice.RelativeLayout
 import com.example.android_practice.listView.SimpleListView
 import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
+import com.example.android_practice.screens.tagB.PastReservationDetail
 import com.example.android_practice.uiwidgets.AllWidgets
 
 class StartActivity : AppCompatActivity(), View.OnClickListener {
@@ -36,6 +37,7 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnFrameLayout.setOnClickListener(this)
         binding.btnRecyclerView.setOnClickListener(this)
         binding.btnListView.setOnClickListener(this)
+        binding.btnTagB.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -78,6 +80,10 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnListView.id -> {
                 val intent = Intent(this@StartActivity, SimpleListView::class.java)
+                startActivity(intent)
+            }
+            binding.btnTagB.id -> {
+                val intent = Intent(this, PastReservationDetail::class.java)
                 startActivity(intent)
             }
             else -> {

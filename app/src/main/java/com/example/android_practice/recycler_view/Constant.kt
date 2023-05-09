@@ -7,6 +7,7 @@ object Constant {
     private lateinit var dataList: ArrayList<RvDataModel>
     private lateinit var userDetail: ArrayList<UserDetailData>
     private lateinit var expandData: ArrayList<ExpandDataModel>
+    private lateinit var hotelDataList: ArrayList<HotelData>
     fun getData(): ArrayList<RvDataModel> {
         dataList = ArrayList<RvDataModel>()
         dataList.add(RvDataModel(R.drawable.hotel1, "Double Tree", "Ahmedabad If content is more than increase the size of card"))
@@ -50,5 +51,21 @@ object Constant {
         expandData.add(ExpandDataModel(R.drawable.hotel1, "Taj Hotel", "Mumbai", "It is an 5 Start Hotel"))
 
         return expandData
+    }
+
+    fun getHotelData(): ArrayList<HotelData> {
+        hotelDataList = ArrayList<HotelData>()
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",1, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",1, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",1, "5 Star Hotel"))
+        hotelDataList.add(HotelData(R.drawable.hotel1, "Taj Hotel", "Ahmedabad",0, "5 Star Hotel"))
+
+        return hotelDataList
     }
 }

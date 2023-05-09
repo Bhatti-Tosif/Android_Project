@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class FragmentAdapterForRv(var fragmentActivity: FragmentActivity, var tabCount: Int): FragmentStateAdapter(fragmentActivity) {
+class FragmentAdapterForRv(fragmentActivity: FragmentActivity, var tabCount: Int): FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int {
         return tabCount
     }
@@ -17,6 +17,7 @@ class FragmentAdapterForRv(var fragmentActivity: FragmentActivity, var tabCount:
             3 -> SearchRecyclerView()
             4 -> ExpandableRv()
             5 -> SwappableRv()
+            6 -> MultipleHolderRv()
             else -> LinearManager()
         }
     }

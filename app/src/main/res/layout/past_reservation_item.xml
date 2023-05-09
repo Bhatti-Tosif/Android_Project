@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="prData"
+            type="com.example.android_practice.screens.tagB.dataModel.RentalModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leftGuide"
+            app:layout_constraintGuide_begin="@dimen/dp_20"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rightGuide"
+            app:layout_constraintGuide_end="@dimen/dp_20"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRentalID"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:text="@string/tv_rental_id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/leftGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PRTextViewRentalData"
+            android:id="@+id/tvRentalIDData"
+            android:layout_marginStart="@dimen/pr_tv_marginStart"
+            android:text="@{prData.rentalID}"
+            app:layout_constraintTop_toTopOf="@+id/tvRentalID"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRentalID"
+            app:layout_constraintStart_toEndOf="@+id/tvRentalID" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFacility"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:text="@string/tv_facility"
+            app:layout_constraintTop_toBottomOf="@+id/tvRentalID"
+            app:layout_constraintStart_toStartOf="@id/leftGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFacilityData"
+            style="@style/PRTextViewData"
+            android:layout_marginStart="@dimen/pr_tv_marginStart"
+            android:text="@{prData.facility}"
+            app:layout_constraintTop_toTopOf="@+id/tvFacility"
+            app:layout_constraintBottom_toBottomOf="@id/tvFacility"
+            app:layout_constraintStart_toEndOf="@+id/tvFacility" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:id="@+id/tvReservationType"
+            android:text="@string/tv_reservation_type"
+            app:layout_constraintTop_toBottomOf="@+id/tvFacility"
+            app:layout_constraintStart_toStartOf="@id/leftGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReservationTypeData"
+            style="@style/PRTextViewData"
+            android:layout_marginStart="@dimen/pr_tv_marginStart"
+            android:text="@{prData.reservationType.toString()}"
+            app:layout_constraintTop_toTopOf="@+id/tvReservationType"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReservationType"
+            app:layout_constraintStart_toEndOf="@+id/tvReservationType" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:id="@+id/tvEnterAfter"
+            android:text="@string/tv_enter_after"
+            app:layout_constraintTop_toBottomOf="@+id/tvReservationType"
+            app:layout_constraintStart_toStartOf="@id/leftGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEnterAfterDate"
+            style="@style/PRTextViewData"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:text="@{prData.entryDate}"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterAfter"
+            app:layout_constraintStart_toStartOf="@id/leftGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEnterAfterTime"
+            style="@style/PRTextViewData"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:text="@{prData.entryTime}"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterAfterDate"
+            app:layout_constraintStart_toStartOf="@id/leftGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:id="@+id/tvExitBefore"
+            android:text="@string/tv_exit_before"
+            app:layout_constraintTop_toBottomOf="@+id/tvReservationType"
+            app:layout_constraintStart_toEndOf="@+id/tvEnterAfter"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvExitBeforeDate"
+            style="@style/PRTextViewData"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:text="@{prData.exitDate}"
+            app:layout_constraintTop_toBottomOf="@+id/tvExitBefore"
+            app:layout_constraintStart_toStartOf="@+id/tvExitBefore"
+            app:layout_constraintEnd_toEndOf="@id/rightGuide" />
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvExitBeforeTime"
+            style="@style/PRTextViewData"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            android:text="@{prData.exitTime}"
+            app:layout_constraintTop_toBottomOf="@+id/tvExitBeforeDate"
+            app:layout_constraintStart_toStartOf="@+id/tvExitBeforeDate"
+            app:layout_constraintEnd_toEndOf="@id/rightGuide" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrice"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_30sp"
+            android:text="@{String.valueOf(prData.price)}"
+            android:layout_marginBottom="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuide"
+            app:layout_constraintBottom_toTopOf="@+id/btnDetail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRating"
+            android:text="@{prData.rating.toString()}"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/rightGuide"
+            app:layout_constraintTop_toTopOf="@+id/tvRentalID"
+            app:drawableStartCompat="@drawable/baseline_star_24" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:text="@string/cb_is_rented_before"
+            android:layout_marginTop="@dimen/pr_tv_marginTop"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterAfterTime"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/button_48dp"
+            android:id="@+id/btnDetail"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/btn_detail"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/deepAqua"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintEnd_toEndOf="@id/rightGuide" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
