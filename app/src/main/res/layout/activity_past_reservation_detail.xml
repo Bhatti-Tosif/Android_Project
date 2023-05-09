@@ -27,6 +27,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:id="@+id/iv_backArrow"
                 android:background="@android:color/transparent"
                 android:src="@drawable/baseline_arrow_back_ios_new_24"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,12 +86,13 @@
         app:layout_constraintTop_toBottomOf="@+id/etFilterData"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
         android:id="@+id/prDetailRv"
         app:layout_constraintTop_toBottomOf="@+id/dividerHorizontal"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/past_reservation_item"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

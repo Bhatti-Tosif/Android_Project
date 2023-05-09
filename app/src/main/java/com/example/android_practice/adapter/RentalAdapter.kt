@@ -22,4 +22,10 @@ class RentalAdapter(var rentalData: ArrayList<RentalModel>): RecyclerView.Adapte
         holder.bind(rentalData[position], position)
 
     }
+
+    fun changeData(list: ArrayList<RentalModel>) {
+        rentalData.clear()
+        rentalData.addAll(list)
+        notifyDataSetChanged()
+    }
 }

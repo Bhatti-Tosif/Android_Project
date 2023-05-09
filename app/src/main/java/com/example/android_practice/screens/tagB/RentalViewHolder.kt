@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.R
 import com.example.android_practice.databinding.PastReservationItemBinding
+import com.example.android_practice.screens.tagB.dataModel.Data
 import com.example.android_practice.screens.tagB.dataModel.RentalModel
 import kotlinx.coroutines.NonDisposableHandle.parent
 import java.text.FieldPosition
@@ -21,6 +22,10 @@ class RentalViewHolder(val binding: PastReservationItemBinding): RecyclerView.Vi
         binding.prData = dataModel
         binding.executePendingBindings()
         setUpRating(dataModel, position)
+
+        binding.checkbox.setOnCheckedChangeListener { p0, p1 ->
+            Data.getRentalData()[position].isRented = p1
+        }
     }
 
     private fun setUpRating(dataModel: RentalModel, position: Int) {
@@ -40,14 +45,25 @@ class RentalViewHolder(val binding: PastReservationItemBinding): RecyclerView.Vi
                 cancelButton.setOnClickListener {
                     builder.dismiss()
                 }
-
                 val ratingBar = view.findViewById<RatingBar>(R.id.ratingBar)
 
                 val rateButton = view.findViewById<Button>(R.id.btnDone)
 
+                rateButton.setOnClickListener {
+                    binding.tvRating.text = ratingBar.rating.toString()
+                    binding.tvRating.setCompoundDrawablesWithIntrinsicBounds(
+                        R.drawable.baseline_star_24,
+                        0,
+                        0,
+                        0
+                    )
+                    binding.prData?.rating = ratingBar.rating.toDouble()
+                    Data.getRentalData()[position].rating = ratingBar.rating.toDouble()
+                    builder.dismiss()
+                }
+                builder.setCanceledOnTouchOutside(true)
+                builder.show()
             }
-
-
         } else {
             binding.tvRating.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_star_24, 0, 0, 0)
         }

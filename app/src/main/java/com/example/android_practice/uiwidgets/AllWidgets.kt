@@ -42,6 +42,7 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnViewPager2.setOnClickListener(this)
         binding.btnDataBinding.setOnClickListener(this)
         binding.btnBottomNavigation.setOnClickListener(this)
+        binding.btnToast.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -123,6 +124,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnBottomNavigation.id -> {
                 val intent = Intent(this, BottomNavigationPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnToast.id -> {
+                val intent = Intent(this, ToastPractice::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

@@ -26,5 +26,9 @@ class PastReservationDetail : AppCompatActivity() {
         adapter = RentalAdapter(rentalData)
         binding.prDetailRv.layoutManager = LinearLayoutManager(this)
         binding.prDetailRv.adapter = adapter
+
+        binding.ivBackArrow.setOnClickListener {
+            finish()
+        }
     }
 }

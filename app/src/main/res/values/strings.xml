@@ -154,6 +154,14 @@
     <string name="txt_search_here">Search Here...</string>
     <string name="rv_expandable">Expandable</string>
     <string name="tab_Swipe">Swipeable</string>
+    <string name="btn_viewpager2">ViewPager2</string>
+    <string name="txt_name">Name:</string>
+    <string name="txt_dataBinding_example">DataBinding Example</string>
+    <string name="btn_dataBinding">DataBinding</string>
+    <string name="btn_bottomnavigation">BottomNavigation</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_download">Download</string>
+    <string name="menu_profile">Profile</string>
     <string name="tv_rental_id">Rental ID</string>
     <string name="tv_facility">Facility</string>
     <string name="tv_reservation_type">Reservation Type</string>
@@ -172,4 +180,8 @@
     <string name="txt_give_rating">Give Rating</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_done">Done</string>
+    <string name="btn_simple_toast">Simple Toast</string>
+    <string name="btn_toast">Toast</string>
+    <string name="btn_center_toast">Center Toast</string>
+    <string name="btn_custom_toast">Custom Toast</string>
 </resources>
