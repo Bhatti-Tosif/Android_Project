@@ -41,5 +41,4 @@
     <dimen name="dp_350dp">350dp</dimen>
     <dimen name="pr_tv_marginTop">10dp</dimen>
     <dimen name="pr_tv_marginStart">20dp</dimen>
-    <dimen name="dp_350dp">350dp</dimen>
 </resources>
