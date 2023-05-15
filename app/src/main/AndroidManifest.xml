@@ -12,21 +12,48 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
-            android:name=".activity_intent_fragment.SecondLaunchActivity"
-            android:exported="true" >
+            android:name=".activity_intent_fragment.intent.ExplicitDataReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".activity_intent_fragment.intent.ExplicitIntentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".activity_intent_fragment.intent.ImplicitIntentType"
+            android:exported="false" />
+        <activity
+            android:name=".activity_intent_fragment.intent.DeepLinkingScreen"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="www.flipkart.com" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.amazon.in" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity_intent_fragment.ActivityLifeCyclePractice"
+            android:name=".activity_intent_fragment.intent.ExplicitIntent"
             android:exported="false" />
+        <activity
+            android:name=".activity_intent_fragment.SecondLaunchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity_intent_fragment.ActivityLifeCyclePractice"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SecondActivity"
             android:exported="true"
-            android:screenOrientation="landscape">
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
