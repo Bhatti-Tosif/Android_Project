@@ -184,4 +184,8 @@
     <string name="btn_toast">Toast</string>
     <string name="btn_center_toast">Center Toast</string>
     <string name="btn_custom_toast">Custom Toast</string>
+    <string name="btn_custom_view">Custom View</string>
+    <string name="enter_to_add">Enter to add..</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_add">Add</string>
 </resources>

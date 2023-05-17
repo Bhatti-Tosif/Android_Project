@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
+            android:name=".custom_view.CustomViewPractice"
+            android:exported="false" />
+        <activity
             android:name=".uiwidgets.ToastPractice"
             android:exported="false" />
         <activity

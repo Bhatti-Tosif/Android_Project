@@ -1,18 +1,16 @@
 package com.example.android_practice.recycler_view
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
-import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.R
 import com.example.android_practice.databinding.RvItemViewBinding
 import com.google.android.material.snackbar.Snackbar
 
-class RvAdapter(var dataList: ArrayList<RvDataModel>): RecyclerView.Adapter<RvAdapter.RvViewHolder>() {
+class RvAdapter(private var dataList: ArrayList<RvDataModel> = ArrayList<RvDataModel>()): RecyclerView.Adapter<RvAdapter.RvViewHolder>() {
 
     inner class RvViewHolder(var binding: RvItemViewBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -36,6 +34,14 @@ class RvAdapter(var dataList: ArrayList<RvDataModel>): RecyclerView.Adapter<RvAd
         holder.itemView.setOnClickListener {
             Snackbar.make(it, "Item Is Selected", Snackbar.LENGTH_SHORT).show()
         }
+    }
+
+    fun  setData(newList: ArrayList<RvDataModel>) {
+        val diffUtil = LinearDiffUtilCallBack(dataList, newList)
+        val diffResult = DiffUtil.calculateDiff(diffUtil)
+        dataList.clear()
+        dataList.addAll(newList)
+        diffResult.dispatchUpdatesTo(this)
     }
 
     private fun animationForItem(view: View) {
