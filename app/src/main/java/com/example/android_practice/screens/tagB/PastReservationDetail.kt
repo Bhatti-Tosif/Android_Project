@@ -10,6 +10,8 @@ import com.example.android_practice.databinding.ActivityPastReservationDetailBin
 import com.example.android_practice.databinding.PastReservationItemBinding
 import com.example.android_practice.screens.tagB.dataModel.Data
 import com.example.android_practice.screens.tagB.dataModel.RentalModel
+import com.example.android_practice.screens.tagB.dataModel.ReservationType
+import java.text.FieldPosition
 
 class PastReservationDetail : AppCompatActivity() {
 
@@ -23,12 +25,19 @@ class PastReservationDetail : AppCompatActivity() {
         setContentView(binding.root)
 
         rentalData = Data.getRentalData()
-        adapter = RentalAdapter(rentalData)
+        adapter = RentalAdapter(this::valueChange)
         binding.prDetailRv.layoutManager = LinearLayoutManager(this)
         binding.prDetailRv.adapter = adapter
+        adapter.submitList(rentalData)
+
 
         binding.ivBackArrow.setOnClickListener {
             finish()
         }
+    }
+
+    private fun valueChange(position: Int) {
+        rentalData[position].price += 10
+        adapter.notifyItemChanged(position)
     }
 }

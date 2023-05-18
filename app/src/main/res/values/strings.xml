@@ -188,4 +188,5 @@
     <string name="enter_to_add">Enter to add..</string>
     <string name="btn_clear">Clear</string>
     <string name="btn_add">Add</string>
+    <string name="btn_image_picker">Image Picker</string>
 </resources>

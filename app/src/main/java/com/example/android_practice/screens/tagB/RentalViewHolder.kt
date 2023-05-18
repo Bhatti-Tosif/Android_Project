@@ -16,12 +16,16 @@ import com.example.android_practice.screens.tagB.dataModel.RentalModel
 import kotlinx.coroutines.NonDisposableHandle.parent
 import java.text.FieldPosition
 
-class RentalViewHolder(val binding: PastReservationItemBinding): RecyclerView.ViewHolder(binding.root) {
+class RentalViewHolder(val binding: PastReservationItemBinding, private val changeDetail: (Int) -> Unit): RecyclerView.ViewHolder(binding.root) {
 
     fun bind(dataModel: RentalModel, position: Int) {
         binding.prData = dataModel
         binding.executePendingBindings()
         setUpRating(dataModel, position)
+
+        binding.btnDetail.setOnClickListener {
+            changeDetail(position)
+        }
 
         binding.checkbox.setOnCheckedChangeListener { p0, p1 ->
             Data.getRentalData()[position].isRented = p1

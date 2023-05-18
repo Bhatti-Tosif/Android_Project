@@ -43,6 +43,7 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnDataBinding.setOnClickListener(this)
         binding.btnBottomNavigation.setOnClickListener(this)
         binding.btnToast.setOnClickListener(this)
+        binding.btnImagePicker.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -128,6 +129,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnToast.id -> {
                 val intent = Intent(this, ToastPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnImagePicker.id -> {
+                val intent = Intent(this, ImagePickerWithRv::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")
