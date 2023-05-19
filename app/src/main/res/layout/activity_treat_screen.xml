@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="carbohydrateData"
+            type="com.example.android_practice.recerseKtScreen.dataModel.CarbohydratesData" />
+        <variable
+            name="waterData"
+            type="com.example.android_practice.recerseKtScreen.dataModel.CarbohydratesData" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".recerseKtScreen.TreatScreen">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_backArrow"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/kt_rounded_back_arrow"
+            android:src="?attr/actionModeCloseDrawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_activities"
+            style="@style/ActionBarTitleStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/ib_backArrow"
+            app:layout_constraintEnd_toStartOf="@+id/ib_waves"
+            app:layout_constraintStart_toEndOf="@+id/ib_backArrow"
+            app:layout_constraintTop_toTopOf="@+id/ib_backArrow" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_waves"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/kt_rounded_back_arrow"
+            android:src="@drawable/baseline_supervised_user_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ib_backArrow" />
+
+        <include
+            android:id="@+id/card_carbo"
+            layout="@layout/carbo_card_view"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            bind:carbohydratesData="@{carbohydrateData}"
+            app:layout_constraintEnd_toStartOf="@+id/card_water"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/ib_backArrow"
+            app:layout_constraintTop_toBottomOf="@+id/ib_backArrow" />
+
+        <include
+            android:id="@+id/card_water"
+            layout="@layout/carbo_card_view"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            bind:carbohydratesData="@{waterData}"
+            android:layout_marginStart="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="@+id/ib_waves"
+            app:layout_constraintStart_toEndOf="@+id/card_carbo"
+            app:layout_constraintTop_toTopOf="@id/card_carbo" />
+
+        <ScrollView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_10"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/card_water"
+            app:layout_constraintStart_toStartOf="@+id/card_carbo"
+            app:layout_constraintTop_toBottomOf="@+id/card_carbo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <include
+                    android:id="@+id/card_walking"
+                    layout="@layout/walking_card"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/card_Fitness"
+                    layout="@layout/walking_card"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_walking" />
+
+                <include
+                    android:id="@+id/card_gym"
+                    layout="@layout/walking_card"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_Fitness" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
