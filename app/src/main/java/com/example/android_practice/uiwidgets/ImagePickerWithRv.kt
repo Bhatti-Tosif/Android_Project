@@ -27,12 +27,12 @@ class ImagePickerWithRv : AppCompatActivity(), OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityImagePickerWithRvBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        uriList = arrayListOf()
         binding.btnImagePicker.setOnClickListener(this)
         adapter = ImagePickerAdapter()
-        binding.recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.recycler.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.recycler.adapter = adapter
-
 
     }
 
@@ -44,26 +44,19 @@ class ImagePickerWithRv : AppCompatActivity(), OnClickListener {
         }
     }
 
-    val pickMultipleMedia = registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uris ->
-        // Callback is invoked after the user selects media items or closes the
-        // photo picker.
-        if (uris.isNotEmpty()) {
-            Log.d("PhotoPicker", "Number of items selected: ${uris.size}")
-        } else {
-            Log.d("PhotoPicker", "No media selected")
+    private val pickMultipleMedia =
+        registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uris ->
+            if (uris.isNotEmpty()) {
+                uriList.addAll(uris)
+                adapter.submitList(uriList)
+                adapter.notifyDataSetChanged()
+            } else {
+                Log.d("PhotoPicker", "No media selected")
+            }
         }
-    }
+
     private fun openImagePicker() {
         pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageAndVideo))
     }
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (resultCode == RESULT_OK && requestCode == pickImage) {
-//            data?.let {
-//                uriList.add(it.data)
-//            }
-//            adapter.submitList(uriList)
-//        }
-//    }
 }
