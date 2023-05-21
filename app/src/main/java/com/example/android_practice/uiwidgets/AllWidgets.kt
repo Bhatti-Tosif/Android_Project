@@ -8,6 +8,7 @@ import android.widget.CheckBox
 import com.example.android_practice.dataBinding.DataBindingPractice
 import com.example.android_practice.databinding.ActivityAllWidgetsBinding
 import com.example.android_practice.layoutPractice.CoordinatorLayout
+import com.example.android_practice.screens.AddCellPractice
 import com.example.android_practice.viewPager2.ViewvPagerPractice
 
 class AllWidgets : AppCompatActivity(), View.OnClickListener {
@@ -44,6 +45,7 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnBottomNavigation.setOnClickListener(this)
         binding.btnToast.setOnClickListener(this)
         binding.btnImagePicker.setOnClickListener(this)
+        binding.btnAddCell.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -133,6 +135,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnImagePicker.id -> {
                 val intent = Intent(this, ImagePickerWithRv::class.java)
+                startActivity(intent)
+            }
+            binding.btnAddCell.id -> {
+                val intent = Intent(this, AddCellPractice::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

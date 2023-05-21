@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/blue_bank">
+
+        <EditText
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_no1"
+            android:hint="No 1"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/custom_edittext"
+            android:backgroundTint="@color/bank_light_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/et_no2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_no2"
+            android:hint="No 2"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/custom_edittext"
+            app:layout_constraintStart_toEndOf="@+id/et_no1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_add"
+            app:layout_constraintTop_toBottomOf="@+id/et_no2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_total"
+            android:text="Total: "
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintTop_toBottomOf="@+id/et_no1"
+            app:layout_constraintStart_toStartOf="@id/et_no1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_total_count"
+            android:text=""
+            tools:text="100"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintEnd_toStartOf="@id/spinner_add"
+            app:layout_constraintTop_toBottomOf="@+id/et_no1"
+            app:layout_constraintStart_toEndOf="@id/tv_total"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_images"
+            app:layout_constraintTop_toBottomOf="@id/tv_total"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_pick_image"
+            android:backgroundTint="@color/orange"
+            android:text="Pick Image"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_add"
+            android:drawableEnd="@android:drawable/ic_menu_report_image"
+            app:layout_constraintTop_toBottomOf="@id/rv_images"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab_add"
+            app:fabSize="mini"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintTop_toBottomOf="@+id/btn_pick_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/btn_add" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
