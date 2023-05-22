@@ -35,7 +35,7 @@ class SwappableRv : Fragment() {
         return binding.root
     }
 
-    fun swappable(data: ArrayList<RvDataModel>) {
+    private fun swappable(data: ArrayList<RvDataModel>) {
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             override fun onMove(
                 recyclerView: RecyclerView,

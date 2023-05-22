@@ -1,5 +1,6 @@
 package com.example.android_practice.uiwidgets
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +45,7 @@ class ImagePickerWithRv : AppCompatActivity(), OnClickListener {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private val pickMultipleMedia =
         registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uris ->
             if (uris.isNotEmpty()) {

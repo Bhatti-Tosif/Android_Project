@@ -46,6 +46,7 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
         binding.btnToast.setOnClickListener(this)
         binding.btnImagePicker.setOnClickListener(this)
         binding.btnAddCell.setOnClickListener(this)
+        binding.btnBottomSheet.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         when(v?.id) {
@@ -139,6 +140,10 @@ class AllWidgets : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnAddCell.id -> {
                 val intent = Intent(this, AddCellPractice::class.java)
+                startActivity(intent)
+            }
+            binding.btnBottomSheet.id -> {
+                val intent = Intent(this, BottomSheetPractice::class.java)
                 startActivity(intent)
             }
             else -> print("Wrong")

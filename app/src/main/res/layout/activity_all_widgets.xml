@@ -265,6 +265,17 @@
                 app:layout_constraintStart_toStartOf="@id/buttonPractice"
                 app:layout_constraintTop_toBottomOf="@id/btnImagePicker" />
 
+            <Button
+                android:id="@+id/btnBottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="BottomSheeet"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/buttonPractice"
+                app:layout_constraintStart_toStartOf="@id/buttonPractice"
+                app:layout_constraintTop_toBottomOf="@id/btnAddCell" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

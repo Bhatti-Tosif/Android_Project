@@ -17,7 +17,7 @@
             android:id="@+id/et_no1"
             android:hint="No 1"
             android:inputType="numberDecimal"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_50"
             android:background="@drawable/custom_edittext"
             android:backgroundTint="@color/bank_light_blue"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:id="@+id/et_no2"
             android:hint="No 2"
             android:inputType="numberDecimal"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_50"
             android:background="@drawable/custom_edittext"
             app:layout_constraintStart_toEndOf="@+id/et_no1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rv_images"
+            tools:listitem="@layout/picked_image_detail"
             app:layout_constraintTop_toBottomOf="@id/tv_total"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -93,6 +94,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/btn_add" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_cancel"
+            android:backgroundTint="@color/black"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
