@@ -1,4 +1,4 @@
-package com.example.android_practice.recycler_view_reverse_kt
+package com.example.android_practice.recycler_view_reverse_kt.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

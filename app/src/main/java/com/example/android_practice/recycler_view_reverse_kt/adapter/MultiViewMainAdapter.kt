@@ -1,21 +1,23 @@
-package com.example.android_practice.recycler_view_reverse_kt
+package com.example.android_practice.recycler_view_reverse_kt.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_practice.databinding.DropDownViewItemBinding
 import com.example.android_practice.databinding.HorizontalRecylerImageViewBinding
-import com.example.android_practice.databinding.SimpleViewItemListBinding
+import com.example.android_practice.databinding.ItemDropDownViewTypeBinding
+import com.example.android_practice.databinding.ItemSimpleViewTypeListBinding
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.CommentDataModal
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.MultiViewType
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.ViewType
 
-class MultiViewMainAdapter(val onPostClick: (Int) -> Unit, val onSimpleViewClick: (MultiViewType.SimpleItem) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MultiViewMainAdapter(
+    val onPostClick: (Int) -> Unit,
+    val onSimpleViewClick: (MultiViewType.SimpleItem) -> Unit
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private lateinit var imagesList: ArrayList<Int>
 
@@ -25,11 +27,38 @@ class MultiViewMainAdapter(val onPostClick: (Int) -> Unit, val onSimpleViewClick
     private lateinit var commentList: ArrayList<CommentDataModal>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when(viewType) {
-            ViewType.SimpleView.ordinal -> SimpleViewHolder(SimpleViewItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            ViewType.HorizontalView.ordinal -> HorizontalViewHolder(HorizontalRecylerImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            ViewType.DropDownView.ordinal -> DropDownVewHolder(DropDownViewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            else -> SimpleViewHolder(SimpleViewItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return when (viewType) {
+            ViewType.SimpleView.ordinal -> SimpleViewHolder(
+                ItemSimpleViewTypeListBinding.inflate(
+                    LayoutInflater.from(parent.context),
+                    parent,
+                    false
+                )
+            )
+
+            ViewType.HorizontalView.ordinal -> HorizontalViewHolder(
+                HorizontalRecylerImageViewBinding.inflate(
+                    LayoutInflater.from(parent.context),
+                    parent,
+                    false
+                )
+            )
+
+            ViewType.DropDownView.ordinal -> DropDownVewHolder(
+                ItemDropDownViewTypeBinding.inflate(
+                    LayoutInflater.from(parent.context),
+                    parent,
+                    false
+                )
+            )
+
+            else -> SimpleViewHolder(
+                ItemSimpleViewTypeListBinding.inflate(
+                    LayoutInflater.from(
+                        parent.context
+                    ), parent, false
+                )
+            )
         }
     }
 
@@ -50,7 +79,8 @@ class MultiViewMainAdapter(val onPostClick: (Int) -> Unit, val onSimpleViewClick
         return dataList[position].viewType.ordinal
     }
 
-    inner class SimpleViewHolder(private val binding: SimpleViewItemListBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class SimpleViewHolder(private val binding: ItemSimpleViewTypeListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MultiViewType.SimpleItem) {
             binding.simpleTypeData = item
             binding.executePendingBindings()
@@ -60,12 +90,15 @@ class MultiViewMainAdapter(val onPostClick: (Int) -> Unit, val onSimpleViewClick
         }
     }
 
-    inner class HorizontalViewHolder(private val binding: HorizontalRecylerImageViewBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class HorizontalViewHolder(private val binding: HorizontalRecylerImageViewBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         init {
             val snapHelper = LinearSnapHelper()
             snapHelper.attachToRecyclerView(binding.rvHorizontalPost)
-            binding.rvHorizontalPost.layoutManager = LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
+            binding.rvHorizontalPost.layoutManager =
+                LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
         }
+
         fun bind(item: MultiViewType.HorizontalItem) {
             horizontalAdapter = HorizontalAdapter(onPostClick)
             binding.rvHorizontalPost.adapter = horizontalAdapter
@@ -74,10 +107,13 @@ class MultiViewMainAdapter(val onPostClick: (Int) -> Unit, val onSimpleViewClick
         }
     }
 
-    inner class DropDownVewHolder(private val binding: DropDownViewItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class DropDownVewHolder(private val binding: ItemDropDownViewTypeBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         init {
-            binding.rvListOfComment.layoutManager = LinearLayoutManager(binding.root.context, LinearLayoutManager.VERTICAL, false)
+            binding.rvListOfComment.layoutManager =
+                LinearLayoutManager(binding.root.context, LinearLayoutManager.VERTICAL, false)
         }
+
         fun bind(item: MultiViewType.DropdownItem) {
             binding.dropDownData = item
             binding.executePendingBindings()
@@ -99,9 +135,11 @@ class MultiViewMainAdapter(val onPostClick: (Int) -> Unit, val onSimpleViewClick
                 item.isExpand = !item.isExpand
             }
         }
+
         private fun expandComment() {
             binding.rvListOfComment.visibility = View.VISIBLE
         }
+
         private fun collapsedComment() {
             binding.rvListOfComment.visibility = View.GONE
         }

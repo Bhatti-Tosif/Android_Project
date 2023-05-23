@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".recycler_view_reverse_kt.MultiViewMainActivity">
+    tools:context=".recycler_view_reverse_kt.activity.MultiViewMainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main"

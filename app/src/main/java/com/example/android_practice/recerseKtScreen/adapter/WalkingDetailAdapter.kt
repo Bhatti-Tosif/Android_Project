@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_practice.databinding.WalkingCardBinding
+import com.example.android_practice.databinding.ItemWalkingCardBinding
 import com.example.android_practice.recerseKtScreen.dataModel.Helper
 import com.example.android_practice.recerseKtScreen.dataModel.WalkingData
 import com.example.android_practice.recerseKtScreen.dataModel.WorkOutData
@@ -14,7 +14,7 @@ class WalkingDetailAdapter: RecyclerView.Adapter<WalkingDetailAdapter.WalkingVie
     private val walkingDataList = ArrayList<WalkingData>()
     private lateinit var workOutData: ArrayList<WorkOutData>
 
-    inner class WalkingViewHolder(val binding: WalkingCardBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class WalkingViewHolder(val binding: ItemWalkingCardBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: WalkingData) {
             binding.walkingData = item
@@ -27,7 +27,7 @@ class WalkingDetailAdapter: RecyclerView.Adapter<WalkingDetailAdapter.WalkingVie
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WalkingViewHolder {
-        return WalkingViewHolder(WalkingCardBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return WalkingViewHolder(ItemWalkingCardBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun getItemCount(): Int {

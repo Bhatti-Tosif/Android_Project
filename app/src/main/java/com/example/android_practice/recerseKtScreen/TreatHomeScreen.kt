@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.SnapHelper
 import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityTreatHomeScreenBinding
-import com.example.android_practice.databinding.DetailCardTodayActivitiesBinding
 import com.example.android_practice.databinding.WorkoutDetailCardBinding
 import com.example.android_practice.recerseKtScreen.adapter.ClickHandle
 import com.example.android_practice.recerseKtScreen.adapter.MedicineAdapter
@@ -20,9 +19,6 @@ import com.example.android_practice.recerseKtScreen.adapter.SysCardAdapter
 import com.example.android_practice.recerseKtScreen.dataModel.Helper
 import com.example.android_practice.recerseKtScreen.dataModel.MedicineData
 import com.example.android_practice.recerseKtScreen.dataModel.SysData
-import com.example.android_practice.recerseKtScreen.dataModel.WorkOutData
-import java.time.chrono.HijrahEra
-
 class TreatHomeScreen : AppCompatActivity(), ClickHandle {
 
     private lateinit var binding: ActivityTreatHomeScreenBinding

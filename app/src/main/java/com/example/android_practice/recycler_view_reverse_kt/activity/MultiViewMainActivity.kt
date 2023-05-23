@@ -1,10 +1,11 @@
-package com.example.android_practice.recycler_view_reverse_kt
+package com.example.android_practice.recycler_view_reverse_kt.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android_practice.databinding.ActivityMultiViewMainBinding
+import com.example.android_practice.recycler_view_reverse_kt.adapter.MultiViewMainAdapter
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.Helper
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.MultiViewType
 

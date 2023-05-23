@@ -124,7 +124,7 @@
                     app:layout_constraintEnd_toEndOf="@id/glucose_card"
                     app:layout_constraintTop_toBottomOf="@id/glucose_card"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/sys_card"/>
+                    tools:listitem="@layout/item_sys_card"/>
 
                 <TextView
                     android:id="@+id/tv_today_activities"
@@ -159,7 +159,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/rv_sys_card"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginBottom="@dimen/dp_20"
-                    tools:listitem="@layout/detail_card_today_activities"/>
+                    tools:listitem="@layout/item_medicine_detail_list"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

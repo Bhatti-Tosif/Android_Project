@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.R
-import com.example.android_practice.databinding.SysCardBinding
+import com.example.android_practice.databinding.ItemSysCardBinding
 import com.example.android_practice.recerseKtScreen.dataModel.Helper
 import com.example.android_practice.recerseKtScreen.dataModel.SysData
 
@@ -14,7 +14,8 @@ class SysCardAdapter(private val onLikedInterFace: ClickHandle) :
 
     val dataList = ArrayList<SysData>()
 
-    inner class SysViewHolder(val binding: SysCardBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class SysViewHolder(val binding: ItemSysCardBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bindSysCardData(sysData: SysData, position: Int) {
             binding.sysData = sysData
             binding.executePendingBindings()
@@ -35,7 +36,7 @@ class SysCardAdapter(private val onLikedInterFace: ClickHandle) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SysViewHolder {
         return SysViewHolder(
-            SysCardBinding.inflate(
+            ItemSysCardBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
