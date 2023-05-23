@@ -10,8 +10,7 @@ object Helper {
     private lateinit var walkingDataList: ArrayList<WalkingData>
     private lateinit var workoutDataList: ArrayList<WorkOutData>
     private lateinit var glucoseDetailList: ArrayList<WorkOutData>
-    private lateinit var systolicDataList: SysData
-    private lateinit var diaData: SysData
+    private lateinit var systolicDataList: ArrayList<SysData>
     private lateinit var medicineDataList: ArrayList<MedicineData>
     private lateinit var compoundsDetail: GlucoseCardData
 
@@ -58,7 +57,7 @@ object Helper {
     }
 
     fun getWorkOutData(context: Context): ArrayList<WorkOutData> {
-        workoutDataList = ArrayList<WorkOutData>()
+        workoutDataList = ArrayList()
         workoutDataList.add(
             WorkOutData(
                 "Calories",
@@ -109,8 +108,18 @@ object Helper {
         return glucoseDetailList
     }
 
-    fun getSystolicCardData(): SysData {
-        return SysData("SYS", "1120", "The meanings of care")
+    fun getSystolicCardData(): ArrayList<SysData> {
+        systolicDataList = arrayListOf()
+        systolicDataList.add(SysData("SYS", "1120", "The meanings of care", true))
+        systolicDataList.add(SysData("DIA", "79", "Growing to meet your needs.", false))
+        systolicDataList.add(SysData("SYS", "1120", "The meanings of care", false))
+        systolicDataList.add(SysData("SYS", "1120", "The meanings of care", false))
+        systolicDataList.add(SysData("DIA", "79", "Growing to meet your needs.",))
+        systolicDataList.add(SysData("DIA", "79", "Growing to meet your needs."))
+        systolicDataList.add(SysData("DIA", "79", "Growing to meet your needs."))
+        systolicDataList.add(SysData("DIA", "79", "Growing to meet your needs."))
+        systolicDataList.add(SysData("DIA", "79", "Growing to meet your needs."))
+        return systolicDataList
     }
 
     fun getDiaCardData(): SysData {
@@ -123,6 +132,8 @@ object Helper {
         medicineDataList.add(MedicineData("Ketoprofen", "Before Lunch", "10mg", AppCompatResources.getDrawable(context, R.drawable.medication_liquid)))
         medicineDataList.add(MedicineData("Paracetamol", "After Lunch", "50mg", AppCompatResources.getDrawable(context, R.drawable.medication_liquid)))
         medicineDataList.add(MedicineData("Other Medicine", "After Lunch", "50mg", AppCompatResources.getDrawable(context, R.drawable.medication_liquid)))
+        medicineDataList.add(MedicineData("Other Medicine", "After Lunch", "50mg", AppCompatResources.getDrawable(context, R.drawable.medication_liquid)))
+        medicineDataList.add(MedicineData("Ketoprofen", "Before Lunch", "10mg", AppCompatResources.getDrawable(context, R.drawable.medication_liquid)))
         return medicineDataList
     }
 
@@ -130,6 +141,7 @@ object Helper {
         compoundsDetail = GlucoseCardData("Glucose:", "5.156 mmol/L", "You're on good state!")
         return compoundsDetail
     }
-
-
+    enum class PayloadConstants {
+        LikedButtonChanged
+    }
 }

@@ -5,18 +5,10 @@
     xmlns:bind="http://schemas.android.com/apk/res/android">
 
     <data>
-        
+
         <variable
             name="glucoseCardData"
             type="com.example.android_practice.recerseKtScreen.dataModel.GlucoseCardData" />
-
-        <variable
-            name="sysCardData"
-            type="com.example.android_practice.recerseKtScreen.dataModel.SysData" />
-
-        <variable
-            name="diaCardData"
-            type="com.example.android_practice.recerseKtScreen.dataModel.SysData" />
 
     </data>
 
@@ -122,28 +114,17 @@
                     app:layout_constraintStart_toStartOf="@+id/tv_heading"
                     app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-                <include
-                    android:id="@+id/sys_card"
-                    layout="@layout/sys_card"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="@dimen/dp_0"
-                    bind:sysData="@{sysCardData}"
-                    android:layout_marginTop="@dimen/dp_20"
-                    app:layout_constraintBottom_toBottomOf="@+id/dia_card"
-                    app:layout_constraintEnd_toStartOf="@+id/dia_card"
-                    app:layout_constraintStart_toStartOf="@+id/glucose_card"
-                    app:layout_constraintTop_toBottomOf="@+id/glucose_card" />
-
-                <include
-                    android:id="@+id/dia_card"
-                    layout="@layout/sys_card"
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
-                    bind:sysData="@{diaCardData}"
-                    android:layout_marginStart="@dimen/dp_10"
-                    app:layout_constraintEnd_toEndOf="@+id/glucose_card"
-                    app:layout_constraintStart_toEndOf="@+id/sys_card"
-                    app:layout_constraintTop_toTopOf="@+id/sys_card" />
+                    android:id="@+id/rv_sys_card"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_20"
+                    app:layout_constraintStart_toStartOf="@+id/glucose_card"
+                    app:layout_constraintEnd_toEndOf="@id/glucose_card"
+                    app:layout_constraintTop_toBottomOf="@id/glucose_card"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/sys_card"/>
 
                 <TextView
                     android:id="@+id/tv_today_activities"
@@ -155,7 +136,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/tv_details"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="@id/ib_profile"
-                    app:layout_constraintTop_toBottomOf="@id/sys_card" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_sys_card" />
 
                 <TextView
                     android:id="@+id/tv_details"
@@ -168,47 +149,17 @@
                     app:layout_constraintStart_toEndOf="@+id/tv_today_activities"
                     app:layout_constraintTop_toTopOf="@id/tv_today_activities" />
 
-                <include
-                    android:id="@+id/azoptex_card"
-                    layout="@layout/detail_card_today_activities"
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
+                    android:id="@+id/rv_medicine_data"
                     android:layout_marginTop="@dimen/dp_20"
-                    app:layout_constraintEnd_toEndOf="@+id/dia_card"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_today_activities"
                     app:layout_constraintStart_toStartOf="@+id/tv_today_activities"
-                    app:layout_constraintTop_toBottomOf="@id/tv_today_activities" />
-
-                <include
-                    android:id="@+id/ketoprofin"
-                    layout="@layout/detail_card_today_activities"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    app:layout_constraintEnd_toEndOf="@+id/dia_card"
-                    app:layout_constraintStart_toStartOf="@+id/tv_today_activities"
-                    app:layout_constraintTop_toBottomOf="@id/azoptex_card" />
-
-                <include
-                    android:id="@+id/otherParacetamol"
-                    layout="@layout/detail_card_today_activities"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    app:layout_constraintEnd_toEndOf="@+id/dia_card"
-                    app:layout_constraintStart_toStartOf="@+id/tv_today_activities"
-                    app:layout_constraintTop_toBottomOf="@id/ketoprofin" />
-
-                <include
-                    android:id="@+id/otherMedicine"
-                    layout="@layout/detail_card_today_activities"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:layout_marginBottom="@dimen/dp_10"
-                    app:layout_constraintEnd_toEndOf="@+id/dia_card"
-                    app:layout_constraintStart_toStartOf="@+id/tv_today_activities"
-                    app:layout_constraintTop_toBottomOf="@id/otherParacetamol"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    app:layout_constraintEnd_toEndOf="@+id/rv_sys_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    tools:listitem="@layout/detail_card_today_activities"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

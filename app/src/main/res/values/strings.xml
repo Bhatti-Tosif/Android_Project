@@ -219,10 +219,9 @@
     <string name="hint_enter_to_add">Enter to Add..</string>
     <string name="btn_clear">Clear</string>
     <string name="btn_add">Add</string>
+    <string name="txt_read_comment">Read comment</string>
     <string name="btn_custom_view">Custom View</string>
     <string name="enter_to_add">Enter to add..</string>
-    <string name="btn_clear">Clear</string>
-    <string name="btn_add">Add</string>
     <string name="btn_image_picker">Image Picker</string>
 
 
