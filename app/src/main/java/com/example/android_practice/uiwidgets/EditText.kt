@@ -52,5 +52,6 @@ class EditText : AppCompatActivity(), View.OnClickListener {
                 binding.passwordError.error = null
             }
         }
+
     }
 }

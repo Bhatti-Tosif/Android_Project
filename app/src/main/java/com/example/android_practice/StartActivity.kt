@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.android_practice.custom_view.CustomViewPractice
 import com.example.android_practice.databinding.ActivityStartBinding
 import com.example.android_practice.layoutPractice.CoordinatorLayout
 import com.example.android_practice.layoutPractice.FrameLayoutPractice
@@ -13,6 +11,7 @@ import com.example.android_practice.layoutPractice.GridLayoutPractice
 import com.example.android_practice.layoutPractice.LayoutPractice
 import com.example.android_practice.layoutPractice.RelativeLayout
 import com.example.android_practice.listView.SimpleListView
+import com.example.android_practice.recerseKtScreen.activity.TreatHomeScreen
 import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.screens.tagB.PastReservationDetail
@@ -39,7 +38,8 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnRecyclerView.setOnClickListener(this)
         binding.btnListView.setOnClickListener(this)
         binding.btnTagB.setOnClickListener(this)
-        binding.btnCustomView.setOnClickListener(this)
+        binding.btnReverseKt.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
@@ -88,8 +88,15 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, PastReservationDetail::class.java)
                 startActivity(intent)
             }
-            binding.btnCustomView.id -> {
-                val intent = Intent(this, CustomViewPractice::class.java)
+
+
+
+
+
+
+
+            binding.btnReverseKt.id -> {
+                val intent = Intent(this, TreatHomeScreen::class.java)
                 startActivity(intent)
             }
             else -> {

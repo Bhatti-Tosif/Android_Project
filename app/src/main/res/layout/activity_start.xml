@@ -115,22 +115,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnRecyclerView" />
 
-            <Button
-                android:id="@+id/btnTagB"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_48dp"
-                android:layout_marginTop="@dimen/dp_30"
-                android:text="@string/btn_tagB_design"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnListView" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_48dp"
+        android:id="@+id/btnTagB"
+        app:layout_constraintTop_toBottomOf="@+id/btnListView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/btn_tagB_design"/>
 
             <Button
-                android:id="@+id/btnCustomView"
+                android:id="@+id/btnReverseKt"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_48dp"
                 android:layout_marginTop="@dimen/dp_30"
-                android:text="@string/btn_custom_view"
+                android:text="@string/btn_reverse_kt"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnTagB" />

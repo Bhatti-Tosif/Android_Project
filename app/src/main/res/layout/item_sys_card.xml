@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sysData"
+            type="com.example.android_practice.recerseKtScreen.dataModel.SysData" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_15">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/card_bg_blue">
+
+            <TextView
+                android:id="@+id/tv_sys"
+                style="@style/SysCardHeadingText"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{sysData.sysTitle}"
+                tools:text="SYS"
+                app:layout_constraintEnd_toStartOf="@+id/ib_heart"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ib_heart"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/heart"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="@id/tv_sys"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_sys"
+                app:layout_constraintTop_toTopOf="@+id/tv_sys" />
+
+            <TextView
+                android:id="@+id/tv_data_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@{sysData.sysData}"
+                tools:text="1120"
+                style="@style/SysCardQuantityText"
+                app:layout_constraintStart_toStartOf="@id/tv_sys"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sys" />
+
+            <TextView
+                android:id="@+id/tv_mmHg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2"
+                android:text="@string/txt_mmhg"
+                android:textColor="@color/glucose_sub_heading"
+                app:layout_constraintStart_toEndOf="@+id/tv_data_value"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_data_value" />
+
+            <TextView
+                android:id="@+id/tv_data_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{sysData.sysDesc}"
+                tools:text="The meaning of care"
+                android:layout_marginTop="@dimen/dp_5"
+                android:maxEms="7"
+                android:lines="2"
+                android:textColor="@color/gray_sub_heading"
+                android:layout_marginBottom="@dimen/dp_20"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintTop_toBottomOf="@+id/tv_data_value"
+                app:layout_constraintStart_toStartOf="@+id/tv_data_value"
+                app:layout_constraintEnd_toStartOf="@+id/iv_bottom_icon"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:id="@+id/iv_bottom_icon"
+                app:layout_constraintEnd_toEndOf="@id/ib_heart"
+                app:layout_constraintStart_toEndOf="@+id/tv_data_desc"
+                android:src="@drawable/ic_girl"
+                app:layout_constraintBottom_toBottomOf="@id/tv_data_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

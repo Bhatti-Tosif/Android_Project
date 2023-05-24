@@ -37,7 +37,7 @@ class ProgressBarTry : AppCompatActivity() {
                 while (count <= 100) {
                     count += 10
                     pd.progress = count
-                    Thread.sleep(2000)
+                    Thread.sleep(1000)
                 }
                 if(count >= 100) {
                     pd.dismiss()
