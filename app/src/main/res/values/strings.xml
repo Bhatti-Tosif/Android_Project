@@ -184,10 +184,44 @@
     <string name="btn_toast">Toast</string>
     <string name="btn_center_toast">Center Toast</string>
     <string name="btn_custom_toast">Custom Toast</string>
-    <string name="btn_custom_view">Custom View</string>
-    <string name="enter_to_add">Enter to add..</string>
+    <string name="txt_activities">Activities</string>
+    <string name="txt_carbo">Carbo</string>
+    <string name="desc_medical_text">A medical student-run clinic is a health care delivery program in which medical students take primary responsibility for logistics</string>
+    <string name="btn_reverse_kt">Reverse KT</string>
+
+    //Revers kt Screen
+    <string name="txt_water"> Water</string>
+    <string name="txt_heading_revers_kt">It\'s all about how we treat you</string>
+    <string name="txt_subHeading_reversKt">That\'s Powerful healing</string>
+    <string name="txt_today_activities_reverse_kt">Today Activities</string>
+    <string name="txt_details">Details</string>
+    <string name="txt_after_lunch">After Lunch</string>
+    <string name="txt_azoptex_obat">Azoptex Obat</string>
+    <string name="txt_10mg">10mg</string>
+    <string name="txt_2Liters">2 Liters</string>
+    <string name="perDay">/day</string>
+    <string name="txt_Duration">Duration</string>
+    <string name="txt_2Hour">2 hours</string>
+    <string name="txt_speed">Speed</string>
+    <string name="txt_4Km">4 hours</string>
+    <string name="txt_Fitness">Fitness</string>
+    <string name="percentage_sign">%</string>
+    <string name="txt_today_at">Today at:</string>
+    <string name="txt_mmhg">mmHg.</string>
+    <string name="txt_description">Description</string>
+    <string name="txt_glucose">Glucose:</string>
+    <string name="txt_5_9mmol_l">5.9mmol/L</string>
+    <string name="txt_you_are_on_good_state">You are on good state!</string>
+    <string name="AMAppend">%s AM </string>
+    <string name="KmAppend">%s Km</string>
+    <string name="molAppend">%s mmol/L</string>
+    <string name="btn_imagepicker">ImagePicker</string>
+    <string name="hint_enter_to_add">Enter to Add..</string>
     <string name="btn_clear">Clear</string>
     <string name="btn_add">Add</string>
+    <string name="txt_read_comment">Read comment</string>
+    <string name="btn_custom_view">Custom View</string>
+    <string name="enter_to_add">Enter to add..</string>
     <string name="btn_image_picker">Image Picker</string>
 
 

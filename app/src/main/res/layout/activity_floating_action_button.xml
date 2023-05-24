@@ -49,7 +49,7 @@
         app:strokeWidth="@dimen/stroke_dp_2"
         app:elevation="@dimen/dp_10"
         app:icon="@android:drawable/ic_lock_idle_lock"
-        app:iconTint="@color/white"
+        app:iconTint="@color/black"
         android:text="@string/fab_extend_fab"
         android:textColor="@color/white"
         app:hoveredFocusedTranslationZ = "@dimen/dp_5"
