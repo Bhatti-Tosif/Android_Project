@@ -13,10 +13,10 @@
         tools:targetApi="31" >
 
         <activity
-            android:name=".recerseKtScreen.TreatHomeScreen"
+            android:name=".recerseKtScreen.activity.TreatHomeScreen"
             android:exported="false" />
         <activity
-            android:name=".recerseKtScreen.TreatScreen"
+            android:name=".recerseKtScreen.activity.TreatScreen"
             android:exported="false" />
         <activity
             android:name=".screens.MultiViewActivity"

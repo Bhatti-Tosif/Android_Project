@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.android_practice.custom_view.CustomViewPractice
 import com.example.android_practice.databinding.ActivityStartBinding
 import com.example.android_practice.layoutPractice.CoordinatorLayout
 import com.example.android_practice.layoutPractice.FrameLayoutPractice
@@ -13,8 +11,7 @@ import com.example.android_practice.layoutPractice.GridLayoutPractice
 import com.example.android_practice.layoutPractice.LayoutPractice
 import com.example.android_practice.layoutPractice.RelativeLayout
 import com.example.android_practice.listView.SimpleListView
-import com.example.android_practice.recerseKtScreen.TreatHomeScreen
-import com.example.android_practice.recerseKtScreen.TreatScreen
+import com.example.android_practice.recerseKtScreen.activity.TreatHomeScreen
 import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.screens.tagB.PastReservationDetail

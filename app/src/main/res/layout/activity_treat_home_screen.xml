@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".recerseKtScreen.TreatHomeScreen">
+        tools:context=".recerseKtScreen.activity.TreatHomeScreen">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -67,6 +67,7 @@
                     android:layout_height="@dimen/dp_0"
                     android:src="@drawable/treat_bg"
                     android:scaleType="fitXY"
+                    android:contentDescription="@string/desc_medical_text"
                     app:layout_constraintStart_toEndOf="@id/tv_heading"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tv_heading"

@@ -48,9 +48,7 @@ class SysCardAdapter(private val onLikedInterFace: ClickHandle) :
         return dataList.count()
     }
 
-    override fun onBindViewHolder(holder: SysViewHolder, position: Int) {
-        holder.bindSysCardData(dataList[position], position)
-    }
+    override fun onBindViewHolder(holder: SysViewHolder, position: Int) = holder.bindSysCardData(dataList[position], position)
 
     override fun onBindViewHolder(
         holder: SysViewHolder,

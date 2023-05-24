@@ -1,7 +1,6 @@
 package com.example.android_practice.recycler_view_reverse_kt.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,14 +11,16 @@ import com.example.android_practice.databinding.ItemDropDownViewTypeBinding
 import com.example.android_practice.databinding.ItemSimpleViewTypeListBinding
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.CommentDataModal
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.MultiViewType
+import com.example.android_practice.recycler_view_reverse_kt.data_modal.PostModel
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.ViewType
 
 class MultiViewMainAdapter(
     val onPostClick: (Int) -> Unit,
-    val onSimpleViewClick: (MultiViewType.SimpleItem) -> Unit
+    val onSimpleViewClick: (MultiViewType.SimpleItem) -> Unit,
+    val onDropDownClick: (ItemDropDownViewTypeBinding, MultiViewType.DropdownItem) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private lateinit var imagesList: ArrayList<Int>
+    private lateinit var imagesList: ArrayList<PostModel>
 
     private var dataList: ArrayList<MultiViewType> = arrayListOf()
     private lateinit var horizontalAdapter: HorizontalAdapter
@@ -30,25 +31,19 @@ class MultiViewMainAdapter(
         return when (viewType) {
             ViewType.SimpleView.ordinal -> SimpleViewHolder(
                 ItemSimpleViewTypeListBinding.inflate(
-                    LayoutInflater.from(parent.context),
-                    parent,
-                    false
+                    LayoutInflater.from(parent.context), parent, false
                 )
             )
 
             ViewType.HorizontalView.ordinal -> HorizontalViewHolder(
                 HorizontalRecylerImageViewBinding.inflate(
-                    LayoutInflater.from(parent.context),
-                    parent,
-                    false
+                    LayoutInflater.from(parent.context), parent, false
                 )
             )
 
             ViewType.DropDownView.ordinal -> DropDownVewHolder(
                 ItemDropDownViewTypeBinding.inflate(
-                    LayoutInflater.from(parent.context),
-                    parent,
-                    false
+                    LayoutInflater.from(parent.context), parent, false
                 )
             )
 
@@ -125,23 +120,8 @@ class MultiViewMainAdapter(
             commentAdapter.submitList(commentList)
 
             itemView.setOnClickListener {
-                if (item.isExpand) {
-                    binding.tvReadComment.visibility = View.VISIBLE
-                    collapsedComment()
-                } else {
-                    binding.tvReadComment.visibility = View.GONE
-                    expandComment()
-                }
-                item.isExpand = !item.isExpand
+                onDropDownClick(binding, item)
             }
-        }
-
-        private fun expandComment() {
-            binding.rvListOfComment.visibility = View.VISIBLE
-        }
-
-        private fun collapsedComment() {
-            binding.rvListOfComment.visibility = View.GONE
         }
     }
 

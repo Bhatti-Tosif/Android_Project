@@ -8,7 +8,7 @@ sealed class MultiViewType {
         override val viewType = ViewType.SimpleView
     }
 
-    data class HorizontalItem(val postImages: ArrayList<Int>) : MultiViewType() {
+    data class HorizontalItem(val postImages: ArrayList<PostModel>) : MultiViewType() {
         override val viewType = ViewType.HorizontalView
     }
 

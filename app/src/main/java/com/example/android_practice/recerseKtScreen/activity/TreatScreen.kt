@@ -1,4 +1,4 @@
-package com.example.android_practice.recerseKtScreen
+package com.example.android_practice.recerseKtScreen.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android_practice.databinding.ActivityTreatScreenBinding
-import com.example.android_practice.databinding.ItemWalkingCardBinding
 import com.example.android_practice.recerseKtScreen.adapter.WalkingDetailAdapter
 import com.example.android_practice.recerseKtScreen.dataModel.Helper
 import com.example.android_practice.recerseKtScreen.dataModel.WalkingData
@@ -14,7 +13,6 @@ import com.example.android_practice.recycler_view_reverse_kt.activity.MultiViewM
 
 class TreatScreen : AppCompatActivity() {
     private lateinit var binding: ActivityTreatScreenBinding
-    private lateinit var walkingCardBinding: ArrayList<ItemWalkingCardBinding>
     private lateinit var walkingAdapter: WalkingDetailAdapter
     private lateinit var walkingDataList: ArrayList<WalkingData>
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,18 +5,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.databinding.ItemYoutubePostHorizontalBinding
+import com.example.android_practice.recycler_view_reverse_kt.data_modal.PostModel
 
 class HorizontalAdapter(val onPostClick: (Int) -> Unit) :
     RecyclerView.Adapter<HorizontalAdapter.HorizontalViewHolder>() {
 
-    private var postImages: ArrayList<Int> = arrayListOf()
+    private var postImages: ArrayList<PostModel> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HorizontalViewHolder =
         HorizontalViewHolder(
             ItemYoutubePostHorizontalBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
+                LayoutInflater.from(parent.context), parent, false
             )
         )
 
@@ -30,8 +29,8 @@ class HorizontalAdapter(val onPostClick: (Int) -> Unit) :
 
     inner class HorizontalViewHolder(private val binding: ItemYoutubePostHorizontalBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Int, position: Int) {
-            binding.ivPost.setImageResource(item)
+        fun bind(item: PostModel, position: Int) {
+            binding.postData = item
             binding.ivPost.setOnClickListener {
                 onPostClick(position)
             }
@@ -39,7 +38,7 @@ class HorizontalAdapter(val onPostClick: (Int) -> Unit) :
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun submitList(newList: ArrayList<Int>) {
+    fun submitList(newList: ArrayList<PostModel>) {
         postImages.addAll(newList)
         notifyDataSetChanged()
     }

@@ -28,9 +28,9 @@ object Helper {
         getMultiViewType.add(
             MultiViewType.HorizontalItem(
                 arrayListOf(
-                    R.drawable.user1,
-                    R.drawable.user8,
-                    R.drawable.user5
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user1)),
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user8)),
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user5))
                 )
             )
         )
@@ -41,7 +41,7 @@ object Helper {
                     R.drawable.user5
                 ),
                 "Parth",
-                arrayListOf( CommentDataModal("I hope we will be best friends until we die. Then, we stay ghost pals to take such beautiful pictures."))
+                arrayListOf(CommentDataModal("I hope we will be best friends until we die. Then, we stay ghost pals to take such beautiful pictures."))
             )
         )
         getMultiViewType.add(
@@ -63,9 +63,9 @@ object Helper {
         getMultiViewType.add(
             MultiViewType.HorizontalItem(
                 arrayListOf(
-                    R.drawable.user1,
-                    R.drawable.user8,
-                    R.drawable.user5
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user1)),
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user8)),
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user5))
                 )
             )
         )
@@ -96,9 +96,9 @@ object Helper {
         getMultiViewType.add(
             MultiViewType.HorizontalItem(
                 arrayListOf(
-                    R.drawable.user1,
-                    R.drawable.user8,
-                    R.drawable.user5
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user1)),
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user8)),
+                    PostModel(AppCompatResources.getDrawable(context, R.drawable.user5))
                 )
             )
         )
@@ -107,7 +107,13 @@ object Helper {
                 AppCompatResources.getDrawable(
                     context,
                     R.drawable.user5
-                ), "Parth", arrayListOf(CommentDataModal("This is a best Song"), CommentDataModal("This is a best Song"), CommentDataModal("This is a best Song"))
+                ),
+                "Parth",
+                arrayListOf(
+                    CommentDataModal("This is a best Song"),
+                    CommentDataModal("This is a best Song"),
+                    CommentDataModal("This is a best Song")
+                )
             )
         )
         getMultiViewType.add(

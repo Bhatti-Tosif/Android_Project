@@ -1,16 +1,12 @@
-package com.example.android_practice.recerseKtScreen
+package com.example.android_practice.recerseKtScreen.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.SnapHelper
-import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityTreatHomeScreenBinding
 import com.example.android_practice.databinding.WorkoutDetailCardBinding
 import com.example.android_practice.recerseKtScreen.adapter.ClickHandle
@@ -19,6 +15,7 @@ import com.example.android_practice.recerseKtScreen.adapter.SysCardAdapter
 import com.example.android_practice.recerseKtScreen.dataModel.Helper
 import com.example.android_practice.recerseKtScreen.dataModel.MedicineData
 import com.example.android_practice.recerseKtScreen.dataModel.SysData
+
 class TreatHomeScreen : AppCompatActivity(), ClickHandle {
 
     private lateinit var binding: ActivityTreatHomeScreenBinding
@@ -55,18 +52,23 @@ class TreatHomeScreen : AppCompatActivity(), ClickHandle {
     }
 
     private fun getGlucoseDetailBinding() {
-        glucoseDetailList = arrayListOf(binding.glucoseCard.cardCalories, binding.glucoseCard.cardRunDuration, binding.glucoseCard.cardSpeed)
+        glucoseDetailList = arrayListOf(
+            binding.glucoseCard.cardCalories,
+            binding.glucoseCard.cardRunDuration,
+            binding.glucoseCard.cardSpeed
+        )
     }
 
     private fun setDataToGlucoseDetail() {
-        glucoseDetailList.forEachIndexed { position,it ->
+        glucoseDetailList.forEachIndexed { position, it ->
             it.workOutData = Helper.getDataOfGlucoseDetail(this)[position]
         }
     }
 
     private fun sysSetDataSet() {
         sysDataList = Helper.getSystolicCardData()
-        binding.rvSysCard.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false)
+        binding.rvSysCard.layoutManager =
+            GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false)
         sysAdapter = SysCardAdapter(this)
         binding.rvSysCard.adapter = sysAdapter
         sysAdapter.submitList(sysDataList)
@@ -85,11 +87,6 @@ class TreatHomeScreen : AppCompatActivity(), ClickHandle {
         binding.glucoseCardData = Helper.getCompoundsData()
     }
 
-    private fun onLikedClick(position: Int) {
-        sysDataList[position].isLiked = !sysDataList[position].isLiked
-        sysAdapter.submitList(sysDataList)
-        sysAdapter.notifyItemChanged(position, Helper.PayloadConstants.LikedButtonChanged)
-    }
 
     override fun onLikedClickInterface(position: Int) {
         sysDataList[position].isLiked = !sysDataList[position].isLiked
