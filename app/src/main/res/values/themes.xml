@@ -10,8 +10,9 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Customize your theme here. -->
+
     </style>
     
     //Custom Chips
@@ -189,6 +190,20 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/_20sp</item>
         <item name="fontFamily">@font/noyh_r_semi_light</item>
+    </style>
+
+    //Full Screen Style
+    <style name="Theme.AppCompat.NoActionBar.FullScreen" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    //Deep Aqua Status Color
+    <style name="DeepAquaStatusBar" parent="Theme.Material3.Light.NoActionBar" >
+        <item name="android:statusBarColor">@color/deepAqua</item>
     </style>
 
 </resources>

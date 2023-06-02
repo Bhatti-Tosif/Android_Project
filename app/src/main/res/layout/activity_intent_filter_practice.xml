@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intent_practice.activity.IntentFilterPractice">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_send_text"
+        android:layout_marginTop="@dimen/dp_20"
+        android:inputType="text"
+        android:hint="@string/enter_to_add"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Enter Name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_send_text"
+        style="@style/Widget.Material3.Button"
+        android:text="@string/btn_send_text"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/et_send_text"/>
+
+    <TextView
+        android:id="@+id/tv_data_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/btn_send_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_set_wallpaper"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:backgroundTint="@color/bank_navy_blue"
+        android:text="@string/btn_set_wallpaper"
+        android:textSize="@dimen/_15sp"
+        app:cornerRadius="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/btn_send_text"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/tv_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp"
+        android:text="@string/txt_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_set_wallpaper"
+        tools:text="TextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

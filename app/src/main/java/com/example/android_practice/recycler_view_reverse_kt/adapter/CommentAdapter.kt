@@ -9,7 +9,7 @@ import com.example.android_practice.recycler_view_reverse_kt.data_modal.CommentD
 
 class CommentAdapter : RecyclerView.Adapter<CommentAdapter.CommentViewHolder>() {
 
-    private val commentDataList: ArrayList<CommentDataModal> = ArrayList<CommentDataModal>()
+    private val commentDataList: ArrayList<CommentDataModal> = ArrayList()
 
     inner class CommentViewHolder(val binding: ItemListOfCommentBinding) :
         RecyclerView.ViewHolder(binding.root) {
