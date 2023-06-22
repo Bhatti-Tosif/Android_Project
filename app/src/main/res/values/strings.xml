@@ -151,7 +151,7 @@
     <string name="tab_simple_list">Simple List</string>
     <string name="tab_custom_list">Custom List</string>
     <string name="tab_search_view">Search View</string>
-    <string name="txt_search_here">Search Here...</string>
+    <string name="txt_search_here">Search Here…</string>
     <string name="rv_expandable">Expandable</string>
     <string name="tab_Swipe">Swipeable</string>
     <string name="btn_viewpager2">ViewPager2</string>
@@ -173,7 +173,7 @@
     <string name="cb_is_rented_before">Is Rented Before?</string>
     <string name="appBar_past_reservation">Past Reservation</string>
     <string name="btn_filter">Filter</string>
-    <string name="hint_search_by_facility_rental_id_etc">Search by Facility...</string>
+    <string name="hint_search_by_facility_rental_id_etc">Search by Facility…</string>
     <string name="btn_tagB_design">TagB Design</string>
 
     <string name="rate_now"><u>Rate Now</u></string>
@@ -226,4 +226,56 @@
 
 
     <string name="btn_add_cell">Add Cell</string>
+    <string name="btn_activity_lifecycle">Activity LifeCycle</string>
+    <string name="btn_intent">Intent</string>
+    <string name="btn_fragment">Fragment</string>
+    <string name="btn_fragment_2">Fragment 2</string>
+    <string name="btn_fragment_1">Fragment 1</string>
+    <string name="btn_fragmentDataPassing">FragmentDataPassing</string>
+    <string name="tv_received_data">Received Data:</string>
+    <string name="btn_send_data">Send Data</string>
+    <string name="btn_send_back">Send Back</string>
+    <string name="hint_generate_email">Generate Email</string>
+    <string name="tv_activity_card">Activity Card</string>
+    <string name="btn_send_to_activity">Send To Activity</string>
+    <string name="tv_fragment_card">Fragment Card</string>
+    <string name="btn_open_image_picker">Open Image Picker</string>
+    <string name="btn_pick_video">Pick Video</string>
+    <string name="btn_do_call">Do Call</string>
+    <string name="hint_sms_to">Sms to</string>
+    <string name="hint_sms_message">Sms Message</string>
+    <string name="btn_send_sms">Send SMS</string>
+    <string name="btn_open_map">Open Map</string>
+    <string name="btn_send_text">Send Text</string>
+    <string name="btn_set_wallpaper">Set Wallpaper</string>
+    <string name="btn_send_broadcast">Send BroadCast</string>
+    <string name="hint_enter_time">Enter Time</string>
+    <string name="btn_set_alarm">Set Alarm</string>
+    <string name="frg_meeting_fragment">Meeting Fragment</string>
+    <string name="frg_chatting_fragment">Chatting Fragment</string>
+    <string name="rb_video_call">Video Call</string>
+    <string name="rb_voice_call">Voice Call</string>
+    <string name="rb_conference_call">Conference Call</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_open_dialog_fragment">Open Dialog Fragment</string>
+    <string name="btn_next">Next</string>
+    <string name="frg_video_chat">Video Chat</string>
+    <string name="tv_description_fragment">Description Fragment</string>
+    <string name="btn_first">First</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_chatting">Chatting</string>
+    <string name="menu_music">Music</string>
+    <string name="menu_video_call">Video Call</string>
+    <string name="menu_description">Description</string>
+    <string name="tv_forward">Forward</string>
+    <string name="tv_reply">Reply</string>
+    <string name="tv_reply_to_all">Reply to all</string>
+    <string name="btn_open_bottom_sheet">Open Bottom Sheet</string>
+    <string name="txt_default">Default</string>
+    <string name="frg_privacy_accepted">Privacy Accepted</string>
+    <string name="btn_accept_terms">Accept Terms</string>
+    <string name="btn_denied_terms">Denied Terms</string>
+    <string name="tv_android_practice">Android Practice</string>
+    <string name="btn_nested_graph">Nested Graph</string>
+    <string name="tv_intent_practice">Intent Practice</string>
 </resources>

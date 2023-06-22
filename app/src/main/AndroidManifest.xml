@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,16 +12,106 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_practice"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".main_screen_handle.FirstScreen"
+            android:exported="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intent_practice.navigationGraph.activity.PrivacyPolicyChange"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.navigationGraph.activity.NestedNavigationGraph"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.navigationGraph.activity.WebViewPractice"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.navigationGraph.activity.MeetingAppMainActivity"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+            android:exported="true" />
 
+        <receiver android:name=".intent_practice.activity.PendingIntentReceiver" />
+
+        <activity
+            android:name=".intent_practice.activity.PendingIntentPractice"
+            android:exported="true" />
+        <activity
+            android:name=".intent_practice.activity.BroadCastReceiverPractice"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.IntentFilterPractice"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intent_practice.activity.ImplicitIntentPractice"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.some.affinity" />
+        <activity
+            android:name=".intent_practice.activity.FragmentToActivityDataPass"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.ActivityFragmentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.button_recycle.ActivityRecycleButton"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.FragmentToFragmentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.FragmentChangerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ExplicitDataReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ExplicitIntentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ImplicitIntentType"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.DeepLinkingScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="www.flipkart.com" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.amazon.in" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intent_practice.ExplicitIntent"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.SecondLaunchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".intent_practice.ActivityLifeCyclePractice"
+            android:exported="true" />
         <activity
             android:name=".recerseKtScreen.activity.TreatHomeScreen"
             android:exported="false" />
         <activity
             android:name=".recerseKtScreen.activity.TreatScreen"
-            android:exported="false" />
-        <activity
-            android:name=".screens.MultiViewActivity"
             android:exported="false" />
         <activity
             android:name=".uiwidgets.BottomSheetPractice"
@@ -38,6 +130,7 @@
             android:exported="false" />
         <activity
             android:name=".screens.tagB.PastReservationDetail"
+            android:theme="@style/DeepAquaStatusBar"
             android:exported="false" />
         <activity
             android:name=".uiwidgets.BottomNavigationPractice"
@@ -84,7 +177,7 @@
         <activity
             android:name=".screens.SummaryScreen"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen" />
         <activity
             android:name=".screens.BudgetScreen"
             android:exported="false" />
@@ -93,12 +186,7 @@
             android:exported="false" />
         <activity
             android:name=".StartActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="true">
         </activity>
         <activity
             android:name=".screens.BankWelcomeScreen"
@@ -106,6 +194,7 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".screens.BankEcLaunchScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen"
             android:exported="false" />
         <activity
             android:name=".uiwidgets.IncludePractice"
@@ -159,11 +248,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
         <activity
             android:name=".recycler_view_reverse_kt.activity.MultiViewMainActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

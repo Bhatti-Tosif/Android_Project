@@ -135,6 +135,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnTagB" />
 
+            <Button
+                android:id="@+id/btnIntent"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_48dp"
+                android:layout_marginTop="@dimen/dp_30"
+                android:text="Activity Intent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnReverseKt" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
