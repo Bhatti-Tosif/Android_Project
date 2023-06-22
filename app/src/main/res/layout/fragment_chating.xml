@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bank_light_blue"
-    tools:context=".intent_practice.navigationGraph.fragment.ChattingFragment">
+    tools:context=".webServices.fragment.ChattingFragment">
 
     <TextView
         android:layout_width="wrap_content"

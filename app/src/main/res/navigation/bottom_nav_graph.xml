@@ -6,7 +6,7 @@
     app:startDestination="@id/meetingFragment2">
     <fragment
         android:id="@+id/meetingFragment2"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.MeetingFragment"
+        android:name="com.example.android_practice.webServices.fragment.MeetingFragment"
         android:label="fragment_meeting"
         tools:layout="@layout/fragment_meeting">
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/chattingFragment"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.ChattingFragment"
+        android:name="com.example.android_practice.webServices.fragment.ChattingFragment"
         android:label="fragment_chating"
         tools:layout="@layout/fragment_chating">
         <action
@@ -48,12 +48,12 @@
     </fragment>
     <dialog
         android:id="@+id/dialogFragmentForMeeting2"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.DialogFragmentForMeeting"
+        android:name="com.example.android_practice.webServices.fragment.DialogFragmentForMeeting"
         android:label="fragment_dialog_for_meeting"
         tools:layout="@layout/fragment_dialog_for_meeting" />
     <fragment
         android:id="@+id/musicFragment"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.MusicFragment"
+        android:name="com.example.android_practice.webServices.fragment.MusicFragment"
         android:label="fragment_music"
         tools:layout="@layout/fragment_music">
         <action
@@ -62,7 +62,7 @@
     </fragment>
     <fragment
         android:id="@+id/videoChatFragment"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.VideoChatFragment"
+        android:name="com.example.android_practice.webServices.fragment.VideoChatFragment"
         android:label="fragment_video_chat"
         tools:layout="@layout/fragment_video_chat">
         <action
@@ -71,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/descriptionFragment"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.DescriptionFragment"
+        android:name="com.example.android_practice.webServices.fragment.DescriptionFragment"
         android:label="fragment_discription"
         tools:layout="@layout/fragment_discription">
         <action
@@ -80,7 +80,7 @@
     </fragment>
     <dialog
         android:id="@+id/bottomSheetDialogFragmentPractice"
-        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.BottomSheetDialogFragmentPractice"
+        android:name="com.example.android_practice.webServices.fragment.BottomSheetDialogFragmentPractice"
         android:label="fragment_bottom_sheet_dialog"
         tools:layout="@layout/fragment_bottom_sheet_dialog" />
 </navigation>

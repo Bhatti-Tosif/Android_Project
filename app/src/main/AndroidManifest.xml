@@ -40,8 +40,8 @@
             android:name=".intent_practice.navigationGraph.activity.WebViewPractice"
             android:exported="false" />
         <activity
-            android:name=".intent_practice.navigationGraph.activity.MeetingAppMainActivity"
-            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+            android:name=".webServices.activity.MeetingAppMainActivity"
+            android:theme="@style/StatusBarTheme"
             android:exported="true" />
 
         <receiver android:name=".intent_practice.activity.PendingIntentReceiver" />

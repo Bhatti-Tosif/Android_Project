@@ -7,7 +7,7 @@
     app:cardCornerRadius="@dimen/dp_10"
     android:layout_margin="@dimen/dp_10"
     android:backgroundTint="@color/bank_light_blue"
-    tools:context=".intent_practice.navigationGraph.fragment.BottomSheetDialogFragmentPractice">
+    tools:context=".webServices.fragment.BottomSheetDialogFragmentPractice">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

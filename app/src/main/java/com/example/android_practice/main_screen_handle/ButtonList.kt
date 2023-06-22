@@ -2,7 +2,7 @@ package com.example.android_practice.main_screen_handle
 
 import com.example.android_practice.intent_practice.button_recycle.ActivityButtonModal
 import com.example.android_practice.intent_practice.button_recycle.ActivityRecycleButton
-import com.example.android_practice.intent_practice.navigationGraph.activity.MeetingAppMainActivity
+import com.example.android_practice.webServices.activity.MeetingAppMainActivity
 import com.example.android_practice.layoutPractice.ConstraintLayout
 import com.example.android_practice.layoutPractice.FrameLayoutPractice
 import com.example.android_practice.layoutPractice.GridLayoutPractice

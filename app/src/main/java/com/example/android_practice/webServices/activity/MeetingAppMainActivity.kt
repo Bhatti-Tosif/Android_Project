@@ -1,4 +1,4 @@
-package com.example.android_practice.intent_practice.navigationGraph.activity
+package com.example.android_practice.webServices.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

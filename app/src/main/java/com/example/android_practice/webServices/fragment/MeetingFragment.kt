@@ -1,4 +1,4 @@
-package com.example.android_practice.intent_practice.navigationGraph.fragment
+package com.example.android_practice.webServices.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -15,9 +15,6 @@ import com.example.android_practice.webServices.Utils.AppConstant
 import com.example.android_practice.webServices.Utils.DebouncingQueryTextListener
 import com.example.android_practice.webServices.adapter.GetUserAdapter
 import com.example.android_practice.webServices.factory.UserViewModelFactory
-import com.example.android_practice.webServices.fragment.AddUserFragment
-import com.example.android_practice.webServices.fragment.EditUserFragment
-import com.example.android_practice.webServices.fragment.UserProfile
 import com.example.android_practice.webServices.model.UserModel
 import com.example.android_practice.webServices.viewModel.UserViewModel
 import kotlinx.coroutines.launch
@@ -90,6 +87,25 @@ class MeetingFragment : Fragment() {
             userAdapter.notifyDataSetChanged()
         }
 
+        userViewModel.showUser.observe(this) { userData ->
+            UserProfile(userData).show(childFragmentManager, "User Profile")
+            binding.pbLoader.visibility = View.GONE
+        }
+
+        userViewModel.volleyResponse.observe(viewLifecycleOwner) { userList ->
+            this.userList.clear()
+            this.userList.addAll(userList)
+            userAdapter.setUserDetail(userList.toMutableList())
+            userAdapter.notifyDataSetChanged()
+        }
+
+        userViewModel.okHttpResponse.observe(this) { userList ->
+            this.userList.clear()
+            this.userList.addAll(userList)
+            userAdapter.setUserDetail(userList.toMutableList())
+            userAdapter.notifyDataSetChanged()
+        }
+
         /** Practice for okHttp
         //getDataThroughOkHttp() */
 
@@ -117,12 +133,6 @@ class MeetingFragment : Fragment() {
     @SuppressLint("NotifyDataSetChanged")
     private fun getDataThroughOkHttp() {
         userViewModel.getUserThroughOkHttp("student")
-        userViewModel.okHttpResponse.observe(this) { userList ->
-            this.userList.clear()
-            this.userList.addAll(userList)
-            userAdapter.setUserDetail(userList.toMutableList())
-            userAdapter.notifyDataSetChanged()
-        }
     }
 
     /** Do Practice on Volley API Calling */
@@ -130,12 +140,6 @@ class MeetingFragment : Fragment() {
     private fun getDataThroughVolley() {
         val queue = Volley.newRequestQueue(context)
         userViewModel.getDataThroughVolley(queue, "student")
-        userViewModel.volleyResponse.observe(viewLifecycleOwner) { userList ->
-            this.userList.clear()
-            this.userList.addAll(userList)
-            userAdapter.setUserDetail(userList.toMutableList())
-            userAdapter.notifyDataSetChanged()
-        }
     }
 
     /** RecyclerView Prepare */
@@ -175,11 +179,6 @@ class MeetingFragment : Fragment() {
             userViewModel.getUserThroughHttp("student/$id")
             binding.pbLoader.visibility = View.VISIBLE
         }
-        userViewModel.showUser.observe(this) { userData ->
-            UserProfile(userData).show(childFragmentManager, "User Profile")
-            binding.pbLoader.visibility = View.GONE
-        }
-
     }
 
 }

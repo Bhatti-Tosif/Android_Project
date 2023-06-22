@@ -11,6 +11,7 @@ import com.android.volley.toolbox.Volley
 import com.example.android_practice.databinding.ActivityGetUserDetailBinding
 import com.example.android_practice.webServices.Utils.AppConstant
 import com.example.android_practice.webServices.Utils.DebouncingQueryTextListener
+import com.example.android_practice.webServices.Utils.Event
 import com.example.android_practice.webServices.adapter.GetUserAdapter
 import com.example.android_practice.webServices.factory.UserViewModelFactory
 import com.example.android_practice.webServices.fragment.AddUserFragment

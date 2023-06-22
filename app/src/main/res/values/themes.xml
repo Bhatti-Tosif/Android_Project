@@ -206,9 +206,8 @@
         <item name="android:statusBarColor">@color/deepAqua</item>
     </style>
 
-    //NAvy Blue StatusColor
-    <style name="NavyBlueStatusBar">
+    //Navy Blue StatusColor
+    <style name="StatusBarTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:statusBarColor">@color/blue_bank</item>
     </style>
-
 </resources>

@@ -1,4 +1,4 @@
-package com.example.android_practice.intent_practice.navigationGraph.fragment
+package com.example.android_practice.webServices.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

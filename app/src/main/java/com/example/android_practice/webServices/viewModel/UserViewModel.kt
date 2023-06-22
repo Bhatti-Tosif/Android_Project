@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.example.android_practice.webServices.Utils.AppConstant
+import com.example.android_practice.webServices.Utils.Event
 import com.example.android_practice.webServices.api.RequestHandler
 import com.example.android_practice.webServices.model.UserModel
 import com.example.android_practice.webServices.reposetry.UserMainRepository
@@ -36,7 +37,7 @@ class UserViewModel(private val repository: UserRepository): ViewModel() {
     }
 
     /** Live Data Properties */
-    var showUser = MutableLiveData<UserModel>()
+    var showUser: MutableLiveData<UserModel> = MutableLiveData<Event<UserModel>>()
     val deleteUser = MutableLiveData<UserModel>()
     var deleteUserSuccess = MutableLiveData<Int>()
     val okHttpResponse = MutableLiveData<Array<UserModel>>()

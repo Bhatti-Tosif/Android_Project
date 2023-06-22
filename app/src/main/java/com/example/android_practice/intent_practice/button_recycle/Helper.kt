@@ -9,7 +9,7 @@ import com.example.android_practice.intent_practice.activity.FragmentToFragmentD
 import com.example.android_practice.intent_practice.activity.ImplicitIntentPractice
 import com.example.android_practice.intent_practice.activity.IntentFilterPractice
 import com.example.android_practice.intent_practice.activity.PendingIntentPractice
-import com.example.android_practice.intent_practice.navigationGraph.activity.MeetingAppMainActivity
+import com.example.android_practice.webServices.activity.MeetingAppMainActivity
 import com.example.android_practice.intent_practice.navigationGraph.activity.NestedNavigationGraph
 import com.example.android_practice.intent_practice.navigationGraph.activity.WebViewPractice
 
