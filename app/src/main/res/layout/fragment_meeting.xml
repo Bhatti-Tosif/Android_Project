@@ -1,43 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bank_navy_blue"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".intent_practice.navigationGraph.fragment.MeetingFragment">
+    tools:context=".webServices.activity.GetUserDetailActivity">
 
-    <TextView
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bank_navy_blue"
+        app:closeIcon="@android:drawable/ic_delete"
+        android:theme="@style/SearchViewStyle"
+        app:queryHint="@string/txt_search_here"
+        app:iconifiedByDefault="false"
+        android:id="@+id/searchViewForRv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_movies"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewForRv"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_get_user_detail">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_frg_meeting"
-        android:text="@string/frg_meeting_fragment"
-        android:textSize="@dimen/_25sp"
-        android:textColor="@color/bank_light_blue"
-        android:textStyle="bold"
+        android:id="@+id/fab_addUser"
+        app:fabSize="auto"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:backgroundTint="@color/blue_bank"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/login" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_loader"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/bank_navy_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_movies"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_open_dialog"
-        android:text="@string/btn_open_dialog_fragment"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/bank_light_blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_frg_meeting" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Result"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_open_dialog" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg_loading"
+        android:visibility="gone"
+        android:foreground="@color/bank_light_blue_transparent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

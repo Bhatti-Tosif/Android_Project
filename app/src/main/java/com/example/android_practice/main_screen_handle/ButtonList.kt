@@ -2,6 +2,7 @@ package com.example.android_practice.main_screen_handle
 
 import com.example.android_practice.intent_practice.button_recycle.ActivityButtonModal
 import com.example.android_practice.intent_practice.button_recycle.ActivityRecycleButton
+import com.example.android_practice.intent_practice.navigationGraph.activity.MeetingAppMainActivity
 import com.example.android_practice.layoutPractice.ConstraintLayout
 import com.example.android_practice.layoutPractice.FrameLayoutPractice
 import com.example.android_practice.layoutPractice.GridLayoutPractice
@@ -12,7 +13,6 @@ import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.screens.tagB.PastReservationDetail
 import com.example.android_practice.uiwidgets.AllWidgets
-import com.example.android_practice.webServices.activity.MainWebServices
 
 object ButtonList {
 
@@ -30,7 +30,7 @@ object ButtonList {
         listOfButtonModal.add(ActivityButtonModal("TagB Design", PastReservationDetail()))
         listOfButtonModal.add(ActivityButtonModal("Reverse kt Design", TreatHomeScreen()))
         listOfButtonModal.add(ActivityButtonModal("Intent Practice", ActivityRecycleButton()))
-        listOfButtonModal.add(ActivityButtonModal("WebServices", MainWebServices()))
+        listOfButtonModal.add(ActivityButtonModal("WebServices", MeetingAppMainActivity()))
 
         return listOfButtonModal
 
