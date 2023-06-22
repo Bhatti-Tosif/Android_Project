@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.BankSignInScreen">
+
+    <TextView
+        android:id="@+id/tvWelcomeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/txt_welcome_back"
+        android:textColor="@color/black"
+        android:textSize="@dimen/welcome_txt_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvContinueSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/txt_sign_in_to_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeBack" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_25" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmailAddress"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_80"
+        app:boxBackgroundColor="@color/bank_light_blue"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_10"
+        app:boxCornerRadiusBottomStart="@dimen/dp_10"
+        app:boxCornerRadiusTopEnd="@dimen/dp_10"
+        app:boxCornerRadiusTopStart="@dimen/dp_10"
+        app:boxStrokeColor="@color/white"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@+id/tvContinueSignIn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:hint="@string/hint_email_address" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        app:boxBackgroundColor="@color/bank_light_blue"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_10"
+        app:boxCornerRadiusBottomStart="@dimen/dp_10"
+        app:boxCornerRadiusTopEnd="@dimen/dp_10"
+        app:boxCornerRadiusTopStart="@dimen/dp_10"
+        app:boxStrokeColor="@color/white"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailAddress">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/txt_forgot_password"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInAccount"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/bank_btn_height"
+        android:layout_marginTop="@dimen/dp_50"
+        android:backgroundTint="@color/blue_bank"
+        android:text="@string/txt_sign_in_my_account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
+
+    <TextView
+        android:id="@+id/tvAlreadyHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/txt_already_have_an_account"
+        app:layout_constraintEnd_toStartOf="@+id/tvSignUp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/btnSignInAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignInAccount" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/tv_sign_up"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btnSignInAccount"
+        app:layout_constraintStart_toEndOf="@+id/tvAlreadyHaveAnAccount"
+        app:layout_constraintTop_toTopOf="@id/tvAlreadyHaveAnAccount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

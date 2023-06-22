@@ -1,12 +1,12 @@
-package com.example.android_practice.layoutPractice
+package com.example.android_practice.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android_practice.R
 
-class ConstraintLAyout : AppCompatActivity() {
+class BudgetScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_constraint_layout)
+        setContentView(R.layout.activity_budget_screen)
     }
 }

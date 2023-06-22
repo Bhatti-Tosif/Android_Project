@@ -1,14 +1,13 @@
 package com.example.android_practice.uiwidgets
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RatingBar
 import android.widget.SeekBar
-import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityProgressBarTryBinding
-import com.example.android_practice.databinding.ActivitySpinnerPracticeBinding
 
 class ProgressBarTry : AppCompatActivity() {
 
@@ -27,7 +26,7 @@ class ProgressBarTry : AppCompatActivity() {
         ObjectAnimator.ofInt(binding.progressVertical, "progress", currentProgress).setDuration(5000).start()
 
         binding.download.setOnClickListener {
-            var pd = ProgressDialog(this)
+            val pd = ProgressDialog(this)
             pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL)
             pd.setTitle("Download")
             pd.setMessage("Downloading File")
@@ -37,7 +36,7 @@ class ProgressBarTry : AppCompatActivity() {
                 while (count <= 100) {
                     count += 10
                     pd.progress = count
-                    Thread.sleep(2000)
+                    Thread.sleep(1000)
                 }
                 if(count >= 100) {
                     pd.dismiss()
@@ -46,6 +45,7 @@ class ProgressBarTry : AppCompatActivity() {
         }
 
         binding.seekBarDiscrete.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            @SuppressLint("SetTextI18n")
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 binding.tvDiscrete.setText("Value = ${progress}")
             }
@@ -58,6 +58,7 @@ class ProgressBarTry : AppCompatActivity() {
 
         })
         binding.seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            @SuppressLint("SetTextI18n")
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 binding.tvChangeValue.setText("Value = ${progress}")
             }
@@ -69,6 +70,7 @@ class ProgressBarTry : AppCompatActivity() {
         })
 
         binding.ratingBar.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
+            @SuppressLint("SetTextI18n")
             override fun onRatingChanged(ratingBar: RatingBar?, rating: Float, fromUser: Boolean) {
                 binding.tvRating.setText("Rating = ${rating}")
             }

@@ -63,4 +63,227 @@
     <string name="txt_players">Players</string>
     <string name="btn_include">Include</string>
     <string name="btn_merged">Merged</string>
+    <string name="txt_bank_ec">Bank Ec</string>
+    <string name="txt_bank_finance_kit">Bank, Finance Kit</string>
+    <string name="txt_welcome">Welcome</string>
+    <string name="txt_please_provide_following">Please provide following</string>
+    <string name="txt_detail_for_your_new_account">detail for your new account</string>
+    <string name="btn_screens">Screens</string>
+    <string name="btn_ui_components">UIComponents</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="btn_sign_up_my_account">Sign up my Account</string>
+    <string name="btn_sign_up_with_phone_number">Sign up with Phone Number</string>
+    <string name="tv_by_creating_your_account_you_have_to_agree_with_our_teams_and_conditions">By creating your account you have to agree with our Teams and Conditions.</string>
+    <string name="txt_already_have_an_account">Already have an Account</string>
+    <string name="txt_signIn">Sign In</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="txt_welcome_back">Welcome Back!</string>
+    <string name="txt_sign_in_to_continue">Sign in to Continue</string>
+    <string name="txt_forgot_password">Forgot Password ?</string>
+    <string name="txt_sign_in_my_account">Sign in My Account</string>
+    <string name="tv_sign_up">Sign Up</string>
+    <string name="txt_summary">Summary</string>
+    <string name="txt_this_month_spending">This Month Spending</string>
+    <string name="txt_1_785">$1,785</string>
+    <string name="txt_well_done_you_have_maintain_your_spending_under_control">Well done you have maintain your \n spending under control</string>
+    <string name="btn_great">Great</string>
+    <string name="txt_top_category">Top Category</string>
+    <string name="txt_lunch_dinner">Lunch and Dinner</string>
+    <string name="tv_price">450</string>
+    <string name="btn_on_track">On Track</string>
+    <string name="btn_fab">Fab</string>
+    <string name="fab_extend_fab">Extend fab</string>
+    <string name="fab_add">Add</string>
+    <string name="txt_received">Received</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="tv_custom_snack">Custom Snack</string>
+    <string name="btn_custom_snackBar">Custom SnackBar</string>
+    <string name="txt_dismiss">Dismiss</string>
+    <string name="txt_custom_snack">Custom Snack</string>
+    <string name="txt_android_developer">Android Developer</string>
+    <string name="btn_custom_snack_bar">Custom SnackBar</string>
+    <string name="btn_tab_layout">Tab Layout</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_this_is_call_fragment">This Is Call Fragment</string>
+    <string name="txt_this_is_chat_fragment">This is Chat Fragment</string>
+    <string name="txt_this_is_status_fragment">This is Status Fragment</string>
+    <string name="txt_australia">Australia</string>
+    <string name="txt_all_countries">All Countries</string>
+    <string name="txt_china">China</string>
+    <string name="txt_india">India</string>
+    <string name="btn_app_bar_layout">App Bar Layout</string>
+    <string name="btn_Constrain_layouts">Constraint Layouts</string>
+    <string name="btn_relative_layout">Relative Layout</string>
+    <string name="btn_linear_layout">Linear Layout</string>
+    <string name="btn_coordinator_layout">Coordinator Layout</string>
+
+    <string name="content">With the idea of imparting programming
+      knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a
+      dream, GeeksforGeeks. Whether programming excites you or you feel
+      stifled, wondering how to prepare for interview questions or how to
+      ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+      With every tick of time, we are adding arrows in our quiver. From articles
+      on various computer science subjects to programming problems for practice,
+      from basic to premium courses, from technologies to entrance examinations,
+      we have been building ample content with superior quality. In a short span,
+      we have built a community of 1 Million+ Geeks around the world, 20,000+
+      Contributors and 500+ Campus Ambassadors in various colleges across the nation.
+      Our success stories include a lot of students who benefitted in their placements
+      and landed jobs at tech giants. Our vision is to build a gigantic network of
+      geeks and we are only a fraction of it yet.
+    </string>
+    <string name="btn_grid_layout">Grid Layout</string>
+    <string name="btn_collapsing_toolbar">Collapsing ToolBar</string>
+    <string name="hint_select_date">Select Date</string>
+    <string name="btn_custom_calender">Custom Calender</string>
+    <string name="txt_frame_layout_practice">Frame Layout Practice</string>
+    <string name="txt_last_text">Last Text</string>
+    <string name="btn_frame_layout">Frame Layout</string>
+    <string name="txt_restaurant_name">Restaurant Name</string>
+    <string name="txt_address">Address</string>
+    <string name="btn_recyclerview">RecyclerView</string>
+    <string name="tab_linear_manager">Linear Manager</string>
+    <string name="tab_grid_manager">Grid Manager</string>
+    <string name="tab_staggered_manager">Staggered Manager</string>
+    <string name="btn_listview">ListView</string>
+    <string name="tab_simple_list">Simple List</string>
+    <string name="tab_custom_list">Custom List</string>
+    <string name="tab_search_view">Search View</string>
+    <string name="txt_search_here">Search Here…</string>
+    <string name="rv_expandable">Expandable</string>
+    <string name="tab_Swipe">Swipeable</string>
+    <string name="btn_viewpager2">ViewPager2</string>
+    <string name="txt_name">Name:</string>
+    <string name="txt_dataBinding_example">DataBinding Example</string>
+    <string name="btn_dataBinding">DataBinding</string>
+    <string name="btn_bottomnavigation">BottomNavigation</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_download">Download</string>
+    <string name="menu_profile">Profile</string>
+    <string name="tv_rental_id">Rental ID</string>
+    <string name="tv_facility">Facility</string>
+    <string name="tv_reservation_type">Reservation Type</string>
+    <string name="tv_enter_after">Enter After</string>
+    <string name="tv_exit_before">Exit Before</string>
+    <string name="btn_detail">Details</string>
+    <string name="tab_multiple_holder">Multiple Holder</string>
+    <string name="pr_price">$20</string>
+    <string name="cb_is_rented_before">Is Rented Before?</string>
+    <string name="appBar_past_reservation">Past Reservation</string>
+    <string name="btn_filter">Filter</string>
+    <string name="hint_search_by_facility_rental_id_etc">Search by Facility…</string>
+    <string name="btn_tagB_design">TagB Design</string>
+
+    <string name="rate_now"><u>Rate Now</u></string>
+    <string name="txt_give_rating">Give Rating</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_simple_toast">Simple Toast</string>
+    <string name="btn_toast">Toast</string>
+    <string name="btn_center_toast">Center Toast</string>
+    <string name="btn_custom_toast">Custom Toast</string>
+    <string name="txt_activities">Activities</string>
+    <string name="txt_carbo">Carbo</string>
+    <string name="desc_medical_text">A medical student-run clinic is a health care delivery program in which medical students take primary responsibility for logistics</string>
+    <string name="btn_reverse_kt">Reverse KT</string>
+
+    //Revers kt Screen
+    <string name="txt_water"> Water</string>
+    <string name="txt_heading_revers_kt">It\'s all about how we treat you</string>
+    <string name="txt_subHeading_reversKt">That\'s Powerful healing</string>
+    <string name="txt_today_activities_reverse_kt">Today Activities</string>
+    <string name="txt_details">Details</string>
+    <string name="txt_after_lunch">After Lunch</string>
+    <string name="txt_azoptex_obat">Azoptex Obat</string>
+    <string name="txt_10mg">10mg</string>
+    <string name="txt_2Liters">2 Liters</string>
+    <string name="perDay">/day</string>
+    <string name="txt_Duration">Duration</string>
+    <string name="txt_2Hour">2 hours</string>
+    <string name="txt_speed">Speed</string>
+    <string name="txt_4Km">4 hours</string>
+    <string name="txt_Fitness">Fitness</string>
+    <string name="percentage_sign">%</string>
+    <string name="txt_today_at">Today at:</string>
+    <string name="txt_mmhg">mmHg.</string>
+    <string name="txt_description">Description</string>
+    <string name="txt_glucose">Glucose:</string>
+    <string name="txt_5_9mmol_l">5.9mmol/L</string>
+    <string name="txt_you_are_on_good_state">You are on good state!</string>
+    <string name="AMAppend">%s AM </string>
+    <string name="KmAppend">%s Km</string>
+    <string name="molAppend">%s mmol/L</string>
+    <string name="btn_imagepicker">ImagePicker</string>
+    <string name="hint_enter_to_add">Enter to Add..</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_add">Add</string>
+    <string name="txt_read_comment">Read comment</string>
+    <string name="btn_custom_view">Custom View</string>
+    <string name="enter_to_add">Enter to add..</string>
+    <string name="btn_image_picker">Image Picker</string>
+
+
+    <string name="btn_add_cell">Add Cell</string>
+    <string name="btn_activity_lifecycle">Activity LifeCycle</string>
+    <string name="btn_intent">Intent</string>
+    <string name="btn_fragment">Fragment</string>
+    <string name="btn_fragment_2">Fragment 2</string>
+    <string name="btn_fragment_1">Fragment 1</string>
+    <string name="btn_fragmentDataPassing">FragmentDataPassing</string>
+    <string name="tv_received_data">Received Data:</string>
+    <string name="btn_send_data">Send Data</string>
+    <string name="btn_send_back">Send Back</string>
+    <string name="hint_generate_email">Generate Email</string>
+    <string name="tv_activity_card">Activity Card</string>
+    <string name="btn_send_to_activity">Send To Activity</string>
+    <string name="tv_fragment_card">Fragment Card</string>
+    <string name="btn_open_image_picker">Open Image Picker</string>
+    <string name="btn_pick_video">Pick Video</string>
+    <string name="btn_do_call">Do Call</string>
+    <string name="hint_sms_to">Sms to</string>
+    <string name="hint_sms_message">Sms Message</string>
+    <string name="btn_send_sms">Send SMS</string>
+    <string name="btn_open_map">Open Map</string>
+    <string name="btn_send_text">Send Text</string>
+    <string name="btn_set_wallpaper">Set Wallpaper</string>
+    <string name="btn_send_broadcast">Send BroadCast</string>
+    <string name="hint_enter_time">Enter Time</string>
+    <string name="btn_set_alarm">Set Alarm</string>
+    <string name="frg_meeting_fragment">Meeting Fragment</string>
+    <string name="frg_chatting_fragment">Chatting Fragment</string>
+    <string name="rb_video_call">Video Call</string>
+    <string name="rb_voice_call">Voice Call</string>
+    <string name="rb_conference_call">Conference Call</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_open_dialog_fragment">Open Dialog Fragment</string>
+    <string name="btn_next">Next</string>
+    <string name="frg_video_chat">Video Chat</string>
+    <string name="tv_description_fragment">Description Fragment</string>
+    <string name="btn_first">First</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_chatting">Chatting</string>
+    <string name="menu_music">Music</string>
+    <string name="menu_video_call">Video Call</string>
+    <string name="menu_description">Description</string>
+    <string name="tv_forward">Forward</string>
+    <string name="tv_reply">Reply</string>
+    <string name="tv_reply_to_all">Reply to all</string>
+    <string name="btn_open_bottom_sheet">Open Bottom Sheet</string>
+    <string name="txt_default">Default</string>
+    <string name="frg_privacy_accepted">Privacy Accepted</string>
+    <string name="btn_accept_terms">Accept Terms</string>
+    <string name="btn_denied_terms">Denied Terms</string>
+    <string name="tv_android_practice">Android Practice</string>
+    <string name="btn_nested_graph">Nested Graph</string>
+    <string name="tv_intent_practice">Intent Practice</string>
+    <string name="btn_web_services">Web Services</string>
+    <string name="tv_id">Id:</string>
+    <string name="btn_edit_user">Edit User</string>
+    <string name="btn_delete_user">Delete User</string>
+    <string name="bnt_update_user">Update User</string>
+    <string name="hint_enter_name">Enter Name</string>
+    <string name="btn_add_user">ADD User</string>
+    <string name="hint_enter_email">Enter Email</string>
 </resources>

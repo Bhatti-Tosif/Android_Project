@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="medicineData"
+            type="com.example.android_practice.recerseKtScreen.dataModel.MedicineData" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/card_bg_blue"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:cardCornerRadius="@dimen/dp_10">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_item"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:scaleType="fitXY"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="@drawable/kt_rounded_back_arrow"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:layout_marginStart="@dimen/dp_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@{medicineData.image}"
+                tools:src="@drawable/medical_services"
+                app:tint="@color/text_blue_revers_kt" />
+
+            <TextView
+                android:id="@+id/tv_titleOfPill"
+                style="@style/MedicineCardHeadingText"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{medicineData.medicineName}"
+                app:layout_constraintBottom_toTopOf="@id/tvShowTime"
+                app:layout_constraintEnd_toStartOf="@id/ib_more_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/iv_item"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Azoptex" />
+
+            <TextView
+                android:id="@+id/tvShowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{medicineData.timeOfTaken}"
+                tools:text="After Lunch"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxEms="14"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvQuantity"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/tv_titleOfPill"
+                app:layout_constraintTop_toBottomOf="@+id/tv_titleOfPill" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_more_horizontal"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_more_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tv_titleOfPill"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_titleOfPill" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@{medicineData.quantity}"
+                tools:text="10mg"
+                android:maxEms="3"
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/MedicineQuantityText"
+                app:layout_constraintBottom_toBottomOf="@id/tvShowTime"
+                app:layout_constraintEnd_toEndOf="@id/ib_more_horizontal"
+                app:layout_constraintStart_toEndOf="@id/tvShowTime"
+                app:layout_constraintTop_toTopOf="@id/tvShowTime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

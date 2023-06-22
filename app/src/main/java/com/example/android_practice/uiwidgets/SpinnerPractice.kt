@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.android_practice.R
@@ -21,9 +20,9 @@ class SpinnerPractice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         binding = ActivitySpinnerPracticeBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val arrayAdapter = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item, players)
         binding.playersSpinner.adapter = arrayAdapter

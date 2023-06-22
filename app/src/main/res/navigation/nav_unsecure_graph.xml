@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_unsecure_graph"
+    app:startDestination="@id/unSecureFragment">
+
+    <fragment
+        android:id="@+id/unSecureFragment"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.UnSecureFragment"
+        android:label="fragment_un_secure"
+        tools:layout="@layout/fragment_un_secure" />
+</navigation>

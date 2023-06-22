@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/meetingFragment2">
+    <fragment
+        android:id="@+id/meetingFragment2"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.MeetingFragment"
+        android:label="fragment_meeting"
+        tools:layout="@layout/fragment_meeting">
+        <action
+            android:id="@+id/navigateToChattingFragment"
+            app:destination="@id/chattingFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_meetingFragment2_to_dialogFragmentForMeeting2"
+            app:destination="@id/dialogFragmentForMeeting2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingFragment"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.ChattingFragment"
+        android:label="fragment_chating"
+        tools:layout="@layout/fragment_chating">
+        <action
+            android:id="@+id/navigateToMeetingFragment"
+            app:destination="@id/meetingFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="fragmentName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="nameOf"
+            app:argType="com.example.android_practice.intent_practice.navigationGraph.modal.SimpleModal"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_chattingFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_chattingFragment_to_bottomSheetDialogFragmentPractice"
+            app:destination="@id/bottomSheetDialogFragmentPractice" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogFragmentForMeeting2"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.DialogFragmentForMeeting"
+        android:label="fragment_dialog_for_meeting"
+        tools:layout="@layout/fragment_dialog_for_meeting" />
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music">
+        <action
+            android:id="@+id/action_musicFragment_to_videoChatFragment"
+            app:destination="@id/videoChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoChatFragment"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.VideoChatFragment"
+        android:label="fragment_video_chat"
+        tools:layout="@layout/fragment_video_chat">
+        <action
+            android:id="@+id/action_videoChatFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.DescriptionFragment"
+        android:label="fragment_discription"
+        tools:layout="@layout/fragment_discription">
+        <action
+            android:id="@+id/action_descriptionFragment_to_meetingFragment2"
+            app:destination="@id/meetingFragment2" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetDialogFragmentPractice"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.BottomSheetDialogFragmentPractice"
+        android:label="fragment_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_bottom_sheet_dialog" />
+</navigation>

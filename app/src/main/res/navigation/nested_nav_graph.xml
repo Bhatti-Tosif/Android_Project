@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_nav_graph"
+    app:startDestination="@id/privacyFragment">
+
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+
+    <fragment
+        android:id="@+id/unSecureFragment2"
+        android:name="com.example.android_practice.intent_practice.navigationGraph.fragment.UnSecureFragment"
+        android:label="fragment_un_secure"
+        tools:layout="@layout/fragment_un_secure" >
+        <action
+            android:id="@+id/action_unSecureFragment2_to_bottom_nav_graph"
+            app:destination="@id/bottom_nav_graph" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_unSecureFragment2"
+        app:destination="@id/unSecureFragment2" />
+    <action
+        android:id="@+id/action_global_privacyFragment"
+        app:destination="@id/privacyFragment" />
+
+    <include app:graph="@navigation/bottom_nav_graph" />
+
+</navigation>

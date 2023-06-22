@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intent_practice.activity.ImplicitIntentPractice">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_open_image"
+        style="@style/Widget.Material3.Button"
+        tools:text="Open Image Picker"
+        android:text="@string/btn_open_image_picker"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_pick_image"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:contentDescription="@string/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/btn_open_image"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_pick_video"
+        style="@style/Widget.Material3.Button"
+        android:text="@string/btn_pick_video"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pick_image"/>
+
+    <VideoView
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:id="@+id/videoPicker"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pick_video" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_number"
+        android:hint="@string/hint_enter_number"
+        android:layout_marginTop="@dimen/dp_10"
+        android:inputType="number"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/videoPicker"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_call_dial"
+        style="@style/Widget.Material3.Button"
+        android:text="@string/btn_do_call"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/et_number"/>
+
+    <EditText
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_smsTo"
+        android:hint="@string/hint_sms_to"
+        android:layout_marginTop="@dimen/dp_10"
+        android:inputType="number"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/et_sms_msg"
+        app:layout_constraintTop_toBottomOf="@id/btn_call_dial"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_sms_msg"
+        android:hint="@string/hint_sms_message"
+        android:layout_marginTop="@dimen/dp_10"
+        android:inputType="text"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/et_smsTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_call_dial" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_send_msg"
+        style="@style/Widget.Material3.Button"
+        android:text="@string/btn_send_sms"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/et_smsTo"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_open_map"
+        style="@style/Widget.Material3.Button"
+        android:text="@string/btn_open_map"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/btn_send_msg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

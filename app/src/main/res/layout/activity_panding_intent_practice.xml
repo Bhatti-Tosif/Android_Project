@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intent_practice.activity.PendingIntentPractice">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_48dp"
+        android:id="@+id/et_enter_time"
+        android:hint="@string/hint_enter_time"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:autofillHints="Enter Time"
+        android:inputType="text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/btn_set_alarm"
+        android:text="@string/btn_set_alarm"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:backgroundTint="@color/bank_navy_blue"
+        app:cornerRadius="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_time"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
