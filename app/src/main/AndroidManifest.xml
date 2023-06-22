@@ -14,6 +14,15 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
+            android:name=".webServices.activity.MainWebServices"
+            android:exported="false" />
+        <activity
+            android:name=".webServices.activity.GetUserDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".webServices.activity.PopularMovies"
+            android:exported="false" />
+        <activity
             android:name=".main_screen_handle.FirstScreen"
             android:exported="true" >
             <intent-filter>
@@ -187,6 +196,11 @@
         <activity
             android:name=".StartActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".screens.BankWelcomeScreen"

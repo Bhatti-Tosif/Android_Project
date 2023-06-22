@@ -29,4 +29,6 @@
     <color name="glucose_sub_heading">#7a7a7a</color>
     <color name="light_blue">#91DDFF</color>
 
+    <color name="bank_light_blue_transparent">#4DDEEDF9</color>
+
 </resources>

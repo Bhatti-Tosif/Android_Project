@@ -17,6 +17,7 @@ import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.screens.tagB.PastReservationDetail
 import com.example.android_practice.uiwidgets.AllWidgets
+import com.example.android_practice.webServices.activity.MainWebServices
 
 class StartActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -41,6 +42,7 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnTagB.setOnClickListener(this)
         binding.btnReverseKt.setOnClickListener(this)
         binding.btnIntent.setOnClickListener(this)
+        binding.btnWebServices.setOnClickListener(this)
 
     }
 
@@ -96,6 +98,10 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
             }
             binding.btnIntent.id -> {
                 val intent = Intent(this, ActivityRecycleButton::class.java)
+                startActivity(intent)
+            }
+            binding.btnWebServices.id -> {
+                val intent = Intent(this, MainWebServices::class.java)
                 startActivity(intent)
             }
             else -> {

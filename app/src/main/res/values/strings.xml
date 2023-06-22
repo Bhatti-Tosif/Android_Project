@@ -278,4 +278,12 @@
     <string name="tv_android_practice">Android Practice</string>
     <string name="btn_nested_graph">Nested Graph</string>
     <string name="tv_intent_practice">Intent Practice</string>
+    <string name="btn_web_services">Web Services</string>
+    <string name="tv_id">Id:</string>
+    <string name="btn_edit_user">Edit User</string>
+    <string name="btn_delete_user">Delete User</string>
+    <string name="bnt_update_user">Update User</string>
+    <string name="hint_enter_name">Enter Name</string>
+    <string name="btn_add_user">ADD User</string>
+    <string name="hint_enter_email">Enter Email</string>
 </resources>

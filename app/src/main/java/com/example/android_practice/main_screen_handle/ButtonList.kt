@@ -12,6 +12,7 @@ import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.screens.tagB.PastReservationDetail
 import com.example.android_practice.uiwidgets.AllWidgets
+import com.example.android_practice.webServices.activity.MainWebServices
 
 object ButtonList {
 
@@ -29,6 +30,7 @@ object ButtonList {
         listOfButtonModal.add(ActivityButtonModal("TagB Design", PastReservationDetail()))
         listOfButtonModal.add(ActivityButtonModal("Reverse kt Design", TreatHomeScreen()))
         listOfButtonModal.add(ActivityButtonModal("Intent Practice", ActivityRecycleButton()))
+        listOfButtonModal.add(ActivityButtonModal("WebServices", MainWebServices()))
 
         return listOfButtonModal
 
