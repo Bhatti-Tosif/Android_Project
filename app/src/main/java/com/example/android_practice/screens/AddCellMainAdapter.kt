@@ -10,7 +10,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_practice.databinding.ActivityAddCellPracticeBinding
 import com.example.android_practice.databinding.AddCardDetailCellBinding
 
 class AddCellMainAdapter(val dataList: ArrayList<CellDataModel> ,val addCell: (Int) -> Unit, val deleteCell: (Int) -> Unit, val pickMultipleMedia: ActivityResultLauncher<PickVisualMediaRequest>, val uriList: ArrayList<Uri>): RecyclerView.Adapter<AddCellMainAdapter.AddCellViewHolder>() {

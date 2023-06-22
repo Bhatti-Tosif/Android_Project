@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.android_practice.databinding.ActivityStartBinding
+import com.example.android_practice.intent_practice.button_recycle.ActivityRecycleButton
 import com.example.android_practice.layoutPractice.CoordinatorLayout
 import com.example.android_practice.layoutPractice.FrameLayoutPractice
 import com.example.android_practice.layoutPractice.GridLayoutPractice
@@ -16,6 +17,7 @@ import com.example.android_practice.recycler_view.RecyclerViewPractice
 import com.example.android_practice.screens.BankEcLaunchScreen
 import com.example.android_practice.screens.tagB.PastReservationDetail
 import com.example.android_practice.uiwidgets.AllWidgets
+import com.example.android_practice.webServices.activity.MainWebServices
 
 class StartActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -39,6 +41,8 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnListView.setOnClickListener(this)
         binding.btnTagB.setOnClickListener(this)
         binding.btnReverseKt.setOnClickListener(this)
+        binding.btnIntent.setOnClickListener(this)
+        binding.btnWebServices.setOnClickListener(this)
 
     }
 
@@ -88,15 +92,16 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, PastReservationDetail::class.java)
                 startActivity(intent)
             }
-
-
-
-
-
-
-
             binding.btnReverseKt.id -> {
                 val intent = Intent(this, TreatHomeScreen::class.java)
+                startActivity(intent)
+            }
+            binding.btnIntent.id -> {
+                val intent = Intent(this, ActivityRecycleButton::class.java)
+                startActivity(intent)
+            }
+            binding.btnWebServices.id -> {
+                val intent = Intent(this, MainWebServices::class.java)
                 startActivity(intent)
             }
             else -> {

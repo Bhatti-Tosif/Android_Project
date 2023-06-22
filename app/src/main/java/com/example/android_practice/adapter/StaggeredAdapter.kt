@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_practice.R
 import com.example.android_practice.databinding.RvItemViewBinding
 import com.example.android_practice.recycler_view.RvDataModel
 

@@ -4,9 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.databinding.PastReservationItemBinding
-import com.example.android_practice.recycler_view.RvDataModel
 import com.example.android_practice.screens.tagB.RentalViewHolder
 import com.example.android_practice.screens.tagB.dataModel.RentalModel
 

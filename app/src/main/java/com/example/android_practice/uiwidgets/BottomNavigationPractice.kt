@@ -2,16 +2,13 @@ package com.example.android_practice.uiwidgets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_practice.R
 import com.example.android_practice.adapter.AdapterForBottomNavigation
 import com.example.android_practice.databinding.ActivityBottomNavigationPracticeBinding
-import com.example.android_practice.fragment.BottomDownloadFragment
 import com.example.android_practice.fragment.BottomHomeFragment
-import com.example.android_practice.fragment.BottomProfileFragment
 
 class BottomNavigationPractice : AppCompatActivity() {
 

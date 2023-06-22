@@ -1,6 +1,5 @@
 package com.example.android_practice.viewPager2
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_practice.R
-import com.example.android_practice.uiwidgets.textView
 
 class ViewPagerAdapter(private val dataList: ArrayList<ViewPagerData>, private val viewPager: ViewPager2): RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
 

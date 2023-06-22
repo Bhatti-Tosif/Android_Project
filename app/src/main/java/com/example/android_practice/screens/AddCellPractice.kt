@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityAddCellPracticeBinding
 
 class AddCellPractice : AppCompatActivity() {

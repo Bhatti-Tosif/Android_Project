@@ -1,15 +1,12 @@
 package com.example.android_practice.uiwidgets
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
-import android.widget.LinearLayout
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager

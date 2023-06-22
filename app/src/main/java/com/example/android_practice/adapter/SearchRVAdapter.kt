@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.android_practice.databinding.RvItemViewBinding
 import com.example.android_practice.recycler_view.RvDataModel
 

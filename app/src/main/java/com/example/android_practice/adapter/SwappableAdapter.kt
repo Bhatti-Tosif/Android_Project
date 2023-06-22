@@ -3,9 +3,6 @@ package com.example.android_practice.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_practice.R
-import com.example.android_practice.databinding.FragmentExpandableRvBinding
-import com.example.android_practice.databinding.FragmentSwipableRvBinding
 import com.example.android_practice.databinding.RvItemViewBinding
 import com.example.android_practice.recycler_view.RvDataModel
 

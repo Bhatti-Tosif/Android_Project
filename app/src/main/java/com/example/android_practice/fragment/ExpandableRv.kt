@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android_practice.R
 import com.example.android_practice.adapter.ExpandableRVAdapter
-import com.example.android_practice.adapter.GridLayoutAdapter
 import com.example.android_practice.databinding.FragmentExpandableRvBinding
-import com.example.android_practice.databinding.FragmentGridManagerBinding
 import com.example.android_practice.recycler_view.Constant
 
 

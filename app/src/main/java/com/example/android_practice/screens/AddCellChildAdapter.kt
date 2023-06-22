@@ -1,11 +1,8 @@
 package com.example.android_practice.screens
 
-import android.annotation.SuppressLint
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.databinding.PickedImageDetailBinding
 

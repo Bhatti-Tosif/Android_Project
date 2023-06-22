@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.CheckBox
 import com.example.android_practice.dataBinding.DataBindingPractice
 import com.example.android_practice.databinding.ActivityAllWidgetsBinding
-import com.example.android_practice.layoutPractice.CoordinatorLayout
 import com.example.android_practice.screens.AddCellPractice
 import com.example.android_practice.viewPager2.ViewvPagerPractice
 

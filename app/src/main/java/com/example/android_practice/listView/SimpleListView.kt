@@ -1,16 +1,9 @@
 package com.example.android_practice.listView
 
-import android.annotation.SuppressLint
-import android.content.ComponentCallbacks
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_practice.R
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 
 class SimpleListView : AppCompatActivity() {

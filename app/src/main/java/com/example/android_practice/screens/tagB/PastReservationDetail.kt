@@ -2,16 +2,11 @@ package com.example.android_practice.screens.tagB
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Adapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android_practice.R
 import com.example.android_practice.adapter.RentalAdapter
 import com.example.android_practice.databinding.ActivityPastReservationDetailBinding
-import com.example.android_practice.databinding.PastReservationItemBinding
 import com.example.android_practice.screens.tagB.dataModel.Data
 import com.example.android_practice.screens.tagB.dataModel.RentalModel
-import com.example.android_practice.screens.tagB.dataModel.ReservationType
-import java.text.FieldPosition
 
 class PastReservationDetail : AppCompatActivity() {
 

@@ -1,14 +1,11 @@
 package com.example.android_practice.fragment
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -16,11 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.R
 import com.example.android_practice.adapter.SearchRVAdapter
-import com.example.android_practice.databinding.FragmentLinearManagerBinding
 import com.example.android_practice.databinding.FragmentSearchRecyclerViewBinding
 import com.example.android_practice.recycler_view.Constant
 import com.example.android_practice.recycler_view.RVContentMargin
-import com.example.android_practice.recycler_view.RvAdapter
 import com.example.android_practice.recycler_view.RvDataModel
 
 class SearchRecyclerView : Fragment() {

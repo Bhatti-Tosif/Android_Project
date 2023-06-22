@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.android_practice.R
 import com.example.android_practice.adapter.StaggeredAdapter
 import com.example.android_practice.databinding.FragmentStaggeredLayoutManagerBinding
 import com.example.android_practice.recycler_view.Constant

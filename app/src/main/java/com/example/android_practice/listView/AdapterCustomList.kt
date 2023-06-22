@@ -2,16 +2,13 @@ package com.example.android_practice.listView
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.android_practice.R
-import com.example.android_practice.databinding.FragmentStaggeredLayoutManagerBinding
 
 class AdapterCustomList(var context: Context, val dataList: ArrayList<UserDetailData>): BaseAdapter() {
     override fun getCount(): Int {

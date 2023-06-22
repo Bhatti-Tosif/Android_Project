@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.coordinatorlayout.widget.CoordinatorLayout
-import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityFloatingActionButtonBinding
 import com.google.android.material.snackbar.Snackbar
 

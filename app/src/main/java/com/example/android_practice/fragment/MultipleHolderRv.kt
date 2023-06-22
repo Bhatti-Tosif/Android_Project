@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android_practice.R
 import com.example.android_practice.adapter.MultipleHolderAdapter
 import com.example.android_practice.databinding.FragmentMultipleHolderRvBinding
 import com.example.android_practice.recycler_view.Constant

@@ -1,20 +1,14 @@
 package com.example.android_practice.screens.tagB
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.graphics.Color
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.Button
 import android.widget.RatingBar
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_practice.R
 import com.example.android_practice.databinding.PastReservationItemBinding
 import com.example.android_practice.screens.tagB.dataModel.Data
 import com.example.android_practice.screens.tagB.dataModel.RentalModel
-import kotlinx.coroutines.NonDisposableHandle.parent
-import java.text.FieldPosition
 
 class RentalViewHolder(val binding: PastReservationItemBinding, private val changeDetail: (Int) -> Unit): RecyclerView.ViewHolder(binding.root) {
 

@@ -1,7 +1,6 @@
 package com.example.android_practice.recycler_view
 
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.DiffUtil.DiffResult
 
 class LinearDiffUtilCallBack(private val oldList: List<RvDataModel>, private val newList: List<RvDataModel>): DiffUtil.Callback() {
 

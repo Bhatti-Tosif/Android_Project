@@ -1,5 +1,6 @@
 package com.example.android_practice.recycler_view_reverse_kt.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -11,58 +12,57 @@ import com.example.android_practice.databinding.ItemDropDownViewTypeBinding
 import com.example.android_practice.databinding.ItemSimpleViewTypeListBinding
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.CommentDataModal
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.MultiViewType
-import com.example.android_practice.recycler_view_reverse_kt.data_modal.PostModel
 import com.example.android_practice.recycler_view_reverse_kt.data_modal.ViewType
-
 class MultiViewMainAdapter(
     val onPostClick: (Int) -> Unit,
     val onSimpleViewClick: (MultiViewType.SimpleItem) -> Unit,
     val onDropDownClick: (ItemDropDownViewTypeBinding, MultiViewType.DropdownItem) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private lateinit var imagesList: ArrayList<PostModel>
-
     private var dataList: ArrayList<MultiViewType> = arrayListOf()
     private lateinit var horizontalAdapter: HorizontalAdapter
     private lateinit var commentAdapter: CommentAdapter
     private lateinit var commentList: ArrayList<CommentDataModal>
 
+    private var getCount = 1
+    private var onCreate = 1
+    private var onBind = 1
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when (viewType) {
-            ViewType.SimpleView.ordinal -> SimpleViewHolder(
+        val view = ViewType.values()[viewType]
+        Log.d("REC create", onCreate.toString())
+        onCreate += 1
+        return when (view) {
+            ViewType.SimpleView -> SimpleViewHolder(
                 ItemSimpleViewTypeListBinding.inflate(
                     LayoutInflater.from(parent.context), parent, false
                 )
             )
 
-            ViewType.HorizontalView.ordinal -> HorizontalViewHolder(
+            ViewType.HorizontalView -> HorizontalViewHolder(
                 HorizontalRecylerImageViewBinding.inflate(
                     LayoutInflater.from(parent.context), parent, false
                 )
             )
 
-            ViewType.DropDownView.ordinal -> DropDownVewHolder(
+            ViewType.DropDownView -> DropDownVewHolder(
                 ItemDropDownViewTypeBinding.inflate(
                     LayoutInflater.from(parent.context), parent, false
-                )
-            )
-
-            else -> SimpleViewHolder(
-                ItemSimpleViewTypeListBinding.inflate(
-                    LayoutInflater.from(
-                        parent.context
-                    ), parent, false
                 )
             )
         }
     }
 
     override fun getItemCount(): Int {
+        Log.d("Recycler count", getCount.toString())
+        getCount += 1
         return dataList.count()
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = dataList[position]
+        Log.d("Recycler bind", onBind.toString())
+        onBind += 1
         when (holder) {
             is SimpleViewHolder -> holder.bind(item as MultiViewType.SimpleItem)
             is HorizontalViewHolder -> holder.bind(item as MultiViewType.HorizontalItem)
@@ -97,8 +97,7 @@ class MultiViewMainAdapter(
         fun bind(item: MultiViewType.HorizontalItem) {
             horizontalAdapter = HorizontalAdapter(onPostClick)
             binding.rvHorizontalPost.adapter = horizontalAdapter
-            imagesList = item.postImages
-            horizontalAdapter.submitList(imagesList)
+            horizontalAdapter.submitList(item.postImages)
         }
     }
 
@@ -134,3 +133,4 @@ class MultiViewMainAdapter(
     }
 
 }
+

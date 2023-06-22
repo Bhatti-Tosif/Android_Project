@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_practice.R
 import com.example.android_practice.databinding.RvItemViewBinding
 import com.google.android.material.snackbar.Snackbar
 

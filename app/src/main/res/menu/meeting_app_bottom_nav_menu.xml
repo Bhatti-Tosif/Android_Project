@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/menu_favorite"
+        android:id="@id/meetingFragment2"
+        android:icon="@drawable/fill_heart"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:title="@string/menu_chatting"
+        android:id="@+id/chattingFragment"
+        android:icon="@drawable/ic_chat_24"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="@string/menu_music"
+        android:id="@+id/musicFragment"
+        android:icon="@drawable/ic_music"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="@string/menu_video_call"
+        android:id="@+id/videoChatFragment"
+        android:icon="@drawable/ic_video_chat"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="@string/menu_description"
+        android:id="@+id/descriptionFragment"
+        android:icon="@drawable/ic_description_24"
+        app:showAsAction="ifRoom"/>
+</menu>

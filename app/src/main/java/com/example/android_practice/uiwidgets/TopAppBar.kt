@@ -2,9 +2,7 @@ package com.example.android_practice.uiwidgets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.android_practice.R
-import com.google.android.material.appbar.MaterialToolbar
 
 class TopAppBar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

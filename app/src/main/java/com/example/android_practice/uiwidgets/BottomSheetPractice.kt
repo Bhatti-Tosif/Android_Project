@@ -2,11 +2,8 @@ package com.example.android_practice.uiwidgets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityBottomSheetpracticeBinding
 import com.example.android_practice.fragment.BottomSheetFragment
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class BottomSheetPractice : AppCompatActivity() {
 

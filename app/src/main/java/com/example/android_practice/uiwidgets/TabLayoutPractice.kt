@@ -1,13 +1,11 @@
 package com.example.android_practice.uiwidgets
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android_practice.R
 import com.example.android_practice.databinding.ActivityTabLayoutPracticeBinding
 import com.example.android_practice.fragment.FragmentAdapterForWp
 import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 
 class TabLayoutPractice : AppCompatActivity() {
 

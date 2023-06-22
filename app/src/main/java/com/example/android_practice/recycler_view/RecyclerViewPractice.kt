@@ -2,17 +2,9 @@ package com.example.android_practice.recycler_view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.res.ResourcesCompat
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.viewpager2.widget.ViewPager2
-import com.example.android_practice.R
-import com.example.android_practice.databinding.ActivityImageButtonBinding
 import com.example.android_practice.databinding.ActivityRecyclerViewPracticeBinding
 import com.example.android_practice.fragment.FragmentAdapterForRv
-import com.example.android_practice.fragment.FragmentAdapterForWp
 import com.google.android.material.tabs.TabLayout
 
 class RecyclerViewPractice : AppCompatActivity() {
