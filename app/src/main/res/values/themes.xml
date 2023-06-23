@@ -208,6 +208,6 @@
 
     //Navy Blue StatusColor
     <style name="StatusBarTheme" parent="Theme.Material3.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/blue_bank</item>
+        <item name="android:statusBarColor">@color/light_blue</item>
     </style>
 </resources>

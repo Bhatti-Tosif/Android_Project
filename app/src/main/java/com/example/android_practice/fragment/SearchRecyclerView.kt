@@ -25,12 +25,12 @@ class SearchRecyclerView : Fragment() {
     private lateinit var newArrayList: ArrayList<RvDataModel>
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
         binding = FragmentSearchRecyclerViewBinding.inflate(layoutInflater)
 
 
-        newArrayList = ArrayList<RvDataModel>()
+        newArrayList = ArrayList()
         newArrayList = Constant.getData()
         rvAdapter = SearchRVAdapter(newArrayList)
         binding.rvRestaurant.layoutManager = LinearLayoutManager(container?.context)

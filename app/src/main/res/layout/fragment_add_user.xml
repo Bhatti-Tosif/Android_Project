@@ -15,39 +15,48 @@
         android:src="@drawable/ic_supervised_user_circle"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/btn_image_picker" />
 
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:id="@+id/et_name"
+        android:paddingStart="@dimen/dp_10"
         android:layout_marginHorizontal="@dimen/dp_20"
-        android:background="@drawable/custom_edittext"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/off_white"
         android:layout_marginTop="@dimen/dp_20"
         android:hint="@string/hint_enter_name"
-        app:layout_constraintTop_toBottomOf="@id/iv_profile_pic"/>
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_pic"
+        tools:ignore="RtlSymmetry"
+        android:autofillHints="Name" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:id="@+id/et_email"
-        android:paddingStart="@dimen/dp_5"
+        android:paddingStart="@dimen/dp_10"
         android:layout_marginHorizontal="@dimen/dp_20"
-        android:background="@drawable/custom_edittext"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/off_white"
         android:layout_marginTop="@dimen/dp_20"
         android:hint="@string/hint_enter_email"
+        android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/et_name"
-        android:autofillHints="name" />
+        android:autofillHints="name"
+        tools:ignore="RtlSymmetry" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:id="@+id/btn_addUser"
         android:text="@string/btn_add_user"
+        android:backgroundTint="@color/bank_navy_blue"
         android:layout_marginHorizontal="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_20"
-        android:backgroundTint="@color/bank_navy_blue"
         app:layout_constraintTop_toBottomOf="@+id/et_email"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

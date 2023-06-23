@@ -11,6 +11,7 @@ import com.android.volley.toolbox.Volley
 import com.example.android_practice.databinding.ActivityGetUserDetailBinding
 import com.example.android_practice.webServices.Utils.AppConstant
 import com.example.android_practice.webServices.Utils.DebouncingQueryTextListener
+import com.example.android_practice.webServices.Utils.observeEvent
 import com.example.android_practice.webServices.adapter.GetUserAdapter
 import com.example.android_practice.webServices.factory.UserViewModelFactory
 import com.example.android_practice.webServices.fragment.AddUserFragment
@@ -166,10 +167,9 @@ class GetUserDetailActivity : AppCompatActivity() {
             userViewModel.getUserThroughHttp("student/$id")
             binding.pbLoader.visibility = View.VISIBLE
         }
-        userViewModel.showUser.observe(this) { userData ->
+        userViewModel.showUser.observeEvent(this) { userData ->
             UserProfile(userData).show(supportFragmentManager, "User Profile")
             binding.pbLoader.visibility = View.GONE
         }
-
     }
 }

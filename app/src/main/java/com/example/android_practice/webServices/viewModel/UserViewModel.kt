@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.example.android_practice.webServices.Utils.AppConstant
+import com.example.android_practice.webServices.Utils.Event
 import com.example.android_practice.webServices.api.RequestHandler
 import com.example.android_practice.webServices.model.UserModel
 import com.example.android_practice.webServices.reposetry.UserMainRepository
@@ -36,7 +37,7 @@ class UserViewModel(private val repository: UserRepository): ViewModel() {
     }
 
     /** Live Data Properties */
-    var showUser: MutableLiveData<UserModel> = MutableLiveData<UserModel>()
+    var showUser = MutableLiveData<Event<UserModel>>()
     val deleteUser = MutableLiveData<UserModel>()
     var deleteUserSuccess = MutableLiveData<Int>()
     val okHttpResponse = MutableLiveData<Array<UserModel>>()
@@ -103,7 +104,7 @@ class UserViewModel(private val repository: UserRepository): ViewModel() {
             //Log.d(TAG, gsonParsing.toString())  */
 
             //Manual Json Parsing
-            val json = response.let { JSONObject(it) }
+            val json = JSONObject(response)
             val user = UserModel( json.getString(AppConstant.createdAt) ?: "",
             json.getString(AppConstant.name) ?: "",
             json.getString(AppConstant.avatar) ?: "",
@@ -111,7 +112,7 @@ class UserViewModel(private val repository: UserRepository): ViewModel() {
                 (json.get(AppConstant.id) ?: "") as String
             )
             withContext(Dispatchers.Main) {
-                showUser.value = user
+                showUser.value = Event(user)
             }
         }
     }
