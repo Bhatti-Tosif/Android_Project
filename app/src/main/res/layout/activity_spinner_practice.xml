@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.SpinnerPractice">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_48dp"
+        android:id="@+id/playersSpinner"
+        android:background="@color/lightGreay"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_48dp"
+        android:id="@+id/customSpiner"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/playersSpinner"
+        app:layout_constraintStart_toStartOf="@+id/playersSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/playersSpinner"/>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoComplete"
+        android:layout_margin="@dimen/dp_20"
+        android:hint="@string/hint_check_autocomplete"
+        app:layout_constraintTop_toBottomOf="@id/customSpiner" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/dp_20"-->
+<!--        android:layout_marginEnd="@dimen/dp_20"-->
+<!--        android:layout_marginTop="@dimen/dp_50"-->
+<!--        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/autoComplete">-->
+
+<!--        <com.google.android.material.textfield.MaterialAutoCompleteTextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/materialSpinner"-->
+<!--            android:paddingBottom="@dimen/dp_16"-->
+<!--            android:paddingTop="@dimen/dp_16"-->
+<!--            android:hint="@string/txt_players" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

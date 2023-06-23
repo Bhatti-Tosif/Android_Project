@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.FloatingActionButton">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/light_gray"
+        app:borderWidth="2dp"
+        app:fabSize="auto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red_color" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/purple_700"
+        app:borderWidth="2dp"
+        app:elevation="@dimen/dp_10"
+        app:fabCustomSize="@dimen/dp_100"
+        app:hoveredFocusedTranslationZ="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
+        app:pressedTranslationZ="@dimen/dp_10"
+        app:rippleColor="@color/white"
+        app:showMotionSpec="@android:anim/bounce_interpolator"
+        app:tint="@color/red_color" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/red_color"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/stroke_dp_2"
+        app:elevation="@dimen/dp_10"
+        app:icon="@android:drawable/ic_lock_idle_lock"
+        app:iconTint="@color/black"
+        android:text="@string/fab_extend_fab"
+        android:textColor="@color/white"
+        app:hoveredFocusedTranslationZ = "@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/faNotification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/dp_20"
+        app:backgroundTint="@color/purple_200"
+        android:text="@string/fab_add"
+        app:icon="@android:drawable/ic_popup_reminder"
+        app:iconTint="@color/black"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabReceive"
+        app:layout_constraintBottom_toTopOf="@+id/faNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/dp_20"
+        app:backgroundTint="@color/btn_color"
+        app:icon="@android:drawable/ic_popup_reminder"
+        app:iconTint="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_received"
+        android:text="@string/txt_received"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/fabReceive"
+        app:layout_constraintTop_toTopOf="@+id/fabReceive"
+        app:layout_constraintBottom_toBottomOf="@+id/fabReceive"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabCancel"
+        app:layout_constraintBottom_toTopOf="@+id/fabReceive"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/dp_20"
+        app:backgroundTint="@color/red_color"
+        app:icon="@android:drawable/ic_popup_reminder"
+        app:iconTint="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_cancel"
+        android:text="@string/txt_cancel"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/fabReceive"
+        app:layout_constraintTop_toTopOf="@+id/fabCancel"
+        app:layout_constraintBottom_toBottomOf="@+id/fabCancel"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabCustomSnack"
+        app:layout_constraintBottom_toTopOf="@+id/fabCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/dp_20"
+        app:backgroundTint="@color/blue_bank"
+        app:icon="@android:drawable/ic_popup_reminder"
+        app:iconTint="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_customSnack"
+        android:text="@string/tv_custom_snack"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/fabCustomSnack"
+        app:layout_constraintTop_toTopOf="@+id/fabCustomSnack"
+        app:layout_constraintBottom_toBottomOf="@+id/fabCustomSnack"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

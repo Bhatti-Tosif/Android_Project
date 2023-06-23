@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Android_practice" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Android_practice" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -10,7 +10,204 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Customize your theme here. -->
+
+    </style>
+    
+    //Custom Chips
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="checkedIconTint">@color/chip_text_color</item>
+    </style>
+    
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@color/blue_bank</item>
+    </style>
+
+    //Custom SearchView
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    //PastReservation Rental TextView Style
+    <style name="PRTextViewRentalData" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_15sp</item>
+    </style>
+
+    //PastReservation TextView Style
+    <style name="PRTextViewData" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_15sp</item>
+    </style>
+
+    //CornerRadius Theme
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    //WalkingCard Style for Reverse Kt
+    <style name="WalkingCard_textStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //Walking Card Subheading
+    <style name="WalkingCardSubHeading">
+        <item name="android:textColor">@color/gray_sub_heading</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/noyh_r_semi_light</item>
+    </style>
+
+    //TextViewDescription with Black for Reverse Kt
+    <style name="TextViewDescription">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //Description Detail Text
+    <style name="DescriptionDetailText">
+        <item name="android:textColor">@color/gray_sub_heading</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //TextView Blue with 20sp for Reverse Kt
+    <style name="TextViewBlue20sp">
+        <item name="android:textColor">@color/text_blue_revers_kt</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+    </style>
+
+    //GlucoseCardHeadingText
+    <style name="GlucoseCardHeadingText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="fontFamily">@font/noyh_r_semi_light</item>
+    </style>
+
+    //GlucoseCardSubHeading
+    <style name="GlucoseSubHeadingText">
+        <item name="android:textColor">@color/glucose_sub_heading</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="fontFamily">@font/noyh_r_light</item>
+    </style>
+
+    //WorkOutDetailCards
+    <style name="WorkOutCardHeadingText">
+        <item name="android:textColor">@color/gray_revers_kt</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    <style name="PercentageSignTextView">
+        <item name="android:textColor">@color/mediumGray</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    //WorkOutSubHeadingCards
+    <style name="WorkOutDetailCardSubHeading">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //MedicineCardHeading
+    <style name="MedicineCardHeadingText">
+        <item name="android:textColor">@color/mediumGray</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="fontFamily">@font/noyh_r_semi_light</item>
+    </style>
+
+    //MedicineQuantityText
+    <style name="MedicineQuantityText">
+        <item name="android:textColor">@color/text_blue_revers_kt</item>
+        <item name="android:textSize">@dimen/_15sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //SysCardDataHeadingText
+    <style name="SysCardHeadingText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/noyh_r_medium</item>
+    </style>
+
+    //SysCardQuantityText
+    <style name="SysCardQuantityText">
+        <item name="fontFamily">@font/noyh_r_regular</item>
+        <item name="android:textColor">@color/text_blue_revers_kt</item>
+        <item name="android:textSize">@dimen/_30sp</item>
+    </style>
+
+    //Carbohydrates Heading text
+    <style name="CarbohydrateCardHeadingText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">23sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //CarbohydratesQuantityText
+    <style name="CarbohydratesQuantityText">
+        <item name="android:textColor">@color/text_blue_revers_kt</item>
+        <item name="android:textSize">@dimen/_30sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //ActionBarTitleStyle
+    <style name="ActionBarTitleStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_25sp</item>
+        <item name="fontFamily">@font/noyh_r_medium</item>
+    </style>
+
+    //TreatHomeScreen Heading Text
+    <style name="HeadingOfTreatHomeScreen">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">35sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //TreatHomeScreen SunHeading Text
+    <style name="SubHeadingOfTreatHomeScreen">
+        <item name="android:textColor">@color/gray_sub_heading</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="fontFamily">@font/noyh_r_regular</item>
+    </style>
+
+    //TodayActivityHeading
+    <style name="TodayActivityHeadingText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="fontFamily">@font/noyh_r_semi_light</item>
+    </style>
+
+    //Full Screen Style
+    <style name="Theme.AppCompat.NoActionBar.FullScreen" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    //Deep Aqua Status Color
+    <style name="DeepAquaStatusBar" parent="Theme.Material3.Light.NoActionBar" >
+        <item name="android:statusBarColor">@color/deepAqua</item>
+    </style>
+
+    //Navy Blue StatusColor
+    <style name="StatusBarTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/blue_bank</item>
     </style>
 </resources>

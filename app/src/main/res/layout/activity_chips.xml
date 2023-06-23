@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.Chips">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtChipType"
+        android:text="@string/txt_types_of_chips"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_20"
+        android:textSize="@dimen/_20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeofChipGroup"
+        android:layout_marginTop="@dimen/dp_10"
+        app:singleSelection="true"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/txtChipType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/defaultChip"
+            android:text="@string/chips_default" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/entryChip"
+            android:text="@string/chips_entry"
+            style="@style/Widget.MaterialComponents.Chip.Entry"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/choiceChip"
+            android:text="@string/chip_choice"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/actionChip"
+            android:text="@string/chip_action"
+            android:backgroundTint="@color/teal_700"
+            style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filterChip"
+            android:text="@string/chup_filter"
+            app:rippleColor="@color/yellow_color"
+            style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconChip"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/chip_chip_icon"
+        app:chipIcon="@drawable/ic_launcher_foreground"
+        app:closeIcon="@android:drawable/btn_dialog"
+        app:closeIconEnabled="true"
+        app:chipIconEnabled="true"
+        app:chipIconTint="@color/btn_color"
+        app:layout_constraintTop_toBottomOf="@+id/typeofChipGroup"
+        app:layout_constraintStart_toStartOf="@+id/typeofChipGroup"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCustomChip"
+        android:text="@string/txt_customchip"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:textSize="@dimen/_20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/iconChip"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtCustomChip"
+        app:layout_constraintStart_toStartOf="@+id/txtCustomChip"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="@string/txt_filter" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="@string/txt_custom" />
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="@string/txt_new" />
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
