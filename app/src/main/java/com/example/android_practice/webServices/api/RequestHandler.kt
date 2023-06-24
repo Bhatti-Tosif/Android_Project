@@ -14,8 +14,8 @@ import java.net.URL
 import java.net.URLEncoder
 
 object RequestHandler {
-    const val GET : String = "GET"
-    const val POST : String = "POST"
+    private const val GET : String = "GET"
+    private const val POST : String = "POST"
 
     @Throws(Exception::class)
     fun requestPOST(r_url: String?, postDataParams: JSONObject): String? {

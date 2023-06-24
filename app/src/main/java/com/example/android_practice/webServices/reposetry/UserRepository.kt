@@ -53,8 +53,8 @@ object UserMainRepository {
         return RetrofitHelper.getUserInstance().searchUser(searchText)
     }
 
-/** This is for Practice
-//    fun uploadImage() : Response<UploadImageResponse> {
-//        return  RetrofitHelper.uploadInstance().uploadImage()
-//    }  */
+    /** This is for Practice
+    //    fun uploadImage() : Response<UploadImageResponse> {
+    //        return  RetrofitHelper.uploadInstance().uploadImage()
+    //    }  */
 }

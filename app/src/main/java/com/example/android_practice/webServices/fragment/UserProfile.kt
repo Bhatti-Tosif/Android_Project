@@ -30,7 +30,7 @@ class UserProfile(private val userData: UserModel) : DialogFragment() {
     }
 
     private fun setData() {
-        Glide.with(requireContext()).load(userData.avatar).into(binding.ivUserPic)
+        context?.let { Glide.with(it).load(userData.avatar).into(binding.ivUserPic) }
         binding.tvName.text = userData.name
         binding.tvEmailId.text = userData.emailId
     }

@@ -82,6 +82,11 @@ class GetUserDetailActivity : AppCompatActivity() {
             userAdapter.notifyDataSetChanged()
         }
 
+        userViewModel.showUser.observeEvent(this) { userData ->
+            UserProfile(userData).show(supportFragmentManager, "User Profile")
+            binding.pbLoader.visibility = View.GONE
+        }
+
         /** Practice for okHttp
         //getDataThroughOkHttp() */
 
@@ -166,10 +171,6 @@ class GetUserDetailActivity : AppCompatActivity() {
         lifecycleScope.launch {
             userViewModel.getUserThroughHttp("student/$id")
             binding.pbLoader.visibility = View.VISIBLE
-        }
-        userViewModel.showUser.observeEvent(this) { userData ->
-            UserProfile(userData).show(supportFragmentManager, "User Profile")
-            binding.pbLoader.visibility = View.GONE
         }
     }
 }

@@ -14,9 +14,9 @@ object AppConstant {
     val userRepository = UserRepository(userServices)
 
     //User Model Json Params
-    val createdAt = "createdAt"
-    val name      = "name"
-    val avatar    = "avatar"
-    val emailId   = "emailId"
-    val id        = "id"
+    const val createdAt = "createdAt"
+    const val name      = "name"
+    const val avatar    = "avatar"
+    const val emailId   = "emailId"
+    const val id        = "id"
 }

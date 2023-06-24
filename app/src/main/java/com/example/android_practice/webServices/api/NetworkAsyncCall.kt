@@ -1,11 +1,13 @@
 package com.example.android_practice.webServices.api
 
-import android.content.Context
-import android.os.AsyncTask
-import android.widget.Toast
-import org.json.JSONObject
 
 /** This is for Practice in Background Thread Now we Use Coroutines for that work */
+
+/***  This is for check Asyns Task
+ *
+ *
+ *
+ *
 class NetworkAsyncCall(private val context: Context, private val url: String, private val requestType:
 String, private val postJSONObject: JSONObject = JSONObject()
 ) : AsyncTask<String?, String?, String?>() {
@@ -26,3 +28,4 @@ String, private val postJSONObject: JSONObject = JSONObject()
         }
     }
 }
+ */
