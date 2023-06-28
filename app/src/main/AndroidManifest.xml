@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -28,6 +35,7 @@
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
@@ -42,13 +50,13 @@
         <activity
             android:name=".webServices.activity.MeetingAppMainActivity"
             android:theme="@style/StatusBarTheme"
-            android:exported="true" />
+            android:exported="false" />
 
         <receiver android:name=".intent_practice.activity.PendingIntentReceiver" />
 
         <activity
             android:name=".intent_practice.activity.PendingIntentPractice"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".intent_practice.activity.BroadCastReceiverPractice"
             android:exported="false" />
@@ -112,10 +120,10 @@
             android:exported="false" />
         <activity
             android:name=".intent_practice.SecondLaunchActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".intent_practice.ActivityLifeCyclePractice"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".recerseKtScreen.activity.TreatHomeScreen"
             android:exported="false" />
@@ -195,13 +203,7 @@
             android:exported="false" />
         <activity
             android:name=".StartActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".screens.BankWelcomeScreen"
             android:exported="false"
@@ -242,29 +244,29 @@
             android:exported="false" />
         <activity
             android:name=".uiwidgets.AllWidgets"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".uiwidgets.textView"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".layoutPractice.ConstraintLayout"
             android:exported="false" />
         <activity
             android:name=".layoutPractice.RelativeLayout"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".layoutPractice.LayoutPractice"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".SecondActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".recycler_view_reverse_kt.activity.MultiViewMainActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

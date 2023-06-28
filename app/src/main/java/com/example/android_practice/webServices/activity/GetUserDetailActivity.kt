@@ -31,7 +31,6 @@ class GetUserDetailActivity : AppCompatActivity() {
 
 
     /** Lifecycle of Activity */
-    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGetUserDetailBinding.inflate(layoutInflater)
@@ -45,7 +44,17 @@ class GetUserDetailActivity : AppCompatActivity() {
         }
 
         searchViewPrepare()
+        observer()
 
+        /** Practice for okHttp
+        //getDataThroughOkHttp() */
+
+        /** Practice GetDataThrough Volley
+        //getDataThroughVolley()  */
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun observer() {
         userViewModel.user.observe(this) { userList ->
             binding.pbLoader.visibility = View.GONE
             binding.bgLoading.visibility = View.GONE
@@ -86,12 +95,6 @@ class GetUserDetailActivity : AppCompatActivity() {
             UserProfile(userData).show(supportFragmentManager, "User Profile")
             binding.pbLoader.visibility = View.GONE
         }
-
-        /** Practice for okHttp
-        //getDataThroughOkHttp() */
-
-        /** Practice GetDataThrough Volley
-        //getDataThroughVolley()  */
     }
 
     private fun searchViewPrepare() {
