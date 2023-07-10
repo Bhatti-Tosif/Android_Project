@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,20 +21,256 @@
         android:theme="@style/Theme.Android_practice"
         tools:targetApi="31">
         <activity
-            android:name=".SecondActivity"
-            android:screenOrientation="landscape"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:name=".webServices.activity.MainWebServices"
+            android:exported="false" />
+        <activity
+            android:name=".webServices.activity.GetUserDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".webServices.activity.PopularMovies"
+            android:exported="false" />
+        <activity
+            android:name=".main_screen_handle.FirstScreen"
+            android:exported="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".intent_practice.navigationGraph.activity.PrivacyPolicyChange"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.navigationGraph.activity.NestedNavigationGraph"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.navigationGraph.activity.WebViewPractice"
+            android:exported="false" />
+        <activity
+            android:name=".webServices.activity.MeetingAppMainActivity"
+            android:theme="@style/StatusBarTheme"
+            android:exported="false" />
 
+        <receiver android:name=".intent_practice.activity.PendingIntentReceiver" />
+
+        <activity
+            android:name=".intent_practice.activity.PendingIntentPractice"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.BroadCastReceiverPractice"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.IntentFilterPractice"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".intent_practice.activity.ImplicitIntentPractice"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.some.affinity" />
+        <activity
+            android:name=".intent_practice.activity.FragmentToActivityDataPass"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.ActivityFragmentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.button_recycle.ActivityRecycleButton"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.FragmentToFragmentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.activity.FragmentChangerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ExplicitDataReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ExplicitIntentDataPassing"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ImplicitIntentType"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.DeepLinkingScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="www.flipkart.com" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.amazon.in" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intent_practice.ExplicitIntent"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.SecondLaunchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent_practice.ActivityLifeCyclePractice"
+            android:exported="false" />
+        <activity
+            android:name=".recerseKtScreen.activity.TreatHomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".recerseKtScreen.activity.TreatScreen"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.BottomSheetPractice"
+            android:exported="false" />
+        <activity
+            android:name=".screens.AddCellPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.ImagePickerWithRv"
+            android:exported="false" />
+        <activity
+            android:name=".custom_view.CustomViewPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.ToastPractice"
+            android:exported="false" />
+        <activity
+            android:name=".screens.tagB.PastReservationDetail"
+            android:theme="@style/DeepAquaStatusBar"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.BottomNavigationPractice"
+            android:exported="false" />
+        <activity
+            android:name=".dataBinding.DataBindingPractice"
+            android:exported="false" />
+        <activity
+            android:name=".viewPager2.ViewvPagerPractice"
+            android:exported="false" />
+        <activity
+            android:name=".listView.SimpleListView"
+            android:exported="false" />
+        <activity
+            android:name=".recycler_view.RecyclerViewPractice"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.FrameLayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CustomDatePicker"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CollapsingToolBarPractice"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.CoordinatorLayout"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.GridLayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.TopAppBar"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.TabLayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CustomeSnackBar"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.FloatingActionButton"
+            android:exported="false" />
+        <activity
+            android:name=".screens.SummaryScreen"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen" />
+        <activity
+            android:name=".screens.BudgetScreen"
+            android:exported="false" />
+        <activity
+            android:name=".screens.BankSignInScreen"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".screens.BankWelcomeScreen"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".screens.BankEcLaunchScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.IncludePractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CalendarView"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.ProgressBarTry"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.SpinnerPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.Chips"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.ImageButton"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.SwitchTry"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.CheckBoxTry"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.EditText"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.ButtonPractice"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.AllWidgets"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.textView"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.ConstraintLayout"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.RelativeLayout"
+            android:exported="false" />
+        <activity
+            android:name=".layoutPractice.LayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recycler_view_reverse_kt.activity.MultiViewMainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

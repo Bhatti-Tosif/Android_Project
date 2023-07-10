@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.ImageButton">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_50"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtForImageButton"
+        android:layout_marginStart="@dimen/dp_30"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:id="@+id/cardForCircle"
+        app:cardCornerRadius="@dimen/dp_50"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewTree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:srcCompat="@drawable/tree1" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageViewScaleType"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@color/btn_color"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardForCircle"
+        app:srcCompat="@drawable/tree1" />
+
+    <TextView
+        android:id="@+id/textViewScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="FitStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewScaleType"
+        app:layout_constraintStart_toStartOf="@+id/imageViewScaleType"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewScaleType" />
+
+    <ImageView
+        android:id="@+id/imageViewWithDrawable"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/image"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScale" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:text="ToggleButton"
+        android:textOff="Switch Off"
+        android:textOn="Switch On"
+        android:checked="true"
+        android:drawablePadding="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:drawableEnd="@android:drawable/checkbox_on_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewWithDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

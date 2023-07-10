@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.ProgressBarTry">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontal_progress"
+        android:layout_margin="@dimen/dp_50"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressVertical"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_progress"/>
+
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_download"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/progressVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <SeekBar
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_20"
+        android:id="@+id/seekbar"
+        android:minHeight="@dimen/dp_20"
+        android:thumbTint="@color/red_color"
+        android:secondaryProgressTint="@color/mediumGray"
+        android:progressTint="@color/btn_color"
+        android:layout_marginTop="@dimen/dp_30"
+        app:layout_constraintTop_toBottomOf="@+id/download"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/dp_100"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvChangeValue"
+        android:text="@string/txt_value"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/seekbar"
+        app:layout_constraintTop_toTopOf="@+id/seekbar"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBarDiscrete"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:progressTint="@color/btn_color"
+        android:secondaryProgressTint="@color/red_color"
+        android:max="10"
+        android:minHeight="@dimen/dp_20"
+        android:progress="1"
+        app:layout_constraintStart_toStartOf="@+id/seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDiscrete"
+        android:text="@string/txt_value"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/seekBarDiscrete"
+        app:layout_constraintTop_toTopOf="@+id/seekBarDiscrete"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:numStars="4"
+        android:background="@color/lightGreay"
+        android:progressTint="@color/btn_color"
+        android:stepSize="0.25"
+        android:rating="1"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarDiscrete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRating"
+        android:text="@string/tvRating"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="@+id/ratingBar"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

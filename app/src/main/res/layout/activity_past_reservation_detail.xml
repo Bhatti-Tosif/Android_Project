@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.tagB.PastReservationDetail">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:id="@+id/appBar"
+        android:backgroundTint="@color/deepAqua"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:titleCentered="true"
+                app:titleTextColor="@color/white"
+                app:title="@string/appBar_past_reservation"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_backArrow"
+                android:contentDescription="@string/txt_search_here"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:id="@+id/etFilterData"
+        app:hintEnabled="false"
+        app:boxCornerRadiusTopEnd="@dimen/dp_5"
+        app:boxCornerRadiusTopStart="@dimen/dp_5"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_5"
+        app:boxCornerRadiusBottomStart="@dimen/dp_5"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginVertical="@dimen/dp_10"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFilter">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/dp_5"
+            android:maxLines="1"
+            android:drawableStart="?android:attr/actionModeWebSearchDrawable"
+            android:hint="@string/hint_search_by_facility_rental_id_etc"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_0"
+        android:id="@+id/btnFilter"
+        app:strokeWidth="@dimen/stroke_dp_2"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="@string/btn_filter"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etFilterData"
+        app:layout_constraintBottom_toBottomOf="@+id/etFilterData"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke_dp_2"
+        android:id="@+id/dividerHorizontal"
+        android:background="@color/light_gray"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/etFilterData"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:id="@+id/prDetailRv"
+        app:layout_constraintTop_toBottomOf="@+id/dividerHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/past_reservation_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

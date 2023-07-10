@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.CustomDatePicker">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSelectDate"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_50"
+        app:boxCornerRadiusBottomStart="@dimen/dp_5"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_5"
+        app:boxCornerRadiusTopStart="@dimen/dp_5"
+        app:boxCornerRadiusTopEnd="@dimen/dp_5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginHorizontal="@dimen/dp_30">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/teal_700"
+            android:paddingVertical="@dimen/dp_16"
+            android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+            android:hint="@string/hint_select_date"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/etSelectDate"
+        android:layout_marginTop="@dimen/dp_30"
+        app:boxCornerRadiusBottomStart="@dimen/dp_5"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_5"
+        app:boxCornerRadiusTopStart="@dimen/dp_5"
+        app:boxCornerRadiusTopEnd="@dimen/dp_5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginHorizontal="@dimen/dp_30">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/teal_700"
+            android:paddingVertical="@dimen/dp_16"
+            android:drawableEnd="@android:drawable/ic_lock_idle_alarm"
+            android:hint="@string/hint_select_date"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

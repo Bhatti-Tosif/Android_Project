@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.SwitchTry">
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchforBgChange"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginStart="@dimen/dp_30"
+        app:trackTint="@color/btn_color"
+        app:thumbTint="@color/black"
+        android:text="Show Passwords"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customSwitch"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_30"
+        app:trackTint="@color/yellow_color"
+        app:thumbTint="@color/red_color"
+        android:thumb="@drawable/heart_shape"
+        android:text="@string/switch_show_passwords"
+        app:layout_constraintTop_toBottomOf="@+id/switchforBgChange"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_48dp"
+        android:id="@+id/editTextNumber"
+        android:hint="@string/hint_enter_number"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_margin="@dimen/dp_20"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/customSwitch"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

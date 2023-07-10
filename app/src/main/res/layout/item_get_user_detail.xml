@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userModel"
+            type="com.example.android_practice.webServices.model.UserModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_10"
+        android:layout_margin="@dimen/dp_5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_blue">
+
+            <ImageView
+                android:id="@+id/iv_user_pic"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/simform_logo"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/bnt_update_user" />
+
+            <TextView
+                android:id="@+id/tv_userID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                tools:text="@string/tv_id"
+                android:text="@{userModel.id}"
+                android:textColor="@color/bank_navy_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/iv_user_pic"
+                app:layout_constraintTop_toTopOf="@id/iv_user_pic" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                tools:text="@string/txt_name"
+                android:textColor="@color/bank_navy_blue"
+                android:text="@{userModel.name}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/tv_userID"
+                app:layout_constraintTop_toBottomOf="@+id/tv_userID" />
+
+            <TextView
+                android:id="@+id/tv_emailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                tools:text="@string/hint_email_address"
+                android:textColor="@color/bank_navy_blue"
+                android:text="@{userModel.emailId}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/tv_userID"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <Button
+                android:id="@+id/btn_deleteUser"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/orange"
+                android:text="@string/btn_delete_user"
+                android:textColor="@color/bank_navy_blue"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_editUser"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_user_pic" />
+
+            <Button
+                android:id="@+id/btn_editUser"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/bank_navy_blue"
+                android:text="@string/btn_edit_user"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_deleteUser"
+                app:layout_constraintTop_toBottomOf="@id/iv_user_pic" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

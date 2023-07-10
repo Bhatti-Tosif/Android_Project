@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.EditText">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/centerGuide"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+
+    <EditText
+        android:id="@+id/editTextSimple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Enter Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Passwords"
+        android:inputType="textPassword"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSimple"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintEnd_toEndOf="@id/centerGuide"/>
+
+    <EditText
+        android:id="@+id/editTextNumberPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="Number Password"
+        android:ems="10"
+        android:inputType="numberPassword"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"
+        app:layout_constraintTop_toTopOf="@id/editTextPassword"/>
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="false"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toTopOf="@id/editTextSimple" />
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="PostalAddress"
+        android:layout_marginStart="10dp"
+        android:inputType="textPostalAddress"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="152dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword"
+        app:layout_constraintStart_toStartOf="@+id/centerGuide"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhone"/>
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+    <EditText
+        android:id="@+id/editTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="MultiLine"
+        android:layout_marginTop="10dp"
+        android:gravity="start|top"
+        android:layout_marginEnd="10dp"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintStart_toStartOf="@+id/leftGuide"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"/>
+
+    <EditText
+        android:id="@+id/editTextUri"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Uri"
+        android:layout_marginStart="10dp"
+        android:gravity="start|top"
+        android:inputType="textUri"
+        app:layout_constraintTop_toTopOf="@id/editTextMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/centerGuide"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="AutoCompleteTextView"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextMultiLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintEnd_toEndOf="@id/centerGuide"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView2"
+        android:layout_width="189dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:text="MultiAutoCompleteTextView"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/editTextUri" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:checkMark="@drawable/heart_shape"
+        android:text="Checked"
+        app:layout_constraintEnd_toEndOf="@id/centerGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/autoCompleteTextView" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="@id/txtMaterial"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMaterial"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintEnd_toStartOf="@+id/txtMaterial"
+
+        />
+
+    <TextView
+        android:id="@+id/txtMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="Material"
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/view3"
+        app:layout_constraintStart_toEndOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMaterial"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"
+        app:layout_constraintStart_toEndOf="@+id/txtMaterial"
+        app:layout_constraintTop_toTopOf="@id/txtMaterial" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/materialOutline"
+        app:layout_constraintTop_toBottomOf="@+id/txtMaterial"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        android:layout_marginTop="@dimen/dp_10"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/teal_700"
+        app:placeholderText="Enter Name"
+        app:boxCornerRadiusBottomEnd="@dimen/edittext_05_dp"
+        app:boxCornerRadiusBottomStart="@dimen/edittext_05_dp"
+        app:boxBackgroundColor="@color/white"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="outline Box" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/materialOutline"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:boxBackgroundMode="filled"
+        android:layout_marginStart="10dp"
+        app:boxStrokeColor="@color/black"
+        app:placeholderText="Enter Email"
+        app:placeholderTextColor="@color/btn_color"
+        app:boxCornerRadiusBottomEnd="@dimen/edittext_05_dp"
+        app:boxCornerRadiusBottomStart="@dimen/edittext_05_dp"
+        android:hint="fill Box"
+        app:hintTextColor="@color/black"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/required_number"
+        android:layout_marginTop="@dimen/dp_10"
+        android:hint="@string/hint_enter_number"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/red_color"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/materialOutline"
+        app:placeholderText="Enter Number"
+        app:prefixText="+91"
+        app:startIconDrawable="@android:drawable/stat_sys_speakerphone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="11" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_error"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:endIconMode="password_toggle"
+        app:errorContentDescription="Too long"
+        app:errorEnabled="true"
+        android:hint="Password"
+        app:boxBackgroundMode="outline"
+        app:placeholderText="Enter Password"
+        app:errorIconDrawable="@android:drawable/ic_dialog_info"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/red_color"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toEndOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/required_number"
+        app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_textEditText"
+            android:inputType="textPassword"
+            android:maxLength="16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
